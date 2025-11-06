@@ -1,0 +1,762 @@
+<!--
+Product: Metronic is a toolkit of UI components built with Tailwind CSS for developing scalable web applications quickly and efficiently
+Version: v9.3.4
+Author: Keenthemes
+Contact: support@keenthemes.com
+Website: https://www.keenthemes.com
+Support: https://devs.keenthemes.com
+Follow: https://www.twitter.com/keenthemes
+License: https://keenthemes.com/metronic/tailwind/docs/getting-started/license
+-->
+<!DOCTYPE html>
+<html class="h-full" data-kt-theme="true" data-kt-theme-mode="light" dir="ltr" lang="en">
+ <head><base href="../../">
+  <title>
+   Metronic - Tailwind CSS
+  </title>
+  <meta charset="utf-8"/>
+  <meta content="follow, index" name="robots"/>
+  <link href="https://127.0.0.1:8001/metronic-html-starter-kit/layout-12/index" rel="canonical"/>
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+  <meta content="" name="description"/>
+  <meta content="@keenthemes" name="twitter:site"/>
+  <meta content="@keenthemes" name="twitter:creator"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="Metronic - Tailwind CSS " name="twitter:title"/>
+  <meta content="" name="twitter:description"/>
+  <meta content="assets/media/app/og-image.png" name="twitter:image"/>
+  <meta content="https://127.0.0.1:8001/metronic-html-starter-kit/layout-12/index" property="og:url"/>
+  <meta content="en_US" property="og:locale"/>
+  <meta content="website" property="og:type"/>
+  <meta content="@keenthemes" property="og:site_name"/>
+  <meta content="Metronic - Tailwind CSS " property="og:title"/>
+  <meta content="" property="og:description"/>
+  <meta content="assets/media/app/og-image.png" property="og:image"/>
+  <link href="assets/media/app/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+  <link href="assets/media/app/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+  <link href="assets/media/app/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+  <link href="assets/media/app/favicon.ico" rel="shortcut icon"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="assets/vendors/apexcharts/apexcharts.css" rel="stylesheet"/>
+  <link href="assets/vendors/keenicons/styles.bundle.css" rel="stylesheet"/>
+  <link href="assets/css/styles.css" rel="stylesheet"/>
+ </head>
+ <body class="antialiased flex h-full text-base text-foreground bg-background text-foreground bg-background flex h-full text-base">
+  <!-- Theme Mode -->
+  <script>
+   const defaultThemeMode = 'light'; // light|dark|system
+			let themeMode;
+
+			if (document.documentElement) {
+				if (localStorage.getItem('kt-theme')) {
+					themeMode = localStorage.getItem('kt-theme');
+				} else if (
+					document.documentElement.hasAttribute('data-kt-theme-mode')
+				) {
+					themeMode =
+						document.documentElement.getAttribute('data-kt-theme-mode');
+				} else {
+					themeMode = defaultThemeMode;
+				}
+
+				if (themeMode === 'system') {
+					themeMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+						? 'dark'
+						: 'light';
+				}
+
+				document.documentElement.classList.add(themeMode);
+			}
+  </script>
+  <!-- End of Theme Mode -->
+  <!-- Page -->
+  <!-- Main -->
+  <div class="flex grow" id="root">
+   <!-- Wrapper -->
+   <div class="flex grow" style="--sidebar-width: 240px; --header-height: 54px; --sidebar-width-mobile: 240px; --header-height-mobile: 54px;">
+    <!-- Header -->
+    <header class="flex items-stretch fixed z-10 top-0 start-0 end-0 shrink-0 bg-background/95 border-b border-border backdrop-blur-sm supports-backdrop-filter:bg-background/60 h-(--header-height-mobile) lg:h-(--header-height) pe-[var(--removed-body-scroll-bar-size,0px)]">
+     <div class="@container grow pe-5 flex items-stretch justify-between gap-2.5">
+      <div class="flex items-stretch">
+       <div class="flex items-center gap-2 lg:w-(--sidebar-width) px-5">
+        <button class="kt-btn kt-btn-icon kt-btn-ghost lg:hidden" data-kt-drawer-toggle="#sidebar">
+         <i class="ki-filled ki-menu">
+         </i>
+        </button>
+        <div class="flex items-center justify-between w-full">
+         <a class="flex items-center gap-2" data-discover="true" href="#">
+          <img alt="image" class="dark:hidden shrink-0 size-6" src="assets/media/app/mini-logo-gray.svg"/>
+          <img alt="image" class="hidden dark:inline-block shrink-0 size-6" src="assets/media/app/mini-logo-gray-dark.svg"/>
+          <span class="text-mono text-lg font-medium hidden lg:block">
+           Metronic
+          </span>
+         </a>
+         <button class="cursor-pointer group focus-visible:outline-hidden items-center justify-center has-data-[arrow=true]:justify-between whitespace-nowrap font-medium ring-offset-background transition-[color,box-shadow] disabled:pointer-events-none disabled:opacity-60 [&_svg]:shrink-0 hover:bg-accent data-[state=open]:bg-accent data-[state=open]:text-accent-foreground rounded-md gap-1.5 text-[0.8125rem] leading-(--text-sm--line-height) focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 shrink-0 w-8.5 h-8.5 p-0 [&_svg:not([class*=size-])]:size-4 hidden lg:inline-flex text-muted-foreground hover:text-foreground" data-slot="button">
+          <svg aria-hidden="true" class="lucide lucide-panel-right -rotate-180 in-data-[sidebar-open=false]:rotate-0 opacity-100" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+           <rect height="18" rx="2" width="18" x="3" y="3">
+           </rect>
+           <path d="M15 3v18">
+           </path>
+          </svg>
+         </button>
+        </div>
+       </div>
+      </div>
+      <div class="flex items-center shrink-0 w-full lg:w-80 hidden lg:flex">
+       <div class="kt-input">
+        <i class="ki-filled ki-magnifier text-muted-foreground">
+        </i>
+        <input class="kt-input" placeholder="Search Metronic" type="text"/>
+       </div>
+      </div>
+      <!-- Toolbar -->
+      <div class="flex items-center gap-2.5">
+       <button class="cursor-pointer group focus-visible:outline-hidden inline-flex items-center justify-center has-data-[arrow=true]:justify-between whitespace-nowrap font-medium ring-offset-background transition-[color,box-shadow] disabled:pointer-events-none disabled:opacity-60 [&_svg]:shrink-0 text-accent-foreground hover:bg-accent hover:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground h-8.5 rounded-md px-3 gap-1.5 text-[0.8125rem] leading-(--text-sm--line-height) [&_svg:not([class*=size-])]:size-4 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 [&_svg:not([role=img]):not([class*=text-]):not([class*=opacity-])]:opacity-60" data-slot="button">
+        <i class="ki-filled ki-plus">
+        </i>
+        Create
+       </button>
+       <div class="flex items-center gap-1">
+        <button class="kt-btn kt-btn-ghost kt-btn-icon text-muted-foreground hover:text-foreground">
+         <i class="ki-filled ki-message-text">
+         </i>
+        </button>
+        <button class="kt-btn kt-btn-ghost kt-btn-icon text-muted-foreground hover:text-foreground">
+         <i class="ki-filled ki-notification-status">
+         </i>
+        </button>
+        <button class="kt-btn kt-btn-ghost kt-btn-icon text-muted-foreground hover:text-foreground">
+         <i class="ki-filled ki-setting-2">
+         </i>
+        </button>
+       </div>
+       <!-- User Dropdown -->
+       <div data-kt-dropdown="true" data-kt-dropdown-offset="10px, 10px" data-kt-dropdown-offset-rtl="-20px, 10px" data-kt-dropdown-placement="bottom-end" data-kt-dropdown-placement-rtl="bottom-start" data-kt-dropdown-trigger="click">
+        <link as="image" href="assets/media/avatars/300-2.png" rel="preload"/>
+        <div class="kt-avatar size-7" data-kt-dropdown-toggle="true">
+         <div class="kt-avatar-image">
+          <img alt="avatar" src="assets/media/avatars/300-2.png">
+          </img>
+         </div>
+         <div class="absolute flex size-6 items-center justify-center -end-2 -top-2" data-slot="avatar-indicator">
+          <svg class="h-4 text-blue-500 fill-current" viewbox="0 0 15 16">
+           <path d="M14.5425 6.8973L13.5 5.8398C13.4273 5.76858 13.3699 5.68331 13.3312 5.58919C13.2925 5.49507 13.2734 5.39405 13.275 5.2923V3.7923C13.274 3.58681 13.2324 3.38353 13.1527 3.19414C13.0729 3.00476 12.9565 2.833 12.8101 2.68874C12.6638 2.54448 12.4904 2.43055 12.2998 2.35351C12.1093 2.27647 11.9055 2.23783 11.7 2.2398H10.2C10.0982 2.24141 9.99722 2.22228 9.9031 2.1836C9.80898 2.14492 9.72371 2.08749 9.65249 2.0148L8.60249 0.957304C8.30998 0.665106 7.91344 0.500977 7.49999 0.500977C7.08654 0.500977 6.68999 0.665106 6.39749 0.957304L5.33999 1.9998C5.26876 2.07249 5.1835 2.12992 5.08937 2.1686C4.99525 2.20728 4.89424 2.22641 4.79249 2.2248H3.29249C3.08699 2.22578 2.88371 2.26735 2.69432 2.34713C2.50494 2.4269 2.33318 2.54331 2.18892 2.68966C2.04466 2.83602 1.93073 3.00943 1.85369 3.19994C1.77665 3.39046 1.73801 3.59431 1.73999 3.7998V5.2998C1.74159 5.40155 1.72247 5.50256 1.68378 5.59669C1.6451 5.69081 1.58767 5.77608 1.51499 5.8473L0.457487 6.8973C0.165289 7.18981 0.00115967 7.58635 0.00115967 7.9998C0.00115967 8.41325 0.165289 8.80979 0.457487 9.1023L1.49999 10.1598C1.57267 10.231 1.6301 10.3163 1.66878 10.4104C1.70747 10.5045 1.72659 10.6056 1.72499 10.7073V12.2073C1.72597 12.4128 1.76754 12.6161 1.84731 12.8055C1.92709 12.9949 2.04349 13.1666 2.18985 13.3109C2.3362 13.4551 2.50961 13.5691 2.70013 13.6461C2.89064 13.7231 3.0945 13.7618 3.29999 13.7598H4.79999C4.90174 13.7582 5.00275 13.7773 5.09687 13.816C5.191 13.8547 5.27627 13.9121 5.34749 13.9848L6.40499 15.0423C6.69749 15.3345 7.09404 15.4986 7.50749 15.4986C7.92094 15.4986 8.31748 15.3345 8.60999 15.0423L9.65999 13.9998C9.73121 13.9271 9.81647 13.8697 9.9106 13.831C10.0047 13.7923 10.1057 13.7732 10.2075 13.7748H11.7075C12.1212 13.7748 12.518 13.6104 12.8106 13.3179C13.1031 13.0253 13.2675 12.6285 13.2675 12.2148V10.7148C13.2659 10.6131 13.285 10.512 13.3237 10.4179C13.3624 10.3238 13.4198 10.2385 13.4925 10.1673L14.55 9.1098C14.6953 8.96434 14.8104 8.79157 14.8887 8.60146C14.9671 8.41134 15.007 8.20761 15.0063 8.00199C15.0056 7.79638 14.9643 7.59293 14.8847 7.40334C14.8051 7.21376 14.6888 7.04178 14.5425 6.8973ZM10.635 6.6498L6.95249 10.2498C6.90055 10.3024 6.83864 10.3441 6.77038 10.3724C6.70212 10.4007 6.62889 10.4152 6.55499 10.4148C6.48062 10.4138 6.40719 10.398 6.33896 10.3684C6.27073 10.3388 6.20905 10.2959 6.15749 10.2423L4.37999 8.4423C4.32532 8.39026 4.28169 8.32775 4.25169 8.25849C4.22169 8.18923 4.20593 8.11464 4.20536 8.03916C4.20479 7.96369 4.21941 7.88887 4.24836 7.81916C4.27731 7.74946 4.31999 7.68629 4.37387 7.63342C4.42774 7.58056 4.4917 7.53908 4.56194 7.51145C4.63218 7.48382 4.70726 7.47061 4.78271 7.4726C4.85816 7.4746 4.93244 7.49176 5.00112 7.52306C5.0698 7.55436 5.13148 7.59917 5.18249 7.6548L6.56249 9.0573L9.84749 5.8473C9.95296 5.74197 10.0959 5.6828 10.245 5.6828C10.394 5.6828 10.537 5.74197 10.6425 5.8473C10.6953 5.90016 10.737 5.963 10.7653 6.03216C10.7935 6.10132 10.8077 6.17542 10.807 6.25013C10.8063 6.32483 10.7908 6.39865 10.7612 6.46728C10.7317 6.5359 10.6888 6.59795 10.635 6.6498Z">
+           </path>
+          </svg>
+         </div>
+        </div>
+        <div class="kt-dropdown-menu w-[250px]" data-kt-dropdown-menu="true">
+         <div class="flex items-center justify-between px-2.5 py-1.5 gap-1.5">
+          <div class="flex items-center gap-2">
+           <link as="image" href="assets/media/avatars/300-2.png" rel="preload"/>
+           <div class="kt-avatar">
+            <div class="kt-avatar-image">
+             <img alt="avatar" src="assets/media/avatars/300-2.png">
+             </img>
+            </div>
+            <div class="kt-avatar-indicator -end-1.5 -top-1.5">
+             <div class="kt-avatar-status kt-avatar-status-online size-2.5">
+             </div>
+            </div>
+           </div>
+           <div class="flex flex-col gap-1.5">
+            <span class="text-sm text-foreground font-semibold leading-none">
+             Sean
+            </span>
+            <span class="text-xs text-secondary-foreground leading-none">
+             Online
+            </span>
+           </div>
+          </div>
+         </div>
+         <ul class="kt-dropdown-menu-sub">
+          <!-- Set Status -->
+          <li>
+           <a class="kt-dropdown-menu-link py-1 rounded-md border border-border hover:bg-muted" href="#">
+            <i class="ki-filled ki-user-edit">
+            </i>
+            Set status
+           </a>
+          </li>
+          <li>
+           <div class="kt-dropdown-menu-separator">
+           </div>
+          </li>
+          <!-- Mute Notifications Sub-menu -->
+          <li data-kt-dropdown="true" data-kt-dropdown-placement="right-start" data-kt-dropdown-trigger="hover">
+           <button class="kt-dropdown-menu-toggle" data-kt-dropdown-toggle="true">
+            <i class="ki-filled ki-notification-status">
+            </i>
+            Mute notifications
+            <span class="kt-dropdown-menu-indicator">
+             <i class="ki-filled ki-right text-xs">
+             </i>
+            </span>
+           </button>
+           <div class="kt-dropdown-menu w-[192px]" data-kt-dropdown-menu="true">
+            <ul class="kt-dropdown-menu-sub">
+             <li>
+              <a class="kt-dropdown-menu-link" href="#">
+               For 30 minutes
+              </a>
+             </li>
+             <li>
+              <a class="kt-dropdown-menu-link" href="#">
+               For 1 hour
+              </a>
+             </li>
+             <li>
+              <a class="kt-dropdown-menu-link" href="#">
+               For 4 hours
+              </a>
+             </li>
+             <li>
+              <a class="kt-dropdown-menu-link" href="#">
+               Until tomorrow
+              </a>
+             </li>
+             <li>
+              <a class="kt-dropdown-menu-link" href="#">
+               Until next week
+              </a>
+             </li>
+             <li>
+              <a class="kt-dropdown-menu-link" href="#">
+               Custom date and time
+              </a>
+             </li>
+            </ul>
+           </div>
+          </li>
+          <!-- Profile and Settings -->
+          <li>
+           <a class="kt-dropdown-menu-link" href="#">
+            <i class="ki-filled ki-user">
+            </i>
+            Profile
+           </a>
+          </li>
+          <li>
+           <a class="kt-dropdown-menu-link" href="#">
+            <i class="ki-filled ki-setting">
+            </i>
+            Settings
+           </a>
+          </li>
+          <li>
+           <a class="kt-dropdown-menu-link" href="#">
+            <i class="ki-filled ki-notification">
+            </i>
+            Notification settings
+           </a>
+          </li>
+          <li>
+           <div class="kt-dropdown-menu-separator">
+           </div>
+          </li>
+          <!-- Business-Focused Application Section -->
+          <li>
+           <a class="kt-dropdown-menu-link" href="#">
+            <i class="ki-filled ki-code">
+            </i>
+            Keyboard shortcuts
+           </a>
+          </li>
+          <li>
+           <a class="kt-dropdown-menu-link" href="#">
+            <i class="ki-filled ki-message-add">
+            </i>
+            Referrals
+            <span class="kt-badge kt-badge-sm kt-badge-info kt-badge-light ms-auto">
+             New
+            </span>
+           </a>
+          </li>
+          <li>
+           <a class="kt-dropdown-menu-link" href="#">
+            <i class="ki-filled ki-file-down">
+            </i>
+            Download apps
+            <i class="ki-filled ki-right text-xs ms-auto">
+            </i>
+           </a>
+          </li>
+          <li>
+           <a class="kt-dropdown-menu-link" href="#">
+            <i class="ki-filled ki-message-question">
+            </i>
+            Help
+            <i class="ki-filled ki-right text-xs ms-auto">
+            </i>
+           </a>
+          </li>
+          <li>
+           <div class="kt-dropdown-menu-separator">
+           </div>
+          </li>
+         </ul>
+         <div class="px-2.5 pt-1.5 mb-2.5 flex flex-col gap-3.5">
+          <div class="flex items-center gap-2 justify-between">
+           <span class="flex items-center gap-2">
+            <i class="ki-filled ki-moon text-base text-muted-foreground">
+            </i>
+            <span class="font-medium text-2sm">
+             Dark Mode
+            </span>
+           </span>
+           <input class="kt-switch" data-kt-theme-switch-state="dark" data-kt-theme-switch-toggle="true" name="check" type="checkbox" value="1"/>
+          </div>
+          <a class="kt-btn kt-btn-outline justify-center w-full" href="#">
+           Log out
+          </a>
+         </div>
+        </div>
+       </div>
+       <!-- End of User Dropdown -->
+      </div>
+      <!-- End of Toolbar -->
+     </div>
+    </header>
+    <!-- End of Header -->
+    <div class="flex grow pt-(--header-height-mobile) lg:pt-(--header-height)">
+     <!-- Sidebar -->
+     <aside class="fixed top-(--header-height) start-0 bottom-0 h-full transition-all duration-300 flex flex-col items-stretch flex-shrink-0 w-(--sidebar-width) in-data-[sidebar-open=false]:-start-full border-e border-border [--kt-drawer-enable:true] lg:[--kt-drawer-enable:false]" data-kt-drawer="true" data-kt-drawer-class="kt-drawer kt-drawer-start top-0 bottom-0" id="sidebar">
+      <!-- Sidebar Menu -->
+      <div class="overflow-y-auto grow shrink-0 flex my-2.5 lg:my-7.5 px-2.5 me-0.5 pe-2 h-[calc(100vh-12rem)] lg:h-[calc(100vh-12rem)]">
+       <!-- Sidebar Menu -->
+       <div class="flex flex-col grow space-y-7.5">
+        <div class="kt-accordion" data-kt-accordion="true" data-kt-accordion-expand-all="true">
+         <!-- General Section -->
+         <div class="kt-accordion-item active" data-kt-accordion-item="true">
+          <button aria-controls="accordion_content_0" class="kt-accordion-toggle" data-kt-accordion-toggle="true" id="accordion_toggle_0">
+           <span class="kt-accordion-title">
+            <div class="px-2 pb-2 text-xs font-normal text-muted-foreground leading-none">
+             General
+            </div>
+           </span>
+          </button>
+          <div aria-labelledby="accordion_toggle_0" class="kt-accordion-content" id="accordion_content_0">
+           <div class="kt-accordion-wrapper">
+            <ul class="kt-accordion-menu gap-px" data-kt-accordion="true">
+             <li class="kt-accordion-menu-item" data-kt-accordion-item="true">
+              <a class="kt-accordion-menu-link kt-accordion-selected:text-muted-foreground text-sm font-normal h-8.5 px-2.5" href="#">
+               <i class="ki-filled ki-chart text-base kt-accordion-selected:text-muted-foreground">
+               </i>
+               Dashboards
+              </a>
+             </li>
+             <li class="kt-accordion-menu-item selected" data-kt-accordion-item="true">
+              <a class="kt-accordion-menu-link kt-accordion-selected:text-muted-foreground text-sm font-normal h-8.5 px-2.5" href="html/layout-12/index.html">
+               <i class="ki-filled ki-users text-base kt-accordion-selected:text-muted-foreground">
+               </i>
+               Public Profiles
+              </a>
+             </li>
+             <li class="kt-accordion-menu-item" data-kt-accordion-item="true">
+              <a class="kt-accordion-menu-link kt-accordion-selected:text-muted-foreground text-sm font-normal h-8.5 px-2.5" href="#">
+               <i class="ki-filled ki-user-tick text-base kt-accordion-selected:text-muted-foreground">
+               </i>
+               Account Settings
+              </a>
+             </li>
+             <li class="kt-accordion-menu-item" data-kt-accordion-item="true">
+              <a class="kt-accordion-menu-link kt-accordion-selected:text-muted-foreground text-sm font-normal h-8.5 px-2.5" href="#">
+               <i class="ki-filled ki-setting-3 text-base kt-accordion-selected:text-muted-foreground">
+               </i>
+               Network
+               <span class="kt-badge kt-badge-xs kt-badge-light kt-badge-destructive">
+                Beta
+               </span>
+              </a>
+             </li>
+             <li class="kt-accordion-menu-item" data-kt-accordion-item="true">
+              <a class="kt-accordion-menu-link kt-accordion-selected:text-muted-foreground text-sm font-normal h-8.5 px-2.5" href="#">
+               <i class="ki-filled ki-lock text-base kt-accordion-selected:text-muted-foreground">
+               </i>
+               Authentication
+              </a>
+             </li>
+            </ul>
+           </div>
+          </div>
+         </div>
+         <!-- Custom Feed Section -->
+         <div class="kt-accordion-item active" data-kt-accordion-item="true">
+          <button aria-controls="accordion_content_1" class="kt-accordion-toggle" data-kt-accordion-toggle="true" id="accordion_toggle_1">
+           <span class="kt-accordion-title">
+            <div class="px-2 pb-2 text-xs font-normal text-muted-foreground leading-none">
+             Custom Feed
+            </div>
+           </span>
+           <span aria-hidden="true" class="kt-accordion-indicator">
+            <svg aria-hidden="true" class="lucide lucide-plus kt-accordion-indicator-on" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+             <path d="M5 12h14">
+             </path>
+             <path d="M12 5v14">
+             </path>
+            </svg>
+            <svg aria-hidden="true" class="lucide lucide-minus kt-accordion-indicator-off" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+             <path d="M5 12h14">
+             </path>
+            </svg>
+           </span>
+          </button>
+          <div aria-labelledby="accordion_toggle_1" class="kt-accordion-content" id="accordion_content_1">
+           <div class="kt-accordion-wrapper">
+            <ul class="kt-accordion-menu gap-px" data-kt-accordion="true">
+             <li class="kt-accordion-menu-item" data-kt-accordion-item="true">
+              <a class="kt-accordion-menu-link kt-accordion-selected:text-muted-foreground text-sm font-normal h-8.5 px-2.5" href="#">
+               <i class="ki-filled ki-plus text-base kt-accordion-selected:text-muted-foreground">
+               </i>
+               Create a custom feed
+              </a>
+             </li>
+             <li class="kt-accordion-menu-item" data-kt-accordion-item="true">
+              <a class="kt-accordion-menu-link kt-accordion-selected:text-muted-foreground text-sm font-normal h-8.5 px-2.5" href="#">
+               <div class="flex items-center justify-center w-4">
+                <div class="size-1.5 rounded-full bg-green-500">
+                </div>
+               </div>
+               New order received
+              </a>
+             </li>
+             <li class="kt-accordion-menu-item" data-kt-accordion-item="true">
+              <a class="kt-accordion-menu-link kt-accordion-selected:text-muted-foreground text-sm font-normal h-8.5 px-2.5" href="#">
+               <div class="flex items-center justify-center w-4">
+                <div class="size-1.5 rounded-full bg-green-500">
+                </div>
+               </div>
+               New customer registered
+              </a>
+             </li>
+            </ul>
+           </div>
+          </div>
+         </div>
+         <!-- Communities Section -->
+         <div class="kt-accordion-item active" data-kt-accordion-item="true">
+          <button aria-controls="accordion_content_2" class="kt-accordion-toggle" data-kt-accordion-toggle="true" id="accordion_toggle_2">
+           <span class="kt-accordion-title">
+            <div class="px-2 pb-2 text-xs font-normal text-muted-foreground leading-none">
+             Communities
+            </div>
+           </span>
+           <span aria-hidden="true" class="kt-accordion-indicator">
+            <svg aria-hidden="true" class="lucide lucide-plus kt-accordion-indicator-on" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+             <path d="M5 12h14">
+             </path>
+             <path d="M12 5v14">
+             </path>
+            </svg>
+            <svg aria-hidden="true" class="lucide lucide-minus kt-accordion-indicator-off" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+             <path d="M5 12h14">
+             </path>
+            </svg>
+           </span>
+          </button>
+          <div aria-labelledby="accordion_toggle_2" class="kt-accordion-content" id="accordion_content_2">
+           <div class="kt-accordion-wrapper">
+            <ul class="kt-accordion-menu gap-px" data-kt-accordion="true">
+             <li class="kt-accordion-menu-item" data-kt-accordion-item="true">
+              <a class="kt-accordion-menu-link kt-accordion-selected:text-muted-foreground text-sm font-normal h-8.5 px-2.5" href="#">
+               <i class="ki-filled ki-plus text-base kt-accordion-selected:text-muted-foreground">
+               </i>
+               Create a community
+              </a>
+             </li>
+             <li class="kt-accordion-menu-item" data-kt-accordion-item="true">
+              <a class="kt-accordion-menu-link kt-accordion-selected:text-muted-foreground text-sm font-normal h-8.5 px-2.5" href="#">
+               <img alt="Designers Hub" class="size-4 rounded-sm" src="assets/media/brand-logos/invision.svg"/>
+               Designers Hub
+              </a>
+             </li>
+             <li class="kt-accordion-menu-item" data-kt-accordion-item="true">
+              <a class="kt-accordion-menu-link kt-accordion-selected:text-muted-foreground text-sm font-normal h-8.5 px-2.5" href="#">
+               <img alt="React Js" class="size-4 rounded-sm" src="assets/media/brand-logos/react.svg"/>
+               React Js
+              </a>
+             </li>
+             <li class="kt-accordion-menu-item" data-kt-accordion-item="true">
+              <a class="kt-accordion-menu-link kt-accordion-selected:text-muted-foreground text-sm font-normal h-8.5 px-2.5" href="#">
+               <img alt="Node Js" class="size-4 rounded-sm" src="assets/media/brand-logos/nodejs.svg"/>
+               Node Js
+              </a>
+             </li>
+            </ul>
+           </div>
+          </div>
+         </div>
+         <!-- Resources Section -->
+         <div class="kt-accordion-item active" data-kt-accordion-item="true">
+          <button aria-controls="accordion_content_3" class="kt-accordion-toggle" data-kt-accordion-toggle="true" id="accordion_toggle_3">
+           <span class="kt-accordion-title">
+            <div class="px-2 pb-2 text-xs font-normal text-muted-foreground leading-none">
+             Resources
+            </div>
+           </span>
+           <span aria-hidden="true" class="kt-accordion-indicator">
+            <svg aria-hidden="true" class="lucide lucide-plus kt-accordion-indicator-on" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+             <path d="M5 12h14">
+             </path>
+             <path d="M12 5v14">
+             </path>
+            </svg>
+            <svg aria-hidden="true" class="lucide lucide-minus kt-accordion-indicator-off" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+             <path d="M5 12h14">
+             </path>
+            </svg>
+           </span>
+          </button>
+          <div aria-labelledby="accordion_toggle_3" class="kt-accordion-content" id="accordion_content_3">
+           <div class="kt-accordion-wrapper">
+            <ul class="kt-accordion-menu gap-px" data-kt-accordion="true">
+             <li class="kt-accordion-menu-item" data-kt-accordion-item="true">
+              <a class="kt-accordion-menu-link kt-accordion-selected:bg-primary kt-accordion-selected:text-primary-foreground text-sm font-normal h-8.5 px-2.5" href="#">
+               <i class="ki-filled ki-setting-4 text-base kt-accordion-selected:text-muted-foreground">
+               </i>
+               About Metronic
+              </a>
+             </li>
+             <li class="kt-accordion-menu-item" data-kt-accordion-item="true">
+              <a class="kt-accordion-menu-link kt-accordion-selected:bg-primary kt-accordion-selected:text-primary-foreground text-sm font-normal h-8.5 px-2.5" href="#">
+               <i class="ki-filled ki-notification text-base kt-accordion-selected:text-muted-foreground">
+               </i>
+               Advertise
+               <span class="kt-badge kt-badge-xs kt-badge-light kt-badge-success">
+                Pro
+               </span>
+              </a>
+             </li>
+             <li class="kt-accordion-menu-item" data-kt-accordion-item="true">
+              <a class="kt-accordion-menu-link kt-accordion-selected:bg-primary kt-accordion-selected:text-primary-foreground text-sm font-normal h-8.5 px-2.5" href="#">
+               <i class="ki-filled ki-message-question text-base kt-accordion-selected:text-muted-foreground">
+               </i>
+               Help
+              </a>
+             </li>
+             <li class="kt-accordion-menu-item" data-kt-accordion-item="true">
+              <a class="kt-accordion-menu-link kt-accordion-selected:bg-primary kt-accordion-selected:text-primary-foreground text-sm font-normal h-8.5 px-2.5" href="#">
+               <i class="ki-filled ki-file-sheet text-base kt-accordion-selected:text-muted-foreground">
+               </i>
+               Blog
+              </a>
+             </li>
+             <li class="kt-accordion-menu-item" data-kt-accordion-item="true">
+              <a class="kt-accordion-menu-link kt-accordion-selected:bg-primary kt-accordion-selected:text-primary-foreground text-sm font-normal h-8.5 px-2.5" href="#">
+               <i class="ki-filled ki-user text-base kt-accordion-selected:text-muted-foreground">
+               </i>
+               Careers
+              </a>
+             </li>
+             <li class="kt-accordion-menu-item" data-kt-accordion-item="true">
+              <a class="kt-accordion-menu-link kt-accordion-selected:bg-primary kt-accordion-selected:text-primary-foreground text-sm font-normal h-8.5 px-2.5" href="#">
+               <i class="ki-filled ki-notification-status text-base kt-accordion-selected:text-muted-foreground">
+               </i>
+               Press
+              </a>
+             </li>
+            </ul>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <!-- End of Sidebar Menu -->
+      </div>
+      <!-- End of Sidebar Menu -->
+     </aside>
+     <!-- End of Sidebar -->
+     <main class="lg:ps-(--sidebar-width) lg:in-data-[sidebar-open=false]:ps-0 transition-all duration-300 grow" role="content">
+      <div class="container-fluid">
+       <div class="py-5 max-w-5xl mx-auto">
+        <div class="flex grow gap-10">
+         <div class="container grow space-y-5">
+          <!-- Toolbar -->
+          <div class="flex flex-wrap items-center justify-between gap-3.5">
+           <!-- Toolbar Heading -->
+           <div class="flex flex-col justify-center gap-1">
+            <h1 class="text-base font-medium leading-none text-foreground">
+             Community Feeds
+            </h1>
+            <div class="flex items-center gap-2 text-sm font-normal text-muted-foreground">
+             <span>
+              Manage your feed preferences and filters
+             </span>
+            </div>
+           </div>
+           <!-- Toolbar Actions -->
+           <div class="flex items-center gap-2.5">
+            <div data-kt-dropdown="true" data-kt-dropdown-offset="10px, 10px" data-kt-dropdown-placement="bottom-end">
+             <button class="kt-btn kt-btn-outline hover:bg-accent-foreground/10 data-[state=open]:bg-accent-foreground/10" data-kt-dropdown-toggle="true">
+              <i class="ki-filled ki-filter">
+              </i>
+              Manage Feeds
+              <span class="kt-badge kt-badge-sm kt-badge-secondary ms-1">
+               3
+              </span>
+             </button>
+             <div class="kt-dropdown-menu w-56" data-kt-dropdown-menu="true">
+              <ul class="kt-dropdown-menu-sub">
+               <!-- Feed Management -->
+               <li>
+                <a class="kt-dropdown-menu-link" href="#">
+                 <i class="ki-filled ki-file-sheet">
+                 </i>
+                 Saved Posts
+                 <span class="kt-badge kt-badge-sm kt-badge-secondary ms-auto">
+                  12
+                 </span>
+                </a>
+               </li>
+               <li>
+                <a class="kt-dropdown-menu-link" href="#">
+                 <i class="ki-filled ki-notification-status">
+                 </i>
+                 Recent Activity
+                </a>
+               </li>
+               <li>
+                <a class="kt-dropdown-menu-link" href="#">
+                 <i class="ki-filled ki-chart-line-up">
+                 </i>
+                 Trending Today
+                </a>
+               </li>
+               <li>
+                <div class="kt-dropdown-menu-separator">
+                </div>
+               </li>
+               <!-- Filter Options -->
+               <li data-kt-dropdown="true" data-kt-dropdown-placement="right-start" data-kt-dropdown-trigger="hover">
+                <button class="kt-dropdown-menu-toggle" data-kt-dropdown-toggle="true">
+                 <i class="ki-filled ki-filter">
+                 </i>
+                 Filter Posts
+                 <span class="kt-dropdown-menu-indicator">
+                  <i class="ki-filled ki-right text-xs">
+                  </i>
+                 </span>
+                </button>
+                <div class="kt-dropdown-menu w-48" data-kt-dropdown-menu="true">
+                 <ul class="kt-dropdown-menu-sub">
+                  <li>
+                   <a class="kt-dropdown-menu-link" href="#">
+                    <i class="ki-filled ki-chart-line-star">
+                    </i>
+                    Showcase Only
+                   </a>
+                  </li>
+                  <li>
+                   <a class="kt-dropdown-menu-link" href="#">
+                    <i class="ki-filled ki-message-text">
+                    </i>
+                    Help Wanted
+                   </a>
+                  </li>
+                  <li>
+                   <a class="kt-dropdown-menu-link" href="#">
+                    <i class="ki-filled ki-users">
+                    </i>
+                    Discussions
+                   </a>
+                  </li>
+                  <li>
+                   <a class="kt-dropdown-menu-link" href="#">
+                    <i class="ki-filled ki-code">
+                    </i>
+                    Tutorials
+                   </a>
+                  </li>
+                 </ul>
+                </div>
+               </li>
+               <li data-kt-dropdown="true" data-kt-dropdown-placement="right-start" data-kt-dropdown-trigger="hover">
+                <button class="kt-dropdown-menu-toggle" data-kt-dropdown-toggle="true">
+                 <i class="ki-filled ki-notification">
+                 </i>
+                 View Options
+                 <span class="kt-dropdown-menu-indicator">
+                  <i class="ki-filled ki-right text-xs">
+                  </i>
+                 </span>
+                </button>
+                <div class="kt-dropdown-menu w-48" data-kt-dropdown-menu="true">
+                 <ul class="kt-dropdown-menu-sub">
+                  <li>
+                   <a class="kt-dropdown-menu-link" href="#">
+                    <i class="ki-filled ki-chart-simple">
+                    </i>
+                    Compact View
+                   </a>
+                  </li>
+                  <li>
+                   <a class="kt-dropdown-menu-link" href="#">
+                    <i class="ki-filled ki-chart-pie-3">
+                    </i>
+                    Card View
+                   </a>
+                  </li>
+                  <li>
+                   <a class="kt-dropdown-menu-link" href="#">
+                    <i class="ki-filled ki-bar-chart">
+                    </i>
+                    List View
+                   </a>
+                  </li>
+                 </ul>
+                </div>
+               </li>
+               <li>
+                <div class="kt-dropdown-menu-separator">
+                </div>
+               </li>
+               <!-- Notifications -->
+               <li>
+                <a class="kt-dropdown-menu-link" href="#">
+                 <i class="ki-filled ki-notification">
+                 </i>
+                 Notification Settings
+                </a>
+               </li>
+               <li>
+                <a class="kt-dropdown-menu-link" href="#">
+                 <i class="ki-filled ki-setting-2">
+                 </i>
+                 Feed Preferences
+                </a>
+               </li>
+              </ul>
+             </div>
+            </div>
+           </div>
+          </div>
+          <!-- Main Content Skeleton -->
+          <div class="animate-pulse bg-accent rounded-lg grow h-screen" data-slot="skeleton">
+          </div>
+         </div>
+         <!-- Sidebar -->
+         <div class="hidden xl:flex gap-3.5 w-[300px] flex-shrink-0">
+          <div class="animate-pulse bg-accent rounded-lg grow h-[500px]" data-slot="skeleton">
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </main>
+    </div>
+   </div>
+  </div>
+  <!-- End of Main -->
+  <!-- End of Page -->
+  <!-- Scripts -->
+  <script src="assets/js/core.bundle.js">
+  </script>
+  <script src="assets/vendors/ktui/ktui.min.js">
+  </script>
+  <script src="assets/vendors/apexcharts/apexcharts.min.js">
+  </script>
+  <script src="assets/js/widgets/general.js">
+  </script>
+  <!-- End of Scripts -->
+ </body>
+</html>

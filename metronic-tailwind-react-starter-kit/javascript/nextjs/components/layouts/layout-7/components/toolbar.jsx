@@ -1,0 +1,83 @@
+import { Fragment } from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { MENU_MEGA } from '@/config/layout-7.config';
+import { cn } from '@/lib/utils';
+import { useMenu } from '@/hooks/use-menu';
+
+function Toolbar({ children }) {
+  return (
+    <div className="container">
+      <div className="border-t border-border"></div>
+      <div className="flex items-center justify-between flex-wrap gap-2 la:gap-5 my-5">
+        {children}
+      </div>
+      <div className="border-b border-border mb-5 lg:mb-7.5"></div>
+    </div>
+  );
+}
+
+function ToolbarActions({ children }) {
+  return <div className="flex items-center flex-wrap gap-2.5">{children}</div>;
+}
+
+function ToolbarBreadcrumbs() {
+  const pathname = usePathname();
+  const { getBreadcrumb, isActive } = useMenu(pathname);
+  const items = getBreadcrumb(MENU_MEGA);
+
+  if (items.length === 0) {
+    return null;
+  }
+
+  return (
+    <div className="flex items-center gap-1 text-sm">
+      {items.map((item, index) => {
+        const isLast = index === items.length - 1;
+        const active = item.path ? isActive(item.path) : false;
+
+        return (
+          <Fragment key={index}>
+            {item.path ? (
+              <Link
+                href={item.path}
+                className={cn(
+                  'flex items-center gap-1',
+                  active
+                    ? 'text-mono'
+                    : 'text-secondary-foreground hover:text-primary',
+                )}
+              >
+                {item.title}
+              </Link>
+            ) : (
+              <span
+                className={cn(
+                  isLast ? 'text-mono' : 'text-secondary-foreground',
+                )}
+              >
+                {item.title}
+              </span>
+            )}
+            {!isLast && <span className="text-muted-foreground">/</span>}
+          </Fragment>
+        );
+      })}
+    </div>
+  );
+}
+
+function ToolbarHeading({ title = '' }) {
+  const pathname = usePathname();
+  const { getCurrentItem } = useMenu(pathname);
+  const item = getCurrentItem(MENU_MEGA);
+
+  return (
+    <div className="flex flex-col gap-1">
+      <h1 className="font-medium text-lg text-mono">{title || item?.title}</h1>
+      <ToolbarBreadcrumbs />
+    </div>
+  );
+}
+
+export { Toolbar, ToolbarActions, ToolbarBreadcrumbs, ToolbarHeading };

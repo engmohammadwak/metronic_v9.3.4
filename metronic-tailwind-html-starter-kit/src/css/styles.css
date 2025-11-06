@@ -1,0 +1,17 @@
+/* Tailwind core */
+@import 'tailwindcss';
+
+/* Tailwind scan sources */
+@source '../../node_modules/@keenthemes/ktui/';
+
+/* Theme configs */
+@import "./config.ktui";
+
+/* KTUI styles */
+@import '../../node_modules/@keenthemes/ktui/styles.css';
+
+/* Metronic components  */
+@import "./components/index";
+
+/* Demos */
+@import "./demos/demo1.css";

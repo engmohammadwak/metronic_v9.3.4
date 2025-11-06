@@ -1,0 +1,255 @@
+<!--
+Product: Metronic is a toolkit of UI components built with Tailwind CSS for developing scalable web applications quickly and efficiently
+Version: v9.3.4
+Author: Keenthemes
+Contact: support@keenthemes.com
+Website: https://www.keenthemes.com
+Support: https://devs.keenthemes.com
+Follow: https://www.twitter.com/keenthemes
+License: https://keenthemes.com/metronic/tailwind/docs/getting-started/license
+-->
+<!DOCTYPE html>
+<html class="h-full" data-kt-theme="true" data-kt-theme-mode="light" dir="ltr" lang="en">
+ <head><base href="../../">
+  <title>
+   Metronic - Tailwind CSS
+  </title>
+  <meta charset="utf-8"/>
+  <meta content="follow, index" name="robots"/>
+  <link href="https://127.0.0.1:8001/metronic-html-starter-kit/layout-17/index.html" rel="canonical"/>
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+  <meta content="" name="description"/>
+  <meta content="@keenthemes" name="twitter:site"/>
+  <meta content="@keenthemes" name="twitter:creator"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="Metronic - Tailwind CSS " name="twitter:title"/>
+  <meta content="" name="twitter:description"/>
+  <meta content="assets/media/app/og-image.png" name="twitter:image"/>
+  <meta content="https://127.0.0.1:8001/metronic-html-starter-kit/layout-17/index.html" property="og:url"/>
+  <meta content="en_US" property="og:locale"/>
+  <meta content="website" property="og:type"/>
+  <meta content="@keenthemes" property="og:site_name"/>
+  <meta content="Metronic - Tailwind CSS " property="og:title"/>
+  <meta content="" property="og:description"/>
+  <meta content="assets/media/app/og-image.png" property="og:image"/>
+  <link href="assets/media/app/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+  <link href="assets/media/app/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+  <link href="assets/media/app/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+  <link href="assets/media/app/favicon.ico" rel="shortcut icon"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="assets/vendors/apexcharts/apexcharts.css" rel="stylesheet"/>
+  <link href="assets/vendors/keenicons/styles.bundle.css" rel="stylesheet"/>
+  <link href="assets/css/styles.css" rel="stylesheet"/>
+ </head>
+ <body class="antialiased flex h-full text-base text-foreground bg-background text-foreground bg-background flex h-full text-base [--primary:#0B5C22] [--primary-foreground:var(--color-white)]">
+  <!-- Theme Mode -->
+  <script>
+   const defaultThemeMode = 'light'; // light|dark|system
+			let themeMode;
+
+			if (document.documentElement) {
+				if (localStorage.getItem('kt-theme')) {
+					themeMode = localStorage.getItem('kt-theme');
+				} else if (
+					document.documentElement.hasAttribute('data-kt-theme-mode')
+				) {
+					themeMode =
+						document.documentElement.getAttribute('data-kt-theme-mode');
+				} else {
+					themeMode = defaultThemeMode;
+				}
+
+				if (themeMode === 'system') {
+					themeMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+						? 'dark'
+						: 'light';
+				}
+
+				document.documentElement.classList.add(themeMode);
+			}
+  </script>
+  <!-- End of Theme Mode -->
+  <!-- Page -->
+  <!-- Main -->
+  <div class="flex grow" id="root">
+   <!-- Wrapper -->
+   <div class="flex grow" data-sidebar-open="true" data-slot="layout-wrapper" style="--sidebar-width: 80px; --header-height: 80px; --header-height-mobile: 60px;">
+    <header class="flex items-stretch fixed z-10 top-0 start-0 end-0 shrink-0 bg-background/95 border-b border-border backdrop-blur-sm supports-backdrop-filter:bg-background/60 h-(--header-height-mobile) lg:h-(--header-height) pe-[var(--removed-body-scroll-bar-size,0px)] px-6.5">
+     <div class="@container grow pe-6 flex items-stretch justify-between gap-2.5">
+      <div class="flex items-stretch">
+       <div class="flex items-center gap-5 lg:gap-2.5">
+        <div class="flex items-center justify-between w-full">
+         <a class="flex items-center gap-2 -ms-2.5 lg:ms-0" data-discover="true" href="#">
+          <img alt="image" class="dark:hidden shrink-0 size-7.5" src="assets/media/app/logo-32.svg"/>
+          <img alt="image" class="hidden dark:inline-block shrink-0 size-7.5" src="assets/media/app/mini-logo-gray-dark.svg"/>
+          <span class="text-mono text-xl font-medium hidden lg:block">
+           Metronic
+          </span>
+         </a>
+        </div>
+        <button aria-expanded="false" aria-haspopup="menu" class="cursor-pointer group focus-visible:outline-hidden inline-flex items-center justify-center has-data-[arrow=true]:justify-between whitespace-nowrap font-medium ring-offset-background transition-[color,box-shadow] disabled:pointer-events-none disabled:opacity-60 [&_svg]:shrink-0 bg-background text-accent-foreground border border-input hover:bg-accent data-[state=open]:bg-accent h-8.5 rounded-md gap-1.5 text-[0.8125rem] leading-(--text-sm--line-height) [&_svg:not([class*=size-])]:size-4 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 [&_svg:not([role=img]):not([class*=text-]):not([class*=opacity-])]:opacity-60 shadow-xs shadow-black/5 select-none px-4" data-slot="dropdown-menu-trigger" data-state="closed" id="radix-«r0»" type="button">
+         <img alt="image" src="assets/media/app/item.png"/>
+         Store Admin
+         <i class="ki-filled ki-chevrons-up-down">
+         </i>
+        </button>
+       </div>
+      </div>
+      <nav class="flex items-center gap-2.5">
+       <div class="kt-input hidden lg:flex w-72">
+        <i class="ki-filled ki-magnifier">
+        </i>
+        <input class="kt-input w-full" placeholder="Search" type="text"/>
+       </div>
+       <button class="cursor-pointer group focus-visible:outline-hidden inline-flex items-center justify-center has-data-[arrow=true]:justify-between whitespace-nowrap font-medium ring-offset-background transition-[color,box-shadow] disabled:pointer-events-none disabled:opacity-60 [&_svg]:shrink-0 text-accent-foreground hover:bg-accent hover:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground h-8.5 rounded-md px-3 gap-1.5 text-[0.8125rem] leading-(--text-sm--line-height) [&_svg:not([class*=size-])]:size-4 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 [&_svg:not([role=img]):not([class*=text-]):not([class*=opacity-])]:opacity-60">
+        <i class="ki-filled ki-plus">
+        </i>
+        Create
+       </button>
+       <div class="flex items-center gap-1">
+        <button class="kt-btn kt-btn-ghost">
+         <i class="ki-filled ki-message-text">
+         </i>
+        </button>
+        <button class="kt-btn kt-btn-ghost">
+         <i class="ki-filled ki-notification-status">
+         </i>
+        </button>
+        <button class="kt-btn kt-btn-ghost">
+         <i class="ki-filled ki-setting">
+         </i>
+        </button>
+       </div>
+       <button aria-expanded="false" aria-haspopup="menu" class="cursor-pointer" data-slot="dropdown-menu-trigger" data-state="closed" id="radix-«r2»" type="button">
+        <span class="kt-avatar size-7" data-slot="avatar">
+         <div class="kt-avatar-image">
+          <img alt="avatar" src="assets/media/avatars/300-2.png">
+          </img>
+         </div>
+         <div class="kt-avatar-indicator -end-1.5 -top-1.5">
+          <div class="kt-avatar-status kt-avatar-status-online size-2.5">
+          </div>
+         </div>
+        </span>
+       </button>
+      </nav>
+     </div>
+    </header>
+    <div class="flex grow pt-(--header-height-mobile) lg:pt-(--header-height)">
+     <div class="fixed z-20 top-(--header-height) start-0 end-0 flex bottom-0 flex-col items-center justify-center shrink-0 py-2.5 gap-5 w-16 lg:w-(--sidebar-width) border-e border-input bg-background">
+      <div class="grow w-full h-[calc(100vh-10rem)] lg:h-[calc(100vh-5.5rem)]">
+       <div class="h-full w-full rounded-[inherit]">
+        <div class="grow gap-1 shrink-0 flex items-center flex-col">
+         <a class="kt-btn kt-btn-icon kt-btn-ghost kt-btn-lg" href="#">
+          <i class="ki-filled ki-profile-circle text-xl">
+          </i>
+         </a>
+         <a class="kt-btn kt-btn-icon kt-btn-ghost kt-btn-lg active" href="#">
+          <i class="ki-filled ki-bar-chart text-xl">
+          </i>
+         </a>
+         <a class="kt-btn kt-btn-icon kt-btn-ghost kt-btn-lg" href="#">
+          <i class="ki-filled ki-setting text-xl">
+          </i>
+         </a>
+         <a class="kt-btn kt-btn-icon kt-btn-ghost kt-btn-lg" href="#">
+          <i class="ki-filled ki-security-user text-xl">
+          </i>
+         </a>
+         <a class="kt-btn kt-btn-icon kt-btn-ghost kt-btn-lg" href="#">
+          <i class="ki-filled ki-code text-xl">
+          </i>
+         </a>
+         <a class="kt-btn kt-btn-icon kt-btn-ghost kt-btn-lg" href="#">
+          <i class="ki-filled ki-folder text-xl">
+          </i>
+         </a>
+         <a class="kt-btn kt-btn-icon kt-btn-ghost kt-btn-lg" href="#">
+          <i class="ki-filled ki-scroll text-xl">
+          </i>
+         </a>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="flex flex-col grow lg:ps-(--sidebar-width) lg:[&_.container-fluid]:px-7.5">
+      <main class="grow pb-2.5" role="content">
+       <div class="container-fluid">
+        <div class="py-2.5 lg:py-7.5 flex flex-wrap items-center justify-between gap-2.5 shrink-0">
+         <div class="flex flex-col items-start gap-0.5">
+          <h1 class="text-base font-semibold">
+           Updates
+          </h1>
+          <nav aria-label="breadcrumb" data-slot="breadcrumb">
+           <ol class="kt-breadcrumb">
+            <li class="kt-breadcrumb-item">
+             <a class="kt-breadcrumb-link" href="#">
+              Home
+             </a>
+            </li>
+            <li class="kt-breadcrumb-separator">
+             /
+            </li>
+            <li class="kt-breadcrumb-item">
+             <span class="kt-breadcrumb-page">
+              Account
+             </span>
+            </li>
+            <li class="kt-breadcrumb-separator">
+             /
+            </li>
+            <li class="kt-breadcrumb-item">
+             <span class="kt-breadcrumb-page">
+              Updates
+             </span>
+            </li>
+           </ol>
+          </nav>
+         </div>
+         <div class="flex items-center gap-2.5">
+          <button class="kt-btn kt-btn-outline">
+           <i class="ki-filled ki-coffee">
+           </i>
+          </button>
+          <button class="kt-btn kt-btn-outline">
+           <i class="ki-filled ki-code">
+           </i>
+          </button>
+          <button class="kt-btn kt-btn-outline">
+           <i class="ki-filled ki-pin">
+           </i>
+          </button>
+          <button class="kt-btn kt-btn-outline">
+           <i class="ki-filled ki-notebook-text">
+           </i>
+           Reports
+          </button>
+          <button class="kt-btn kt-btn-primary">
+           <i class="ki-filled ki-plus">
+           </i>
+           Add
+          </button>
+         </div>
+        </div>
+        <div class="animate-pulse bg-accent rounded-lg grow h-screen" data-slot="skeleton">
+        </div>
+       </div>
+      </main>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!-- End of Main -->
+  <!-- End of Page -->
+  <!-- Scripts -->
+  <script src="assets/js/core.bundle.js">
+  </script>
+  <script src="assets/vendors/ktui/ktui.min.js">
+  </script>
+  <script src="assets/vendors/apexcharts/apexcharts.min.js">
+  </script>
+  <script src="assets/js/widgets/general.js">
+  </script>
+  <!-- End of Scripts -->
+ </body>
+</html>

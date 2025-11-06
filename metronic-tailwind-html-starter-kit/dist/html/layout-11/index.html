@@ -1,0 +1,511 @@
+<!--
+Product: Metronic is a toolkit of UI components built with Tailwind CSS for developing scalable web applications quickly and efficiently
+Version: v9.3.4
+Author: Keenthemes
+Contact: support@keenthemes.com
+Website: https://www.keenthemes.com
+Support: https://devs.keenthemes.com
+Follow: https://www.twitter.com/keenthemes
+License: https://keenthemes.com/metronic/tailwind/docs/getting-started/license
+-->
+<!DOCTYPE html>
+<html class="h-full" data-kt-theme="true" data-kt-theme-mode="light" dir="ltr" lang="en">
+ <head><base href="../../">
+  <title>
+   Metronic - Tailwind CSS
+  </title>
+  <meta charset="utf-8"/>
+  <meta content="follow, index" name="robots"/>
+  <link href="https://127.0.0.1:8001/metronic-html-starter-kit/layout-11/index" rel="canonical"/>
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+  <meta content="" name="description"/>
+  <meta content="@keenthemes" name="twitter:site"/>
+  <meta content="@keenthemes" name="twitter:creator"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="Metronic - Tailwind CSS " name="twitter:title"/>
+  <meta content="" name="twitter:description"/>
+  <meta content="assets/media/app/og-image.png" name="twitter:image"/>
+  <meta content="https://127.0.0.1:8001/metronic-html-starter-kit/layout-11/index" property="og:url"/>
+  <meta content="en_US" property="og:locale"/>
+  <meta content="website" property="og:type"/>
+  <meta content="@keenthemes" property="og:site_name"/>
+  <meta content="Metronic - Tailwind CSS " property="og:title"/>
+  <meta content="" property="og:description"/>
+  <meta content="assets/media/app/og-image.png" property="og:image"/>
+  <link href="assets/media/app/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+  <link href="assets/media/app/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+  <link href="assets/media/app/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+  <link href="assets/media/app/favicon.ico" rel="shortcut icon"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="assets/vendors/apexcharts/apexcharts.css" rel="stylesheet"/>
+  <link href="assets/vendors/keenicons/styles.bundle.css" rel="stylesheet"/>
+  <link href="assets/css/styles.css" rel="stylesheet"/>
+ </head>
+ <body class="antialiased flex h-full text-base text-foreground bg-background [--header-height:54px] [--header-height-mobile:54px] [--sidebar-width:240px] bg-muted overflow-hidden h-full">
+  <!-- Theme Mode -->
+  <script>
+   const defaultThemeMode = 'light'; // light|dark|system
+			let themeMode;
+
+			if (document.documentElement) {
+				if (localStorage.getItem('kt-theme')) {
+					themeMode = localStorage.getItem('kt-theme');
+				} else if (
+					document.documentElement.hasAttribute('data-kt-theme-mode')
+				) {
+					themeMode =
+						document.documentElement.getAttribute('data-kt-theme-mode');
+				} else {
+					themeMode = defaultThemeMode;
+				}
+
+				if (themeMode === 'system') {
+					themeMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+						? 'dark'
+						: 'light';
+				}
+
+				document.documentElement.classList.add(themeMode);
+			}
+  </script>
+  <!-- End of Theme Mode -->
+  <!-- Page -->
+  <!-- Main -->
+  <div class="flex grow" id="root">
+   <!-- Wrapper -->
+   <div class="flex grow" style="--sidebar-width: 240px; --sidebar-width-mobile: 240px; --header-height: 54px; --header-height-mobile: 54px">
+    <!-- Header -->
+    <header class="flex items-stretch fixed z-10 top-0 start-0 end-0 shrink-0 bg-muted lg:bg-transparent h-(--header-height-mobile) lg:h-(--header-height) pe-[var(--removed-body-scroll-bar-size,0px)]">
+     <div class="@container grow px-4 lg:px-7.5 flex items-stretch justify-between gap-2.5">
+      <div class="flex items-stretch">
+       <!-- Mobile Logo -->
+       <div class="flex gap-2.5 lg:hidden items-center -ms-1">
+        <div class="flex items-center">
+         <button class="kt-btn kt-btn-icon kt-btn-ghost" data-kt-drawer-toggle="#sidebar">
+          <i class="ki-filled ki-menu">
+          </i>
+         </button>
+        </div>
+        <a class="shrink-0" href="#">
+         <img alt="image" class="dark:hidden max-h-[25px] w-full" src="assets/media/app/mini-logo-gray.svg"/>
+         <img alt="image" class="hidden dark:inline-block max-h-[25px] w-full" src="assets/media/app/mini-logo-gray-dark.svg"/>
+        </a>
+       </div>
+       <!-- End of Mobile Logo -->
+       <!-- Logo -->
+       <div class="flex items-center gap-2 hidden lg:flex">
+        <a href="#">
+         <img alt="image" class="dark:hidden size-6" src="assets/media/app/mini-logo-gray.svg"/>
+         <img alt="image" class="hidden dark:inline-block size-6" src="assets/media/app/mini-logo-gray-dark.svg"/>
+        </a>
+       </div>
+       <!-- End of Logo -->
+       <div class="hidden lg:flex" id="headerMenuWrapper">
+        <!-- Header Menu -->
+        <div class="flex items-stretch [--kt-reparent-target:#mainContentWrapper] lg:[--kt-reparent-target:#headerMenuWrapper] [--kt-reparent-mode:prepend]" data-kt-reparent="true">
+         <div class="h-7 mx-5 my-auto border-e border-border hidden lg:block">
+         </div>
+         <nav class="list-none flex items-stretch overflow-x-auto gap-7.5">
+          <li class="flex items-stretch">
+           <a class="inline-flex items-center border-b text-sm font-medium whitespace-nowrap hover:text-primary py-2.5 lg:py-0 text-primary border-primary border-primary text-primary text-sm font-medium text-primary" href="html/layout-11/index.html">
+            Dashboards
+           </a>
+          </li>
+          <li class="flex items-stretch">
+           <a class="inline-flex items-center border-b text-sm font-medium whitespace-nowrap hover:text-primary py-2.5 lg:py-0 text-primary border-primary border-transparent text-sm font-medium text-secondary-foreground hover:text-primary" href="#">
+            Public Profile
+           </a>
+          </li>
+          <li class="flex items-stretch">
+           <a class="inline-flex items-center border-b text-sm font-medium whitespace-nowrap hover:text-primary py-2.5 lg:py-0 text-primary border-primary border-transparent text-sm font-medium text-secondary-foreground hover:text-primary" href="#">
+            Account Settings
+           </a>
+          </li>
+          <li class="flex items-stretch">
+           <a class="inline-flex items-center border-b text-sm font-medium whitespace-nowrap hover:text-primary py-2.5 lg:py-0 text-primary border-primary border-transparent text-sm font-medium text-secondary-foreground hover:text-primary" href="#">
+            Network
+           </a>
+          </li>
+          <li class="flex items-stretch">
+           <a class="inline-flex items-center border-b text-sm font-medium whitespace-nowrap hover:text-primary py-2.5 lg:py-0 text-primary border-primary border-transparent text-sm font-medium text-secondary-foreground hover:text-primary" href="#">
+            Authentication
+           </a>
+          </li>
+         </nav>
+        </div>
+        <!-- End of Header Menu -->
+       </div>
+      </div>
+      <!-- Toolbar -->
+      <nav class="flex items-center gap-2.5">
+       <button class="kt-btn kt-btn-outline hover:bg-background hover:text-foreground">
+        <i class="ki-filled ki-users">
+        </i>
+        <span>
+         Add Team
+        </span>
+       </button>
+       <div class="flex items-center gap-1">
+        <button class="kt-btn kt-btn-ghost kt-btn-icon text-muted-foreground hover:text-foreground">
+         <i class="ki-filled ki-notification-status">
+         </i>
+        </button>
+        <button class="kt-btn kt-btn-ghost kt-btn-icon text-muted-foreground hover:text-foreground">
+         <i class="ki-filled ki-setting-2">
+         </i>
+        </button>
+       </div>
+       <!-- User Dropdown -->
+       <div data-kt-dropdown="true" data-kt-dropdown-offset="10px, 10px" data-kt-dropdown-offset-rtl="-20px, 10px" data-kt-dropdown-placement="bottom-end" data-kt-dropdown-placement-rtl="bottom-start" data-kt-dropdown-trigger="click">
+        <div class="cursor-pointer shrink-0" data-kt-dropdown-toggle="true">
+         <div class="relative">
+          <link as="image" href="assets/media/avatars/300-2.png" rel="preload"/>
+          <div class="kt-avatar size-7">
+           <div class="kt-avatar-image">
+            <img alt="avatar" src="assets/media/avatars/300-2.png"/>
+           </div>
+           <div class="kt-avatar-indicator -end-1.5 -top-1.5">
+            <div class="kt-avatar-status kt-avatar-status-online size-2.5">
+            </div>
+           </div>
+          </div>
+          <div class="absolute flex size-6 items-center justify-center -end-2 -top-2" data-slot="avatar-indicator">
+           <div class="flex items-center rounded-full border-2 border-background bg-green-600 size-2.5" data-slot="avatar-status">
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="kt-dropdown-menu w-[250px]" data-kt-dropdown-menu="true">
+         <div class="flex items-center justify-between px-2.5 py-1.5 gap-1.5">
+          <div class="flex items-center gap-2">
+           <link as="image" href="assets/media/avatars/300-2.png" rel="preload"/>
+           <div class="kt-avatar">
+            <div class="kt-avatar-image">
+             <img alt="avatar" src="assets/media/avatars/300-2.png"/>
+            </div>
+            <div class="kt-avatar-indicator -end-1.5 -top-1.5">
+             <div class="kt-avatar-status kt-avatar-status-online size-2.5">
+             </div>
+            </div>
+           </div>
+           <div class="flex flex-col gap-1.5">
+            <span class="text-sm text-foreground font-semibold leading-none">
+             Sean
+            </span>
+            <span class="text-xs text-secondary-foreground leading-none">
+             Online
+            </span>
+           </div>
+          </div>
+         </div>
+         <ul class="kt-dropdown-menu-sub">
+          <!-- Set Status -->
+          <li>
+           <a class="kt-dropdown-menu-link py-1 rounded-md border border-border hover:bg-muted" href="#">
+            <i class="ki-filled ki-user-edit">
+            </i>
+            Set status
+           </a>
+          </li>
+          <li>
+           <div class="kt-dropdown-menu-separator">
+           </div>
+          </li>
+          <!-- Mute Notifications Sub-menu -->
+          <li data-kt-dropdown="true" data-kt-dropdown-placement="right-start" data-kt-dropdown-trigger="hover">
+           <button class="kt-dropdown-menu-toggle" data-kt-dropdown-toggle="true">
+            <i class="ki-filled ki-notification-status">
+            </i>
+            Mute notifications
+            <span class="kt-dropdown-menu-indicator">
+             <i class="ki-filled ki-right text-xs">
+             </i>
+            </span>
+           </button>
+           <div class="kt-dropdown-menu w-[192px]" data-kt-dropdown-menu="true">
+            <ul class="kt-dropdown-menu-sub">
+             <li>
+              <a class="kt-dropdown-menu-link" href="#">
+               For 30 minutes
+              </a>
+             </li>
+             <li>
+              <a class="kt-dropdown-menu-link" href="#">
+               For 1 hour
+              </a>
+             </li>
+             <li>
+              <a class="kt-dropdown-menu-link" href="#">
+               For 4 hours
+              </a>
+             </li>
+             <li>
+              <a class="kt-dropdown-menu-link" href="#">
+               Until tomorrow
+              </a>
+             </li>
+             <li>
+              <a class="kt-dropdown-menu-link" href="#">
+               Until next week
+              </a>
+             </li>
+             <li>
+              <a class="kt-dropdown-menu-link" href="#">
+               Custom date and time
+              </a>
+             </li>
+            </ul>
+           </div>
+          </li>
+          <!-- Profile and Settings -->
+          <li>
+           <a class="kt-dropdown-menu-link" href="#">
+            <i class="ki-filled ki-user">
+            </i>
+            Profile
+           </a>
+          </li>
+          <li>
+           <a class="kt-dropdown-menu-link" href="#">
+            <i class="ki-filled ki-setting">
+            </i>
+            Settings
+           </a>
+          </li>
+          <li>
+           <a class="kt-dropdown-menu-link" href="#">
+            <i class="ki-filled ki-notification">
+            </i>
+            Notification settings
+           </a>
+          </li>
+          <li>
+           <div class="kt-dropdown-menu-separator">
+           </div>
+          </li>
+          <!-- Business-Focused Application Section -->
+          <li>
+           <a class="kt-dropdown-menu-link" href="#">
+            <i class="ki-filled ki-code">
+            </i>
+            Keyboard shortcuts
+           </a>
+          </li>
+          <li>
+           <a class="kt-dropdown-menu-link" href="#">
+            <i class="ki-filled ki-message-add">
+            </i>
+            Referrals
+            <span class="kt-badge kt-badge-sm kt-badge-info kt-badge-light ms-auto">
+             New
+            </span>
+           </a>
+          </li>
+          <li>
+           <a class="kt-dropdown-menu-link" href="#">
+            <i class="ki-filled ki-file-down">
+            </i>
+            Download apps
+            <i class="ki-filled ki-right text-xs ms-auto">
+            </i>
+           </a>
+          </li>
+          <li>
+           <a class="kt-dropdown-menu-link" href="#">
+            <i class="ki-filled ki-message-question">
+            </i>
+            Help
+            <i class="ki-filled ki-right text-xs ms-auto">
+            </i>
+           </a>
+          </li>
+          <li>
+           <div class="kt-dropdown-menu-separator">
+           </div>
+          </li>
+         </ul>
+         <div class="px-2.5 pt-1.5 mb-2.5 flex flex-col gap-3.5">
+          <div class="flex items-center gap-2 justify-between">
+           <span class="flex items-center gap-2">
+            <i class="ki-filled ki-moon text-base text-muted-foreground">
+            </i>
+            <span class="font-medium text-2sm">
+             Dark Mode
+            </span>
+           </span>
+           <input class="kt-switch" data-kt-theme-switch-state="dark" data-kt-theme-switch-toggle="true" name="check" type="checkbox" value="1"/>
+          </div>
+          <a class="kt-btn kt-btn-outline justify-center w-full" href="#">
+           Log out
+          </a>
+         </div>
+        </div>
+       </div>
+       <!-- End of User Dropdown -->
+      </nav>
+      <!-- End of Toolbar -->
+     </div>
+    </header>
+    <!-- End of Header -->
+    <div class="flex flex-col lg:flex-row grow pt-(--header-height)">
+     <div class="flex grow rounded-xl bg-background border border-input m-2.5 mt-0">
+      <!-- Sidebar -->
+      <div class="flex flex-col items-stretch shrink-0 w-(--sidebar-width) border-e border-border hidden lg:flex [--kt-drawer-enable:true] lg:[--kt-drawer-enable:false]" data-kt-drawer="true" data-kt-drawer-class="kt-drawer kt-drawer-start top-0 bottom-0" id="sidebar">
+       <!-- Search -->
+       <div class="p-5 border-b border-border shrink-0">
+        <div class="kt-input">
+         <i class="ki-filled ki-magnifier text-muted-foreground">
+         </i>
+         <input class="kt-input" placeholder="Search" type="text"/>
+        </div>
+       </div>
+       <!-- End of Search -->
+       <!-- Sidebar Menu -->
+       <div class="overflow-y-auto grow shrink-0 flex my-2.5 lg:my-7.5 px-2.5 me-0.5 pe-2 h-[calc(100vh-12rem)] lg:h-[calc(100vh-12rem)]">
+        <!-- Sidebar Menu -->
+        <div class="flex flex-col grow space-y-7.5">
+         <div>
+          <!-- Menu Group Label -->
+          <div class="px-2 pb-2 text-xs font-normal text-muted-foreground leading-none">
+           Configuration
+          </div>
+          <!-- Menu Items -->
+          <ul class="kt-accordion-menu gap-px" data-kt-accordion="true">
+           <li class="kt-accordion-menu-item" data-kt-accordion-item="true">
+            <a class="kt-accordion-menu-link kt-accordion-selected:bg-primary kt-accordion-selected:text-primary-foreground text-sm font-normal h-8.5 px-2.5" href="#">
+             <i class="ki-filled ki-setting-2 text-base text-muted-foreground kt-accordion-selected:text-primary-foreground">
+             </i>
+             API Setup
+            </a>
+           </li>
+           <li class="kt-accordion-menu-item selected" data-kt-accordion-item="true">
+            <a class="kt-accordion-menu-link kt-accordion-selected:bg-primary kt-accordion-selected:text-primary-foreground text-sm font-normal h-8.5 px-2.5" href="#">
+             <i class="ki-filled ki-users text-base text-muted-foreground kt-accordion-selected:text-primary-foreground">
+             </i>
+             Team Settings
+            </a>
+           </li>
+           <li class="kt-accordion-menu-item" data-kt-accordion-item="true">
+            <a class="kt-accordion-menu-link kt-accordion-selected:bg-primary kt-accordion-selected:text-primary-foreground text-sm font-normal h-8.5 px-2.5" href="#">
+             <i class="ki-filled ki-lock text-base text-muted-foreground kt-accordion-selected:text-primary-foreground">
+             </i>
+             Authentication
+            </a>
+           </li>
+           <li class="kt-accordion-menu-item" data-kt-accordion-item="true">
+            <a class="kt-accordion-menu-link kt-accordion-selected:bg-primary kt-accordion-selected:text-primary-foreground text-sm font-normal h-8.5 px-2.5" href="#">
+             <i class="ki-filled ki-setting-3 text-base text-muted-foreground kt-accordion-selected:text-primary-foreground">
+             </i>
+             Endpoints Configs
+            </a>
+           </li>
+           <li class="kt-accordion-menu-item" data-kt-accordion-item="true">
+            <a class="kt-accordion-menu-link kt-accordion-selected:bg-primary kt-accordion-selected:text-primary-foreground text-sm font-normal h-8.5 px-2.5" href="#">
+             <i class="ki-filled ki-chart-line text-base text-muted-foreground kt-accordion-selected:text-primary-foreground">
+             </i>
+             Rate Limiting
+            </a>
+           </li>
+          </ul>
+         </div>
+         <div>
+          <!-- Menu Group Label -->
+          <div class="px-2 pb-2 text-xs font-normal text-muted-foreground leading-none">
+           Security
+          </div>
+          <!-- Menu Items -->
+          <ul class="kt-accordion-menu gap-px" data-kt-accordion="true">
+           <li class="kt-accordion-menu-item" data-kt-accordion-item="true">
+            <a class="kt-accordion-menu-link kt-accordion-selected:bg-primary kt-accordion-selected:text-primary-foreground text-sm font-normal h-8.5 px-2.5" href="#">
+             <i class="ki-filled ki-shield text-base text-muted-foreground kt-accordion-selected:text-primary-foreground">
+             </i>
+             Data Encryption
+            </a>
+           </li>
+           <li class="kt-accordion-menu-item" data-kt-accordion-item="true">
+            <a class="kt-accordion-menu-link kt-accordion-selected:bg-primary kt-accordion-selected:text-primary-foreground text-sm font-normal h-8.5 px-2.5" href="#">
+             <i class="ki-filled ki-chart-line text-base text-muted-foreground kt-accordion-selected:text-primary-foreground">
+             </i>
+             Rate Limiting
+            </a>
+           </li>
+           <li class="kt-accordion-menu-item" data-kt-accordion-item="true">
+            <a class="kt-accordion-menu-link kt-accordion-selected:bg-primary kt-accordion-selected:text-primary-foreground text-sm font-normal h-8.5 px-2.5" href="#">
+             <i class="ki-filled ki-key text-base text-muted-foreground kt-accordion-selected:text-primary-foreground">
+             </i>
+             Access Control
+            </a>
+           </li>
+           <li class="kt-accordion-menu-item" data-kt-accordion-item="true">
+            <a class="kt-accordion-menu-link kt-accordion-selected:bg-primary kt-accordion-selected:text-primary-foreground text-sm font-normal h-8.5 px-2.5" href="#">
+             <i class="ki-filled ki-notification text-base text-muted-foreground kt-accordion-selected:text-primary-foreground">
+             </i>
+             Incident Response
+            </a>
+           </li>
+          </ul>
+         </div>
+         <div>
+          <!-- Menu Group Label -->
+          <div class="px-2 pb-2 text-xs font-normal text-muted-foreground leading-none">
+           Analytics
+          </div>
+          <!-- Menu Items -->
+          <ul class="kt-accordion-menu gap-px" data-kt-accordion="true">
+           <li class="kt-accordion-menu-item" data-kt-accordion-item="true">
+            <a class="kt-accordion-menu-link kt-accordion-selected:bg-primary kt-accordion-selected:text-primary-foreground text-sm font-normal h-8.5 px-2.5" href="#">
+             <i class="ki-filled ki-data text-base text-muted-foreground kt-accordion-selected:text-primary-foreground">
+             </i>
+             Fetching Data
+            </a>
+           </li>
+           <li class="kt-accordion-menu-item" data-kt-accordion-item="true">
+            <a class="kt-accordion-menu-link kt-accordion-selected:bg-primary kt-accordion-selected:text-primary-foreground text-sm font-normal h-8.5 px-2.5" href="#">
+             <i class="ki-filled ki-chart text-base text-muted-foreground kt-accordion-selected:text-primary-foreground">
+             </i>
+             Custom Reports
+            </a>
+           </li>
+           <li class="kt-accordion-menu-item" data-kt-accordion-item="true">
+            <a class="kt-accordion-menu-link kt-accordion-selected:bg-primary kt-accordion-selected:text-primary-foreground text-sm font-normal h-8.5 px-2.5" href="#">
+             <i class="ki-filled ki-chart-line text-base text-muted-foreground kt-accordion-selected:text-primary-foreground">
+             </i>
+             Real Time Analytics
+            </a>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <!-- End of Sidebar Menu -->
+       </div>
+       <!-- End of Sidebar Menu -->
+       <!-- Sidebar Footer -->
+       <div>
+       </div>
+       <!-- End of Sidebar Footer -->
+      </div>
+      <!-- End of Sidebar -->
+      <div class="grow overflow-y-auto p-5">
+       <main class="grow" id="mainContentWrapper" role="content">
+        <div class="animate-pulse bg-accent rounded-lg grow h-screen" data-slot="skeleton">
+        </div>
+       </main>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!-- End of Main -->
+  <!-- End of Page -->
+  <!-- Scripts -->
+  <script src="assets/js/core.bundle.js">
+  </script>
+  <script src="assets/vendors/ktui/ktui.min.js">
+  </script>
+  <script src="assets/vendors/apexcharts/apexcharts.min.js">
+  </script>
+  <script src="assets/js/widgets/general.js">
+  </script>
+  <!-- End of Scripts -->
+ </body>
+</html>

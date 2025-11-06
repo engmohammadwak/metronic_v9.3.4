@@ -1,0 +1,39 @@
+function Toolbar({ children }) {
+  return (
+    <div className="flex flex-col grow gap-5 mb-4 lg:mb-6">{children}</div>
+  );
+}
+
+function ToolbarActions({ children }) {
+  return <div className="flex items-center gap-2.5">{children}</div>;
+}
+
+function ToolbarHeading({ children }) {
+  return (
+    <div className="flex flex-col flex-wrap gap-2.5 lg:gap-4">{children}</div>
+  );
+}
+
+function ToolbarPageTitle({ children }) {
+  return (
+    <h1 className="text-xl font-medium leading-none text-foreground">
+      {children}
+    </h1>
+  );
+}
+
+function ToolbarWrapper({ children }) {
+  return (
+    <div className="flex items-center flex-wrap justify-between gap-2.5">
+      {children}
+    </div>
+  );
+}
+
+export {
+  Toolbar,
+  ToolbarActions,
+  ToolbarHeading,
+  ToolbarPageTitle,
+  ToolbarWrapper,
+};

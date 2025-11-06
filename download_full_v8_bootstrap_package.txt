@@ -1,0 +1,8 @@
+Due to the increasing package size, now reaching 10GB, the Metronic v8.x package has been separated.
+It is now available for download from:
+
+1. Download Metronic v8.x Bootstrap Full Package:
+https://drive.google.com/drive/folders/1r_Nl17lzbic8fds6LhI_bgyXN4vGtFMy?usp=drive_link
+
+2. Download Metronic v7.2.9 Bootstrap Full Package:
+https://drive.google.com/file/d/1M9aW1wjWBXpXZNI5fwz6ljihiTEI0Lk0/view?usp=drive_link

@@ -1,0 +1,4072 @@
+<!--
+Product: Metronic is a toolkit of UI components built with Tailwind CSS for developing scalable web applications quickly and efficiently
+Version: v9.3.4
+Author: Keenthemes
+Contact: support@keenthemes.com
+Website: https://www.keenthemes.com
+Support: https://devs.keenthemes.com
+Follow: https://www.twitter.com/keenthemes
+License: https://keenthemes.com/metronic/tailwind/docs/getting-started/license
+-->
+<!DOCTYPE html>
+<html class="h-full" data-kt-theme="true" data-kt-theme-mode="light" dir="ltr" lang="en">
+ <head><base href="../../../">
+  <title>
+   Metronic - Tailwind CSS Home
+  </title>
+  <meta charset="utf-8"/>
+  <meta content="follow, index" name="robots"/>
+  <link href="https://127.0.0.1:8001/metronic-tailwind-html/demo5/store-client/home" rel="canonical"/>
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+  <meta content="Home with store client management, powered by Tailwind CSS" name="description"/>
+  <meta content="@keenthemes" name="twitter:site"/>
+  <meta content="@keenthemes" name="twitter:creator"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="Metronic - Tailwind CSS Home" name="twitter:title"/>
+  <meta content="Home with store client management, powered by Tailwind CSS" name="twitter:description"/>
+  <meta content="assets/media/app/og-image.png" name="twitter:image"/>
+  <meta content="https://127.0.0.1:8001/metronic-tailwind-html/demo5/store-client/home" property="og:url"/>
+  <meta content="en_US" property="og:locale"/>
+  <meta content="website" property="og:type"/>
+  <meta content="@keenthemes" property="og:site_name"/>
+  <meta content="Metronic - Tailwind CSS Home" property="og:title"/>
+  <meta content="Home with store client management, powered by Tailwind CSS" property="og:description"/>
+  <meta content="assets/media/app/og-image.png" property="og:image"/>
+  <link href="assets/media/app/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+  <link href="assets/media/app/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+  <link href="assets/media/app/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+  <link href="assets/media/app/favicon.ico" rel="shortcut icon"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="assets/vendors/apexcharts/apexcharts.css" rel="stylesheet"/>
+  <link href="assets/vendors/keenicons/styles.bundle.css" rel="stylesheet"/>
+  <link href="assets/css/styles.css" rel="stylesheet"/>
+ </head>
+ <body class="antialiased flex h-full text-base text-foreground bg-background [--header-height:54px] [--sidebar-width:200px]">
+  <!-- Theme Mode -->
+  <script>
+   const defaultThemeMode = 'light'; // light|dark|system
+			let themeMode;
+
+			if (document.documentElement) {
+				if (localStorage.getItem('kt-theme')) {
+					themeMode = localStorage.getItem('kt-theme');
+				} else if (
+					document.documentElement.hasAttribute('data-kt-theme-mode')
+				) {
+					themeMode =
+						document.documentElement.getAttribute('data-kt-theme-mode');
+				} else {
+					themeMode = defaultThemeMode;
+				}
+
+				if (themeMode === 'system') {
+					themeMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+						? 'dark'
+						: 'light';
+				}
+
+				document.documentElement.classList.add(themeMode);
+			}
+  </script>
+  <!-- End of Theme Mode -->
+  <!-- Page -->
+  <!-- Main -->
+  <div class="flex grow flex-col in-data-kt-[sticky-header=on]:pt-(--header-height)">
+   <!-- Header -->
+   <header class="flex items-center transition-[height] shrink-0 bg-background h-(--header-height)" data-kt-sticky="true" data-kt-sticky-class="transition-[height] fixed z-10 top-0 left-0 right-0 shadow-xs backdrop-blur-md bg-white/70 dark:bg-background/70 border-b border-border" data-kt-sticky-name="header" data-kt-sticky-offset="100px" id="header">
+    <!-- Container -->
+    <div class="kt-container-fluid flex flex-wrap justify-between items-center lg:gap-4" id="header_container">
+     <!-- Logo -->
+     <div class="flex items-center gap-2 lg:gap-5">
+      <button class="kt-btn kt-btn-icon kt-btn-ghost -ms-2 lg:hidden" data-kt-drawer-toggle="#sidebar">
+       <i class="ki-filled ki-menu">
+       </i>
+      </button>
+      <a href="html/demo5.html">
+       <img class="dark:hidden min-h-[34px]" src="assets/media/app/mini-logo-circle.svg"/>
+       <img class="hidden dark:inline-block min-h-[34px]" src="assets/media/app/mini-logo-circle-dark.svg"/>
+      </a>
+      <!-- Navs -->
+      <div class="hidden lg:flex items-center">
+       <!-- Nav -->
+       <div class="kt-menu kt-menu-default" data-kt-menu="true">
+        <div class="kt-menu-item" data-kt-menu-item-offset="0,10px" data-kt-menu-item-placement="bottom-start" data-kt-menu-item-toggle="dropdown" data-kt-menu-item-trigger="hover">
+         <button class="kt-menu-toggle text-mono text-sm font-medium">
+          MetronicTeam
+          <span class="kt-menu-arrow">
+           <i class="ki-filled ki-down">
+           </i>
+          </span>
+         </button>
+         <div class="kt-menu-dropdown w-48 py-2">
+          <div class="kt-menu-item">
+           <a class="kt-menu-link" href="html/demo5/public-profile/profiles/default.html" tabindex="0">
+            <span class="kt-menu-icon">
+             <i class="ki-filled ki-profile-circle">
+             </i>
+            </span>
+            <span class="kt-menu-title">
+             MetronicTeam
+            </span>
+           </a>
+          </div>
+          <div class="kt-menu-item">
+           <a class="kt-menu-link" href="html/demo5.html" tabindex="0">
+            <span class="kt-menu-icon">
+             <i class="ki-filled ki-setting-2">
+             </i>
+            </span>
+            <span class="kt-menu-title">
+             KeenTeam
+            </span>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <!-- End of Nav -->
+       <span class="text-sm text-muted-foreground font-medium px-2.5 hidden md:inline">
+        /
+       </span>
+       <!-- Nav -->
+       <div class="kt-menu kt-menu-default" data-kt-menu="true">
+        <div class="kt-menu-item" data-kt-menu-item-offset="0, 10px" data-kt-menu-item-placement="bottom-start" data-kt-menu-item-toggle="dropdown" data-kt-menu-item-trigger="hover">
+         <button class="kt-menu-toggle text-secondary-foreground text-sm font-medium">
+          Fall 24 Campaign
+          <span class="kt-menu-arrow">
+           <i class="ki-filled ki-down">
+           </i>
+          </span>
+         </button>
+         <div class="kt-menu-dropdown w-48 py-2">
+          <div class="kt-menu-item">
+           <a class="kt-menu-link" href="" tabindex="0">
+            <span class="kt-menu-icon">
+             <i class="ki-filled ki-profile-circle">
+             </i>
+            </span>
+            <span class="kt-menu-title">
+             Fall ‘24 Campaign
+            </span>
+           </a>
+          </div>
+          <div class="kt-menu-item">
+           <a class="kt-menu-link" href="" tabindex="0">
+            <span class="kt-menu-icon">
+             <i class="ki-filled ki-setting-2">
+             </i>
+            </span>
+            <span class="kt-menu-title">
+             Fall Winter 2024
+            </span>
+           </a>
+          </div>
+          <div class="kt-menu-item">
+           <a class="kt-menu-link" href="" tabindex="0">
+            <span class="kt-menu-icon">
+             <i class="ki-filled ki-users">
+             </i>
+            </span>
+            <span class="kt-menu-title">
+             Barberry Autmn 24
+            </span>
+           </a>
+          </div>
+          <div class="kt-menu-item">
+           <a class="kt-menu-link" href="" tabindex="0">
+            <span class="kt-menu-icon">
+             <i class="ki-filled ki-security-user">
+             </i>
+            </span>
+            <span class="kt-menu-title">
+             PF24 Advertising
+            </span>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <!-- End of Nav -->
+       <span class="text-sm text-muted-foreground font-medium px-2.5">
+        /
+       </span>
+       <!-- Nav -->
+       <div class="kt-menu kt-menu-default" data-kt-menu="true">
+        <div class="kt-menu-item" data-kt-menu-item-offset="0, 10px" data-kt-menu-item-placement="bottom-start" data-kt-menu-item-toggle="dropdown" data-kt-menu-item-trigger="hover">
+         <button class="kt-menu-toggle text-secondary-foreground text-sm font-medium">
+          Staging
+          <span class="kt-menu-arrow">
+           <i class="ki-filled ki-down">
+           </i>
+          </span>
+         </button>
+         <div class="kt-menu-dropdown w-48 py-2">
+          <div class="kt-menu-item">
+           <a class="kt-menu-link" href="" tabindex="0">
+            <span class="kt-menu-icon">
+             <i class="ki-filled ki-profile-circle">
+             </i>
+            </span>
+            <span class="kt-menu-title">
+             Staging
+            </span>
+           </a>
+          </div>
+          <div class="kt-menu-item">
+           <a class="kt-menu-link" href="" tabindex="0">
+            <span class="kt-menu-icon">
+             <i class="ki-filled ki-setting-2">
+             </i>
+            </span>
+            <span class="kt-menu-title">
+             Account
+            </span>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <!-- End of Nav -->
+      </div>
+      <!-- End of Navs -->
+     </div>
+     <!-- End of Logo -->
+     <!-- Topbar -->
+     <div class="flex items-center gap-3">
+      <!-- User -->
+      <div class="shrink-0" data-kt-dropdown="true" data-kt-dropdown-offset="10px, 10px" data-kt-dropdown-offset-rtl="-20px, 10px" data-kt-dropdown-placement="bottom-end" data-kt-dropdown-placement-rtl="bottom-start" data-kt-dropdown-trigger="click">
+       <button class="kt-btn kt-btn-icon kt-btn-ghost size-9 relative rounded-full hover:bg-primary/10 [&.active]:bg-primary/10 hover:[&_i]:text-primary [&.active]:[&_i]:text-primary" data-kt-dropdown-toggle="true">
+        <i class="ki-filled ki-profile-circle text-xl">
+        </i>
+       </button>
+       <div class="kt-dropdown-menu w-[250px]" data-kt-dropdown-menu="true">
+        <div class="flex items-center justify-between px-2.5 py-1.5 gap-1.5">
+         <div class="flex items-center gap-2">
+          <img alt="" class="size-9 shrink-0 rounded-full border-2 border-green-500" src="assets/media/avatars/300-2.png"/>
+          <div class="flex flex-col gap-1.5">
+           <span class="text-sm text-foreground font-semibold leading-none">
+            Cody Fisher
+           </span>
+           <a class="text-xs text-secondary-foreground hover:text-primary font-medium leading-none" href="html/demo5/account/home/get-started.html">
+            c.fisher@gmail.com
+           </a>
+          </div>
+         </div>
+         <span class="kt-badge kt-badge-sm kt-badge-primary kt-badge-outline">
+          Pro
+         </span>
+        </div>
+        <ul class="kt-dropdown-menu-sub">
+         <li>
+          <div class="kt-dropdown-menu-separator">
+          </div>
+         </li>
+         <li>
+          <a class="kt-dropdown-menu-link" href="html/demo5/public-profile/profiles/default.html">
+           <i class="ki-filled ki-badge">
+           </i>
+           Public Profile
+          </a>
+         </li>
+         <li>
+          <a class="kt-dropdown-menu-link" href="html/demo5/account/home/user-profile.html">
+           <i class="ki-filled ki-profile-circle">
+           </i>
+           My Profile
+          </a>
+         </li>
+         <li data-kt-dropdown="true" data-kt-dropdown-placement="right-start" data-kt-dropdown-trigger="hover">
+          <button class="kt-dropdown-menu-toggle" data-kt-dropdown-toggle="true">
+           <i class="ki-filled ki-setting-2">
+           </i>
+           My Account
+           <span class="kt-dropdown-menu-indicator">
+            <i class="ki-filled ki-right text-xs">
+            </i>
+           </span>
+          </button>
+          <div class="kt-dropdown-menu w-[220px]" data-kt-dropdown-menu="true">
+           <ul class="kt-dropdown-menu-sub">
+            <li>
+             <a class="kt-dropdown-menu-link" href="html/demo5/account/home/get-started.html">
+              <i class="ki-filled ki-coffee">
+              </i>
+              Get Started
+             </a>
+            </li>
+            <li>
+             <a class="kt-dropdown-menu-link" href="html/demo5/account/home/user-profile.html">
+              <i class="ki-filled ki-some-files">
+              </i>
+              My Profile
+             </a>
+            </li>
+            <li>
+             <a class="kt-dropdown-menu-link" href="#">
+              <span class="flex items-center gap-2">
+               <i class="ki-filled ki-icon">
+               </i>
+               Billing
+              </span>
+              <span class="ms-auto inline-flex items-center" data-kt-tooltip="true" data-kt-tooltip-placement="top">
+               <i class="ki-filled ki-information-2 text-base text-muted-foreground">
+               </i>
+               <span class="kt-tooltip" data-kt-tooltip-content="true">
+                Payment and subscription info
+               </span>
+              </span>
+             </a>
+            </li>
+            <li>
+             <a class="kt-dropdown-menu-link" href="html/demo5/account/security/overview.html">
+              <i class="ki-filled ki-medal-star">
+              </i>
+              Security
+             </a>
+            </li>
+            <li>
+             <a class="kt-dropdown-menu-link" href="html/demo5/account/members/teams.html">
+              <i class="ki-filled ki-setting">
+              </i>
+              Members & Roles
+             </a>
+            </li>
+            <li>
+             <a class="kt-dropdown-menu-link" href="html/demo5/account/integrations.html">
+              <i class="ki-filled ki-switch">
+              </i>
+              Integrations
+             </a>
+            </li>
+            <li>
+             <div class="kt-dropdown-menu-separator">
+             </div>
+            </li>
+            <li>
+             <a class="kt-dropdown-menu-link" href="html/demo5/account/security/overview.html">
+              <span class="flex items-center gap-2">
+               <i class="ki-filled ki-shield-tick">
+               </i>
+               Notifications
+              </span>
+              <input checked="" class="ms-auto kt-switch" name="check" type="checkbox" value="1"/>
+             </a>
+            </li>
+           </ul>
+          </div>
+         </li>
+         <li>
+          <a class="kt-dropdown-menu-link" href="https://devs.keenthemes.com">
+           <i class="ki-filled ki-message-programming">
+           </i>
+           Dev Forum
+          </a>
+         </li>
+         <li data-kt-dropdown="true" data-kt-dropdown-placement="right-start" data-kt-dropdown-trigger="hover">
+          <button class="kt-dropdown-menu-toggle py-1" data-kt-dropdown-toggle="true">
+           <span class="flex items-center gap-2">
+            <i class="ki-filled ki-icon">
+            </i>
+            Language
+           </span>
+           <span class="ms-auto kt-badge kt-badge-stroke shrink-0">
+            English
+            <img alt="" class="inline-block size-3.5 rounded-full" src="assets/media/flags/united-states.svg"/>
+           </span>
+          </button>
+          <div class="kt-dropdown-menu w-[180px]" data-kt-dropdown-menu="true">
+           <ul class="kt-dropdown-menu-sub">
+            <li class="active">
+             <a class="kt-dropdown-menu-link" href="?dir=ltr">
+              <span class="flex items-center gap-2">
+               <img alt="" class="inline-block size-4 rounded-full" src="assets/media/flags/united-states.svg"/>
+               <span class="kt-menu-title">
+                English
+               </span>
+              </span>
+              <i class="ki-solid ki-check-circle ms-auto text-green-500 text-base">
+              </i>
+             </a>
+            </li>
+            <li class="">
+             <a class="kt-dropdown-menu-link" href="?dir=rtl">
+              <span class="flex items-center gap-2">
+               <img alt="" class="inline-block size-4 rounded-full" src="assets/media/flags/saudi-arabia.svg"/>
+               <span class="kt-menu-title">
+                Arabic(Saudi)
+               </span>
+              </span>
+             </a>
+            </li>
+            <li class="">
+             <a class="kt-dropdown-menu-link" href="?dir=ltr">
+              <span class="flex items-center gap-2">
+               <img alt="" class="inline-block size-4 rounded-full" src="assets/media/flags/spain.svg"/>
+               <span class="kt-menu-title">
+                Spanish
+               </span>
+              </span>
+             </a>
+            </li>
+            <li class="">
+             <a class="kt-dropdown-menu-link" href="?dir=ltr">
+              <span class="flex items-center gap-2">
+               <img alt="" class="inline-block size-4 rounded-full" src="assets/media/flags/germany.svg"/>
+               <span class="kt-menu-title">
+                German
+               </span>
+              </span>
+             </a>
+            </li>
+            <li class="">
+             <a class="kt-dropdown-menu-link" href="?dir=ltr">
+              <span class="flex items-center gap-2">
+               <img alt="" class="inline-block size-4 rounded-full" src="assets/media/flags/japan.svg"/>
+               <span class="kt-menu-title">
+                Japanese
+               </span>
+              </span>
+             </a>
+            </li>
+           </ul>
+          </div>
+         </li>
+         <li>
+          <div class="kt-dropdown-menu-separator">
+          </div>
+         </li>
+        </ul>
+        <div class="px-2.5 pt-1.5 mb-2.5 flex flex-col gap-3.5">
+         <div class="flex items-center gap-2 justify-between">
+          <span class="flex items-center gap-2">
+           <i class="ki-filled ki-moon text-base text-muted-foreground">
+           </i>
+           <span class="font-medium text-2sm">
+            Dark Mode
+           </span>
+          </span>
+          <input class="kt-switch" data-kt-theme-switch-state="dark" data-kt-theme-switch-toggle="true" name="check" type="checkbox" value="1"/>
+         </div>
+         <a class="kt-btn kt-btn-outline justify-center w-full" href="html/demo5/authentication/classic/sign-in.html">
+          Log out
+         </a>
+        </div>
+       </div>
+      </div>
+      <!-- End of User -->
+      <!--Wishlist-->
+      <button class="kt-btn kt-btn-icon kt-btn-ghost size-9 rounded-full hover:bg-primary/10 [&.active]:bg-primary/10 hover:[&_i]:text-primary [&.active]:[&_i]:text-primary" data-kt-drawer-toggle="#drawers_shop_wishlist">
+       <i class="ki-filled ki-heart text-xl">
+       </i>
+      </button>
+      <!--Product Wishlist-->
+      <div class="hidden kt-drawer kt-drawer-end card flex-col max-w-[90%] w-[600px] top-5 bottom-5 end-5 rounded-xl border border-border" data-kt-drawer="true" data-kt-drawer-container="body" id="drawers_shop_wishlist">
+       <div class="kt-card-header px-5">
+        <h3 class="kt-card-title">
+         Wishlist
+        </h3>
+        <button class="kt-btn kt-btn-sm kt-btn-icon kt-btn-ghost shrink-0" data-kt-drawer-dismiss="true">
+         <i class="ki-filled ki-cross text-base">
+         </i>
+        </button>
+       </div>
+       <div class="kt-card-content space-y-5 p-5 kt-scrollable-y-auto">
+        <div class="kt-card">
+         <div class="kt-card-content p-2 pe-5 flex sm:items-center justify-between gap-3.5">
+          <div class="kt-card flex items-center justify-center bg-accent/50 h-[70px] w-[90px] shrink-0 shadow-none">
+           <img alt="img" class="h-[70px]" src="assets/media/store/client/600x600/11.png"/>
+          </div>
+          <div class="flex flex-col gap-2 w-full">
+           <div class="flex items-center flex-wrap justify-between gap-2.5 -mt-1">
+            <a class="hover:text-primary text-sm font-medium text-mono leading-5.5" href="#">
+             Cloud Shift Lightweight Runner Pro Edition
+            </a>
+           </div>
+           <div class="flex items-center flex-wrap justify-between gap-3">
+            <div class="flex items-center flex-wrap gap-3">
+             <span class="kt-badge kt-badge-warning kt-badge-sm rounded-full gap-1">
+              <i class="ki-solid ki-star text-white -mt-0.5">
+              </i>
+              5.0
+             </span>
+             <span class="text-xs font-normal text-secondary-foreground">
+              Brand:
+              <span class="text-xs font-medium text-foreground">
+               Nike
+              </span>
+             </span>
+            </div>
+            <div class="flex items-center flex-wrap gap-2.5">
+             <span class="text-sm font-medium text-mono">
+              $120.00
+             </span>
+             <button class="kt-btn kt-btn-outline kt-btn-sm shrink-0">
+              <i class="ki-filled ki-handcart">
+              </i>
+              Add
+             </button>
+             <button class="kt-btn kt-btn-icon kt-btn-outline kt-btn-sm">
+              <i class="ki-filled ki-trash">
+              </i>
+             </button>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="kt-card">
+         <div class="kt-card-content p-2 pe-5 flex sm:items-center justify-between gap-3.5">
+          <div class="kt-card flex items-center justify-center bg-accent/50 h-[70px] w-[90px] shrink-0 shadow-none">
+           <img alt="img" class="h-[70px]" src="assets/media/store/client/600x600/12.png"/>
+          </div>
+          <div class="flex flex-col gap-2 w-full">
+           <div class="flex items-center flex-wrap justify-between gap-2.5 -mt-1">
+            <a class="hover:text-primary text-sm font-medium text-mono leading-5.5" href="#">
+             Titan Edge High Impact Stability Lightweight..
+            </a>
+           </div>
+           <div class="flex items-center flex-wrap justify-between gap-3">
+            <div class="flex items-center flex-wrap gap-3">
+             <span class="kt-badge kt-badge-warning kt-badge-sm rounded-full gap-1">
+              <i class="ki-solid ki-star text-white -mt-0.5">
+              </i>
+              3.9
+             </span>
+             <span class="text-xs font-normal text-secondary-foreground">
+              Brand:
+              <span class="text-xs font-medium text-foreground">
+               Puma
+              </span>
+             </span>
+            </div>
+            <div class="flex items-center flex-wrap gap-2.5">
+             <span class="text-sm font-medium text-mono">
+              $99.00
+             </span>
+             <button class="kt-btn kt-btn-outline kt-btn-sm shrink-0">
+              <i class="ki-filled ki-handcart">
+              </i>
+              Add
+             </button>
+             <button class="kt-btn kt-btn-icon kt-btn-outline kt-btn-sm">
+              <i class="ki-filled ki-trash">
+              </i>
+             </button>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="kt-card">
+         <div class="kt-card-content p-2 pe-5 flex sm:items-center justify-between gap-3.5">
+          <div class="kt-card flex items-center justify-center bg-accent/50 h-[70px] w-[90px] shrink-0 shadow-none">
+           <img alt="img" class="h-[70px]" src="assets/media/store/client/600x600/13.png"/>
+          </div>
+          <div class="flex flex-col gap-2 w-full">
+           <div class="flex items-center flex-wrap justify-between gap-2.5 -mt-1">
+            <a class="hover:text-primary text-sm font-medium text-mono leading-5.5" href="#">
+             Wave Strike Dynamic Boost Sneaker
+            </a>
+            <span class="kt-badge kt-badge-destructive kt-badge-sm uppercase shrink-0">
+             save 25%
+            </span>
+           </div>
+           <div class="flex items-center flex-wrap justify-between gap-3">
+            <div class="flex items-center flex-wrap gap-3">
+             <span class="kt-badge kt-badge-warning kt-badge-sm rounded-full gap-1">
+              <i class="ki-solid ki-star text-white -mt-0.5">
+              </i>
+              4.6
+             </span>
+             <span class="text-xs font-normal text-secondary-foreground">
+              Brand:
+              <span class="text-xs font-medium text-foreground">
+               Campers
+              </span>
+             </span>
+            </div>
+            <div class="flex items-center flex-wrap gap-2.5">
+             <span class="text-xs font-normal text-secondary-foreground line-through">
+              {item.label}
+             </span>
+             <span class="text-sm font-medium text-mono">
+              $144.00
+             </span>
+             <button class="kt-btn kt-btn-outline kt-btn-sm shrink-0">
+              <i class="ki-filled ki-handcart">
+              </i>
+              Add
+             </button>
+             <button class="kt-btn kt-btn-icon kt-btn-outline kt-btn-sm">
+              <i class="ki-filled ki-trash">
+              </i>
+             </button>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="kt-card">
+         <div class="kt-card-content p-2 pe-5 flex sm:items-center justify-between gap-3.5">
+          <div class="kt-card flex items-center justify-center bg-accent/50 h-[70px] w-[90px] shrink-0 shadow-none">
+           <img alt="img" class="h-[70px]" src="assets/media/store/client/600x600/15.png"/>
+          </div>
+          <div class="flex flex-col gap-2 w-full">
+           <div class="flex items-center flex-wrap justify-between gap-2.5 -mt-1">
+            <a class="hover:text-primary text-sm font-medium text-mono leading-5.5" href="#">
+             Cloud Shift Lightweight Runner Pro Edition
+            </a>
+           </div>
+           <div class="flex items-center flex-wrap justify-between gap-3">
+            <div class="flex items-center flex-wrap gap-3">
+             <span class="kt-badge kt-badge-warning kt-badge-sm rounded-full gap-1">
+              <i class="ki-solid ki-star text-white -mt-0.5">
+              </i>
+              4.2
+             </span>
+             <span class="text-xs font-normal text-secondary-foreground">
+              Brand:
+              <span class="text-xs font-medium text-foreground">
+               Puma
+              </span>
+             </span>
+            </div>
+            <div class="flex items-center flex-wrap gap-2.5">
+             <span class="text-xs font-normal text-secondary-foreground line-through">
+              {item.label}
+             </span>
+             <span class="text-sm font-medium text-mono">
+              $230.00
+             </span>
+             <button class="kt-btn kt-btn-outline kt-btn-sm shrink-0">
+              <i class="ki-filled ki-handcart">
+              </i>
+              Add
+             </button>
+             <button class="kt-btn kt-btn-icon kt-btn-outline kt-btn-sm">
+              <i class="ki-filled ki-trash">
+              </i>
+             </button>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="kt-card-footer px-5">
+        <button class="kt-btn kt-btn-outline grow">
+         Remove all
+        </button>
+       </div>
+      </div>
+      <!--End of Wishlist Drawer-->
+      <!--End of Wishlist-->
+      <!--Cart-->
+      <div class="flex items-center gap-2">
+       <button class="kt-btn kt-btn-icon kt-btn-ghost size-9 relative rounded-full hover:bg-primary/10 [&.active]:bg-primary/10 hover:[&_i]:text-primary [&.active]:[&_i]:text-primary" data-kt-drawer-toggle="#drawers_shop_cart">
+        <i class="ki-filled ki-handcart text-xl">
+        </i>
+        <span class="kt-badge kt-badge-xs kt-badge-success rounded-full absolute -end-1 -top-0.5">
+         7
+        </span>
+       </button>
+       <!--Cart Drawer-->
+       <div class="hidden kt-drawer kt-drawer-end card flex-col max-w-[90%] w-[600px] top-5 bottom-5 end-5 rounded-xl border border-border" data-kt-drawer="true" data-kt-drawer-container="body" id="drawers_shop_cart">
+        <div class="kt-card-header px-5">
+         <h3 class="kt-card-title">
+          Cart
+         </h3>
+         <button class="kt-btn kt-btn-sm kt-btn-icon kt-btn-ghost shrink-0" data-kt-drawer-dismiss="true">
+          <i class="ki-filled ki-cross text-base">
+          </i>
+         </button>
+        </div>
+        <div class="kt-card-content space-y-5 p-5 kt-scrollable-y-auto">
+         <div class="kt-card">
+          <div class="kt-card-content p-2 pe-5 flex items-center flex-wrap w-full justify-between gap-3.5">
+           <div class="flex md:items-center gap-4">
+            <div class="kt-card flex items-center justify-center bg-accent/50 h-[70px] w-[90px] shadow-none">
+             <img alt="img" class="h-[70px]" src="assets/media/store/client/600x600/11.png"/>
+            </div>
+            <div class="flex flex-col sm:justify-end gap-2.5 -mt-1">
+             <a class="hover:text-primary text-sm font-medium text-mono leading-5.5" href="#">
+              Cloud Shift Lightweight Runner Pro Edition
+             </a>
+             <div class="flex items-center gap-2">
+              <span class="text-xs font-normal text-secondary-foreground">
+               SKU:
+               <span class="text-xs font-medium text-foreground">
+                BT-A1-YLW-8
+               </span>
+              </span>
+             </div>
+            </div>
+           </div>
+           <div class="flex sm:justify-end flex-col gap-3">
+            <div class="flex items-center sm:justify-end gap-2">
+             <select class="kt-select kt-select-sm w-[60px] bg-background" data-kt-select="true" data-kt-select-dropdown-container="body" name="kt-select">
+              <option selected="" value="1">
+               1
+              </option>
+              <option value="2">
+               3
+              </option>
+              <option value="3">
+               6
+              </option>
+              <option value="4">
+               9
+              </option>
+             </select>
+             <button class="kt-btn kt-btn-icon kt-btn-outline kt-btn-sm">
+              <i class="ki-filled ki-trash">
+              </i>
+             </button>
+            </div>
+            <div class="flex items-center sm:justify-end gap-3">
+             <span class="text-sm font-semibold text-mono">
+              $120.00
+             </span>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="kt-card">
+          <div class="kt-card-content p-2 pe-5 flex items-center flex-wrap w-full justify-between gap-3.5">
+           <div class="flex md:items-center gap-4">
+            <div class="kt-card flex items-center justify-center bg-accent/50 h-[70px] w-[90px] shadow-none">
+             <img alt="img" class="h-[70px]" src="assets/media/store/client/600x600/12.png"/>
+            </div>
+            <div class="flex flex-col sm:justify-end gap-2.5 -mt-1">
+             <a class="hover:text-primary text-sm font-medium text-mono leading-5.5" href="#">
+              Titan Edge High Impact Stability Lightweight..
+             </a>
+             <div class="flex items-center gap-2">
+              <span class="text-xs font-normal text-secondary-foreground">
+               SKU:
+               <span class="text-xs font-medium text-foreground">
+                SNK-888-RED-42
+               </span>
+              </span>
+             </div>
+            </div>
+           </div>
+           <div class="flex sm:justify-end flex-col gap-3">
+            <div class="flex items-center sm:justify-end gap-2">
+             <select class="kt-select kt-select-sm w-[60px] bg-background" data-kt-select="true" data-kt-select-dropdown-container="body" name="kt-select">
+              <option selected="" value="1">
+               1
+              </option>
+              <option value="2">
+               3
+              </option>
+              <option value="3">
+               6
+              </option>
+              <option value="4">
+               9
+              </option>
+             </select>
+             <button class="kt-btn kt-btn-icon kt-btn-outline kt-btn-sm">
+              <i class="ki-filled ki-trash">
+              </i>
+             </button>
+            </div>
+            <div class="flex items-center sm:justify-end gap-3">
+             <span class="text-sm font-semibold text-mono">
+              $99.00
+             </span>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="kt-card">
+          <div class="kt-card-content p-2 pe-5 flex items-center flex-wrap w-full justify-between gap-3.5">
+           <div class="flex md:items-center gap-4">
+            <div class="kt-card flex items-center justify-center bg-accent/50 h-[70px] w-[90px] shadow-none">
+             <img alt="img" class="h-[70px]" src="assets/media/store/client/600x600/13.png"/>
+            </div>
+            <div class="flex flex-col sm:justify-end gap-2.5 -mt-1">
+             <a class="hover:text-primary text-sm font-medium text-mono leading-5.5" href="#">
+              Cloud Shift Lightweight Runner Pro Edition
+             </a>
+             <div class="flex items-center gap-2">
+              <span class="text-xs font-normal text-secondary-foreground">
+               SKU:
+               <span class="text-xs font-medium text-foreground">
+                SD-999-TAN-38
+               </span>
+              </span>
+             </div>
+            </div>
+           </div>
+           <div class="flex sm:justify-end flex-col gap-3">
+            <div class="flex items-center sm:justify-end gap-2">
+             <select class="kt-select kt-select-sm w-[60px] bg-background" data-kt-select="true" data-kt-select-dropdown-container="body" name="kt-select">
+              <option selected="" value="1">
+               1
+              </option>
+              <option value="2">
+               3
+              </option>
+              <option value="3">
+               6
+              </option>
+              <option value="4">
+               9
+              </option>
+             </select>
+             <button class="kt-btn kt-btn-icon kt-btn-outline kt-btn-sm">
+              <i class="ki-filled ki-trash">
+              </i>
+             </button>
+            </div>
+            <div class="flex items-center sm:justify-end gap-3">
+             <span class="text-sm font-semibold text-mono">
+              $120.00
+             </span>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="kt-card">
+          <div class="kt-card-content p-2 pe-5 flex items-center flex-wrap w-full justify-between gap-3.5">
+           <div class="flex md:items-center gap-4">
+            <div class="kt-card flex items-center justify-center bg-accent/50 h-[70px] w-[90px] shadow-none">
+             <img alt="img" class="h-[70px]" src="assets/media/store/client/600x600/15.png"/>
+            </div>
+            <div class="flex flex-col sm:justify-end gap-2.5 -mt-1">
+             <a class="hover:text-primary text-sm font-medium text-mono leading-5.5" href="#">
+              Wave Strike Dynamic Boost Sneaker
+             </a>
+             <div class="flex items-center gap-2">
+              <span class="text-xs font-normal text-secondary-foreground">
+               SKU:
+               <span class="text-xs font-medium text-foreground">
+                BT-444-BRN-7
+               </span>
+              </span>
+              <span class="kt-badge kt-badge-destructive kt-badge-sm uppercase">
+               save 25%
+              </span>
+             </div>
+            </div>
+           </div>
+           <div class="flex sm:justify-end flex-col gap-3">
+            <div class="flex items-center sm:justify-end gap-2">
+             <select class="kt-select kt-select-sm w-[60px] bg-background" data-kt-select="true" data-kt-select-dropdown-container="body" name="kt-select">
+              <option selected="" value="1">
+               1
+              </option>
+              <option value="2">
+               3
+              </option>
+              <option value="3">
+               6
+              </option>
+              <option value="4">
+               9
+              </option>
+             </select>
+             <button class="kt-btn kt-btn-icon kt-btn-outline kt-btn-sm">
+              <i class="ki-filled ki-trash">
+              </i>
+             </button>
+            </div>
+            <div class="flex items-center sm:justify-end gap-3">
+             <span class="text-sm font-normal text-secondary-foreground line-through">
+              $179.00
+             </span>
+             <span class="text-sm font-semibold text-mono">
+              $144.00
+             </span>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="flex items-center justify-end border-none rounded-md bg-accent/50 gap-5 py-2 px-3 !mt-[30px]">
+          <span class="text-sm font-medium text-mono">
+           Total
+          </span>
+          <span class="text-sm font-semibold text-mono">
+           $492.00
+          </span>
+         </div>
+        </div>
+        <div class="kt-card-footer p-5 flex gap-3">
+         <button class="kt-btn kt-btn-outline">
+          Clear Cart
+         </button>
+         <button class="kt-btn kt-btn-primary grow">
+          <i class="ki-filled ki-handcart">
+          </i>
+          Checkout
+         </button>
+        </div>
+       </div>
+       <!--End of Cart Drawer-->
+       <div class="flex flex-col">
+        <span class="text-xs font-medium text-secondary-foreground">
+         Total
+        </span>
+        <span class="text-xs font-medium text-mono">
+         $94.56
+        </span>
+       </div>
+      </div>
+      <!--End of Cart-->
+      <!--Product Details Drawer-->
+      <div class="hidden kt-drawer kt-drawer-end kt-card flex-col max-w-[90%] w-[520px] top-5 bottom-5 end-5 rounded-xl border border-border" data-kt-drawer="true" data-kt-drawer-container="body" id="drawers_shop_product_details">
+       <div class="kt-card-header px-5">
+        <h3 class="kt-card-title">
+         Product Details
+        </h3>
+        <button class="kt-btn kt-btn-sm kt-btn-icon kt-btn-ghost shrink-0" data-kt-drawer-dismiss="true">
+         <i class="ki-filled ki-cross text-base">
+         </i>
+        </button>
+       </div>
+       <div class="kt-card-content flex flex-col space-y-3 p-5 kt-scrollable-y-auto">
+        <div class="kt-card relative items-center justify-center bg-accent/50 mb-6.5 h-[280px] shadow-none">
+         <span class="kt-badge kt-badge-destructive kt-badge-sm absolute top-4 end-4 uppercase">
+          save 40%
+         </span>
+         <img alt="" class="size-80" src="assets/media/store/client/600x600/1.png"/>
+         <div class="kt-card absolute items-center justify-center bg-background w-[75px] h-[45px] overflow-hidden rounded-sm bottom-4 end-4">
+          <img alt="" class="dark:hidden" src="assets/media/brand-logos/nike-light.svg"/>
+          <img alt="" class="hidden dark:block" src="assets/media/brand-logos/nike-dark.svg"/>
+         </div>
+        </div>
+        <span class="text-base font-medium text-mono">
+         Cloud Shift Lightweight Runner Pro Edition
+        </span>
+        <span class="text-sm font-normal text-foreground block mb-7">
+         Lightweight and stylish, these sneakers offer all-day comfort with breathable mesh, 
+      cushioned soles, and a durable grip. Perfect for casual wear, workouts, 
+      or daily adventures. Available in multiple colors and sizes.
+        </span>
+        <div class="flex flex-col gap-2.5 lg:mb-11">
+         <div class="flex items-center gap-2.5">
+          <span class="text-xs font-normal text-foreground min-w-14 xl:min-w-24 shrink-0">
+           Avaibilaty
+          </span>
+          <div>
+           <span class="kt-badge kt-badge-success kt-badge-sm">
+            In Stock
+           </span>
+          </div>
+         </div>
+         <div class="flex items-center gap-2.5">
+          <span class="text-xs font-normal text-foreground min-w-14 xl:min-w-24 shrink-0">
+           SKU
+          </span>
+          <div>
+           <span class="text-xs font-medium text-foreground">
+            SH-001-BLK-42
+           </span>
+          </div>
+         </div>
+         <div class="flex items-center gap-2.5">
+          <span class="text-xs font-normal text-foreground min-w-14 xl:min-w-24 shrink-0">
+           Category
+          </span>
+          <div>
+           <span class="text-xs font-medium text-foreground">
+            Sneakers
+           </span>
+          </div>
+         </div>
+         <div class="flex items-center gap-2.5">
+          <span class="text-xs font-normal text-foreground min-w-14 xl:min-w-24 shrink-0">
+           Rating
+          </span>
+          <div>
+           <div class="kt-rating">
+            <div class="kt-rating-label checked">
+             <i class="kt-rating-on ki-solid ki-star text-base leading-none">
+             </i>
+             <i class="kt-rating-off ki-outline ki-star text-base leading-none">
+             </i>
+            </div>
+            <div class="kt-rating-label checked">
+             <i class="kt-rating-on ki-solid ki-star text-base leading-none">
+             </i>
+             <i class="kt-rating-off ki-outline ki-star text-base leading-none">
+             </i>
+            </div>
+            <div class="kt-rating-label checked">
+             <i class="kt-rating-on ki-solid ki-star text-base leading-none">
+             </i>
+             <i class="kt-rating-off ki-outline ki-star text-base leading-none">
+             </i>
+            </div>
+            <div class="kt-rating-label checked">
+             <i class="kt-rating-on ki-solid ki-star text-base leading-none">
+             </i>
+             <i class="kt-rating-off ki-outline ki-star text-base leading-none">
+             </i>
+            </div>
+            <div class="kt-rating-label checked">
+             <i class="kt-rating-on ki-solid ki-star text-base leading-none">
+             </i>
+             <i class="kt-rating-off ki-outline ki-star text-base leading-none">
+             </i>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="flex items-center gap-2.5">
+          <span class="text-xs font-normal text-foreground min-w-14 xl:min-w-24 shrink-0">
+           Mor Info
+          </span>
+          <div>
+           <span class="text-xs font-normal text-foreground">
+            10g powder, powder measure & water dispensing bottle (empty)
+           </span>
+          </div>
+         </div>
+        </div>
+        <div class="flex items-center justify-end gap-2">
+         <span class="text-base font-normal text-secondary-foreground line-through">
+          $140.00
+         </span>
+         <span class="text-lg font-medium text-mono">
+          $99.00
+         </span>
+        </div>
+       </div>
+       <div class="kt-card-footer px-5">
+        <button class="kt-btn kt-btn-primary grow">
+         <i class="ki-filled ki-handcart">
+         </i>
+         Add to Cart
+        </button>
+       </div>
+      </div>
+      <!--End of Product Details Drawer-->
+     </div>
+     <!-- End of Topbar -->
+    </div>
+    <!-- End of Container -->
+   </header>
+   <!-- End of Header -->
+   <!-- Navbar -->
+   <div class="bg-background border-y border-t border-border mb-5 lg:mb-10">
+    <!-- Container -->
+    <div class="kt-container-fluid flex flex-wrap justify-between items-center gap-2">
+     <div class="grid">
+      <div class="kt-scrollable-x-auto">
+       <div class="kt-menu gap-5 lg:gap-7.5" data-kt-menu="true">
+        <div class="kt-menu-item py-3.5 border-b border-transparent kt-menu-item-active:border-b-mono kt-menu-item-here:border-b-mono">
+         <a class="kt-menu-link gap-2.5" href="html/demo5.html">
+          <span class="kt-menu-title text-nowrap font-medium text-sm text-secondary-foreground kt-menu-item-active:text-mono kt-menu-item-active:font-medium kt-menu-link-hover:text-mono">
+           Dashboards
+          </span>
+         </a>
+        </div>
+        <div class="kt-menu-item py-3.5 border-b border-transparent kt-menu-item-active:border-b-mono kt-menu-item-here:border-b-mono">
+         <a class="kt-menu-link gap-2.5" href="html/demo5/public-profile/profiles/default.html">
+          <span class="kt-menu-title text-nowrap font-medium text-sm text-secondary-foreground kt-menu-item-active:text-mono kt-menu-item-active:font-medium kt-menu-link-hover:text-mono">
+           Public Profiles
+          </span>
+         </a>
+        </div>
+        <div class="kt-menu-item py-3.5 border-b border-transparent kt-menu-item-active:border-b-mono kt-menu-item-here:border-b-mono">
+         <a class="kt-menu-link gap-2.5" href="html/demo5/account/home/get-started.html">
+          <span class="kt-menu-title text-nowrap font-medium text-sm text-secondary-foreground kt-menu-item-active:text-mono kt-menu-item-active:font-medium kt-menu-link-hover:text-mono">
+           Account Settings
+          </span>
+         </a>
+        </div>
+        <div class="kt-menu-item py-3.5 border-b border-transparent kt-menu-item-active:border-b-mono kt-menu-item-here:border-b-mono">
+         <a class="kt-menu-link gap-2.5" href="html/demo5/network/get-started.html">
+          <span class="kt-menu-title text-nowrap font-medium text-sm text-secondary-foreground kt-menu-item-active:text-mono kt-menu-item-active:font-medium kt-menu-link-hover:text-mono">
+           Network
+          </span>
+         </a>
+        </div>
+        <div class="kt-menu-item py-3.5 border-b border-transparent kt-menu-item-active:border-b-mono kt-menu-item-here:border-b-mono">
+         <a class="kt-menu-link gap-2.5" href="html/demo5/authentication/get-started.html">
+          <span class="kt-menu-title text-nowrap font-medium text-sm text-secondary-foreground kt-menu-item-active:text-mono kt-menu-item-active:font-medium kt-menu-link-hover:text-mono">
+           Authentication
+          </span>
+         </a>
+        </div>
+        <div class="kt-menu-item py-3.5 border-b border-transparent kt-menu-item-active:border-b-mono kt-menu-item-here:border-b-mono active">
+         <a class="kt-menu-link gap-2.5" href="html/demo5/store-client/home.html">
+          <span class="kt-menu-title text-nowrap font-medium text-sm text-secondary-foreground kt-menu-item-active:text-mono kt-menu-item-active:font-medium kt-menu-link-hover:text-mono">
+           Store - Client
+          </span>
+         </a>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <!-- End of Container -->
+   </div>
+   <!-- End of Navbar -->
+   <!-- Wrapper Container -->
+   <div class="container-fixed w-full flex px-0 lg:ps-4">
+    <!-- Sidebar -->
+    <div class="w-(--sidebar-width) shrink-0 hidden lg:flex items-start [--kt-drawer-enable:true] lg:[--kt-drawer-enable:false]" data-kt-drawer="true" data-kt-drawer-class="kt-drawer kt-drawer-start flex top-0 bottom-0" id="sidebar">
+     <div class="w-(--sidebar-width) z-5 lg:top-[80px] top-0 bottom-0 lg:right-auto lg:start-auto shrink-0 py-3 lg:py-0 bg-background" data-kt-sticky="true" data-kt-sticky-class="fixed" data-kt-sticky-name="sidebar" data-kt-sticky-offset="150px">
+      <div class="kt-scrollable-y-auto" data-kt-scrollable="true" data-kt-scrollable-dependencies="#header" data-kt-scrollable-height="auto" data-kt-scrollable-offset="10px" id="sidebar_scrollable">
+       <!-- Sidebar Menu -->
+       <div class="kt-menu flex flex-col w-full px-2.5 gap-0.5" data-kt-menu="true" data-kt-menu-accordion-expand-all="false" id="sidebar_menu">
+        <div class="kt-menu-item active">
+         <a class="kt-menu-link py-1.5 ps-2.5 pe-2.5 rounded-md border border-transparent kt-menu-item-active:border-border kt-menu-item-active:bg-background kt-menu-link-hover:bg-background kt-menu-link-hover:border-border" href="html/demo5/store-client/home.html">
+          <span class="kt-menu-title text-sm text-foreground kt-menu-item-active:font-medium kt-menu-item-active:text-primary kt-menu-link-hover:text-primary">
+           Home
+          </span>
+         </a>
+        </div>
+        <div class="kt-menu-item">
+         <a class="kt-menu-link py-1.5 ps-2.5 pe-2.5 rounded-md border border-transparent kt-menu-item-active:border-border kt-menu-item-active:bg-background kt-menu-link-hover:bg-background kt-menu-link-hover:border-border" href="html/demo5/store-client/search-results-grid.html">
+          <span class="kt-menu-title text-sm text-foreground kt-menu-item-active:font-medium kt-menu-item-active:text-primary kt-menu-link-hover:text-primary">
+           Search Results - Grid
+          </span>
+         </a>
+        </div>
+        <div class="kt-menu-item">
+         <a class="kt-menu-link py-1.5 ps-2.5 pe-2.5 rounded-md border border-transparent kt-menu-item-active:border-border kt-menu-item-active:bg-background kt-menu-link-hover:bg-background kt-menu-link-hover:border-border" href="html/demo5/store-client/search-results-list.html">
+          <span class="kt-menu-title text-sm text-foreground kt-menu-item-active:font-medium kt-menu-item-active:text-primary kt-menu-link-hover:text-primary">
+           Search Results - List
+          </span>
+         </a>
+        </div>
+        <div class="kt-menu-item">
+         <a class="kt-menu-link py-1.5 ps-2.5 pe-2.5 rounded-md border border-transparent kt-menu-item-active:border-border kt-menu-item-active:bg-background kt-menu-link-hover:bg-background kt-menu-link-hover:border-border" href="html/demo5/store-client/product-details.html">
+          <span class="kt-menu-title text-sm text-foreground kt-menu-item-active:font-medium kt-menu-item-active:text-primary kt-menu-link-hover:text-primary">
+           Product Details
+          </span>
+         </a>
+        </div>
+        <div class="kt-menu-item">
+         <a class="kt-menu-link py-1.5 ps-2.5 pe-2.5 rounded-md border border-transparent kt-menu-item-active:border-border kt-menu-item-active:bg-background kt-menu-link-hover:bg-background kt-menu-link-hover:border-border" href="html/demo5/store-client/shopping-cart.html">
+          <span class="kt-menu-title text-sm text-foreground kt-menu-item-active:font-medium kt-menu-item-active:text-primary kt-menu-link-hover:text-primary">
+           Shopping Cart
+          </span>
+         </a>
+        </div>
+        <div class="kt-menu-item">
+         <a class="kt-menu-link py-1.5 ps-2.5 pe-2.5 rounded-md border border-transparent kt-menu-item-active:border-border kt-menu-item-active:bg-background kt-menu-link-hover:bg-background kt-menu-link-hover:border-border" href="html/demo5/store-client/wishlist.html">
+          <span class="kt-menu-title text-sm text-foreground kt-menu-item-active:font-medium kt-menu-item-active:text-primary kt-menu-link-hover:text-primary">
+           Wishlist
+          </span>
+         </a>
+        </div>
+        <div class="kt-menu-item" data-kt-menu-item-toggle="accordion" data-kt-menu-item-trigger="click">
+         <div class="kt-menu-link py-1.5 ps-2.5 pe-2.5 rounded-md border border-transparent">
+          <span class="kt-menu-title text-sm text-foreground kt-menu-item-here:text-mono kt-menu-item-show:text-mono kt-menu-link-hover:text-mono">
+           Checkout
+          </span>
+          <span class="kt-menu-arrow text-muted-foreground">
+           <span class="inline-flex kt-menu-item-show:hidden">
+            <i class="ki-filled ki-down text-xs">
+            </i>
+           </span>
+           <span class="hidden kt-menu-item-show:inline-flex">
+            <i class="ki-filled ki-up text-xs">
+            </i>
+           </span>
+          </span>
+         </div>
+         <div class="kt-menu-accordion gap-px">
+          <div class="kt-menu-item">
+           <a class="kt-menu-link py-1.5 ps-5 pe-2.5 rounded-md border border-transparent kt-menu-item-active:border-border kt-menu-item-active:bg-background kt-menu-link-hover:bg-background kt-menu-link-hover:border-border" href="html/demo5/store-client/checkout/order-summary.html">
+            <span class="kt-menu-title text-sm text-foreground kt-menu-item-active:font-medium kt-menu-item-active:text-primary kt-menu-link-hover:text-primary">
+             Order Summary
+            </span>
+           </a>
+          </div>
+          <div class="kt-menu-item">
+           <a class="kt-menu-link py-1.5 ps-5 pe-2.5 rounded-md border border-transparent kt-menu-item-active:border-border kt-menu-item-active:bg-background kt-menu-link-hover:bg-background kt-menu-link-hover:border-border" href="html/demo5/store-client/checkout/shipping-info.html">
+            <span class="kt-menu-title text-sm text-foreground kt-menu-item-active:font-medium kt-menu-item-active:text-primary kt-menu-link-hover:text-primary">
+             Shipping Info
+            </span>
+           </a>
+          </div>
+          <div class="kt-menu-item">
+           <a class="kt-menu-link py-1.5 ps-5 pe-2.5 rounded-md border border-transparent kt-menu-item-active:border-border kt-menu-item-active:bg-background kt-menu-link-hover:bg-background kt-menu-link-hover:border-border" href="html/demo5/store-client/checkout/payment-method.html">
+            <span class="kt-menu-title text-sm text-foreground kt-menu-item-active:font-medium kt-menu-item-active:text-primary kt-menu-link-hover:text-primary">
+             Payment Method
+            </span>
+           </a>
+          </div>
+          <div class="kt-menu-item">
+           <a class="kt-menu-link py-1.5 ps-5 pe-2.5 rounded-md border border-transparent kt-menu-item-active:border-border kt-menu-item-active:bg-background kt-menu-link-hover:bg-background kt-menu-link-hover:border-border" href="html/demo5/store-client/checkout/order-placed.html">
+            <span class="kt-menu-title text-sm text-foreground kt-menu-item-active:font-medium kt-menu-item-active:text-primary kt-menu-link-hover:text-primary">
+             Order Placed
+            </span>
+           </a>
+          </div>
+         </div>
+        </div>
+        <div class="kt-menu-item">
+         <a class="kt-menu-link py-1.5 ps-2.5 pe-2.5 rounded-md border border-transparent kt-menu-item-active:border-border kt-menu-item-active:bg-background kt-menu-link-hover:bg-background kt-menu-link-hover:border-border" href="html/demo5/store-client/my-orders.html">
+          <span class="kt-menu-title text-sm text-foreground kt-menu-item-active:font-medium kt-menu-item-active:text-primary kt-menu-link-hover:text-primary">
+           My Orders
+          </span>
+         </a>
+        </div>
+        <div class="kt-menu-item">
+         <a class="kt-menu-link py-1.5 ps-2.5 pe-2.5 rounded-md border border-transparent kt-menu-item-active:border-border kt-menu-item-active:bg-background kt-menu-link-hover:bg-background kt-menu-link-hover:border-border" href="html/demo5/store-client/order-receipt.html">
+          <span class="kt-menu-title text-sm text-foreground kt-menu-item-active:font-medium kt-menu-item-active:text-primary kt-menu-link-hover:text-primary">
+           Order Receipt
+          </span>
+         </a>
+        </div>
+       </div>
+       <!-- End of Sidebar Menu -->
+      </div>
+     </div>
+    </div>
+    <!-- End of Sidebar -->
+    <!-- Content -->
+    <main class="flex flex-col grow" id="content" role="content">
+     <!-- Toolbar -->
+     <div class="mb-5 lg:mb-7.5">
+      <!-- Container -->
+      <div class="kt-container-fluid flex items-center justify-between flex-wrap gap-5">
+       <div class="flex items-center flex-wrap gap-1 lg:gap-5">
+        <h1 class="font-medium text-lg text-mono">
+         Home
+        </h1>
+        <div class="flex items-center gap-1 text-sm font-normal">
+         <a class="text-secondary-foreground hover:text-primary" href="html/demo5.html">
+          Home
+         </a>
+         <span class="text-muted-foreground text-sm">
+          /
+         </span>
+         <span class="text-secondary-foreground">
+          Store - Client
+         </span>
+         <span class="text-muted-foreground text-sm">
+          /
+         </span>
+         <span class="text-mono">
+          Home
+         </span>
+        </div>
+       </div>
+       <div class="flex items-center gap-1">
+        <a class="kt-btn kt-btn-outline" href="html/demo5/public-profile/profiles/default.html">
+         View Profile
+        </a>
+       </div>
+      </div>
+      <!-- End of Container -->
+     </div>
+     <!-- End of Toolbar -->
+     <!-- Container -->
+     <div class="kt-container-fluid">
+      <!-- begin: Content -->
+      <div class="grid grid-cols-1 gap-6">
+       <!--Store Search-->
+       <div class="kt-card shadow-none relative h-[140px] bg-cover bg-no-repeat light:bg-accent/50 mb-3.5">
+        <div class="kt-input kt-input-lg absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-[420px] w-full z-1 shadow-[0px_3px_11px_0px_rgba(45,72,126,0.10)]">
+         <i class="ki-filled ki-magnifier text-muted-foreground">
+         </i>
+         <input placeholder="Search shop" type="text" value=""/>
+         <span class="kt-badge kt-badge-sm kt-badge-outline -me-1.5">
+          ⌘ K
+         </span>
+        </div>
+        <div class="absolute top-1/2 start-1/2 -translate-1/2 w-[90%] text-white dark:text-black/30">
+         <svg fill="none" viewbox="0 0 1140 140" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_34073_49244)">
+           <mask height="120" id="mask0_34073_49244" maskunits="userSpaceOnUse" style="mask-type:alpha" width="942" x="99" y="10">
+            <path d="M1039.76 70C1039.76 73.8626 1036.68 77.7768 1030.44 81.6678C1024.23 85.5392 1015.04 89.2917 1003.16 92.876C979.399 100.042 944.997 106.503 902.458 111.93C817.385 122.785 699.843 129.5 570 129.5C440.157 129.5 322.616 122.785 237.543 111.93C195.003 106.503 160.601 100.042 136.844 92.876C124.962 89.2917 115.773 85.5392 109.564 81.6678C103.323 77.7768 100.245 73.8626 100.245 70C100.245 66.1374 103.323 62.2232 109.564 58.3322C115.773 54.4608 124.962 50.7083 136.844 47.124C160.601 39.9576 195.003 33.4972 237.543 28.0696C322.616 17.2151 440.157 10.5 570 10.5C699.843 10.5 817.385 17.2151 902.458 28.0696C944.997 33.4972 979.399 39.9576 1003.16 47.124C1015.04 50.7083 1024.23 54.4608 1030.44 58.3322C1036.68 62.2232 1039.76 66.1374 1039.76 70Z" fill="#D9D9D9" stroke="#262D6B">
+            </path>
+           </mask>
+           <g mask="url(#mask0_34073_49244)">
+            <path d="M114 16.5H95V-2.5H114V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M133 16.5H114V-2.5H133V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M152 16.5H133V-2.5H152V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M171 16.5H152V-2.5H171V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M190 16.5H171V-2.5H190V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M209 16.5H190V-2.5H209V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M228 16.5H209V-2.5H228V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M247 16.5H228V-2.5H247V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M266 16.5H247V-2.5H266V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M285 16.5H266V-2.5H285V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M304 16.5H285V-2.5H304V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M323 16.5H304V-2.5H323V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M342 16.5H323V-2.5H342V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M361 16.5H342V-2.5H361V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M380 16.5H361V-2.5H380V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M399 16.5H380V-2.5H399V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M418 16.5H399V-2.5H418V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M437 16.5H418V-2.5H437V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M456 16.5H437V-2.5H456V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M475 16.5H456V-2.5H475V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M494 16.5H475V-2.5H494V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M513 16.5H494V-2.5H513V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M532 16.5H513V-2.5H532V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M551 16.5H532V-2.5H551V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M570 16.5H551V-2.5H570V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M589 16.5H570V-2.5H589V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M608 16.5H589V-2.5H608V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M627 16.5H608V-2.5H627V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M646 16.5H627V-2.5H646V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M665 16.5H646V-2.5H665V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M684 16.5H665V-2.5H684V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M703 16.5H684V-2.5H703V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M722 16.5H703V-2.5H722V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M741 16.5H722V-2.5H741V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M760 16.5H741V-2.5H760V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M779 16.5H760V-2.5H779V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M798 16.5H779V-2.5H798V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M817 16.5H798V-2.5H817V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M836 16.5H817V-2.5H836V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M855 16.5H836V-2.5H855V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M874 16.5H855V-2.5H874V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M893 16.5H874V-2.5H893V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M912 16.5H893V-2.5H912V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M931 16.5H912V-2.5H931V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M950 16.5H931V-2.5H950V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M969 16.5H950V-2.5H969V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M988 16.5H969V-2.5H988V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M1007 16.5H988V-2.5H1007V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M1026 16.5H1007V-2.5H1026V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M1045 16.5H1026V-2.5H1045V16.5Z" stroke="currentColor">
+            </path>
+            <path d="M114 35.5H95V16.5H114V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M133 35.5H114V16.5H133V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M152 35.5H133V16.5H152V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M171 35.5H152V16.5H171V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M190 35.5H171V16.5H190V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M209 35.5H190V16.5H209V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M228 35.5H209V16.5H228V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M247 35.5H228V16.5H247V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M266 35.5H247V16.5H266V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M285 35.5H266V16.5H285V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M304 35.5H285V16.5H304V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M323 35.5H304V16.5H323V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M342 35.5H323V16.5H342V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M361 35.5H342V16.5H361V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M380 35.5H361V16.5H380V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M399 35.5H380V16.5H399V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M418 35.5H399V16.5H418V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M437 35.5H418V16.5H437V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M456 35.5H437V16.5H456V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M475 35.5H456V16.5H475V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M494 35.5H475V16.5H494V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M513 35.5H494V16.5H513V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M532 35.5H513V16.5H532V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M551 35.5H532V16.5H551V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M570 35.5H551V16.5H570V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M589 35.5H570V16.5H589V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M608 35.5H589V16.5H608V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M627 35.5H608V16.5H627V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M646 35.5H627V16.5H646V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M665 35.5H646V16.5H665V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M684 35.5H665V16.5H684V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M703 35.5H684V16.5H703V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M722 35.5H703V16.5H722V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M741 35.5H722V16.5H741V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M760 35.5H741V16.5H760V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M779 35.5H760V16.5H779V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M798 35.5H779V16.5H798V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M817 35.5H798V16.5H817V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M836 35.5H817V16.5H836V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M855 35.5H836V16.5H855V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M874 35.5H855V16.5H874V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M893 35.5H874V16.5H893V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M912 35.5H893V16.5H912V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M931 35.5H912V16.5H931V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M950 35.5H931V16.5H950V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M969 35.5H950V16.5H969V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M988 35.5H969V16.5H988V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M1007 35.5H988V16.5H1007V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M1026 35.5H1007V16.5H1026V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M1045 35.5H1026V16.5H1045V35.5Z" stroke="currentColor">
+            </path>
+            <path d="M114 54.5H95V35.5H114V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M133 54.5H114V35.5H133V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M152 54.5H133V35.5H152V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M171 54.5H152V35.5H171V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M190 54.5H171V35.5H190V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M209 54.5H190V35.5H209V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M228 54.5H209V35.5H228V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M247 54.5H228V35.5H247V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M266 54.5H247V35.5H266V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M285 54.5H266V35.5H285V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M304 54.5H285V35.5H304V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M323 54.5H304V35.5H323V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M342 54.5H323V35.5H342V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M361 54.5H342V35.5H361V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M380 54.5H361V35.5H380V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M399 54.5H380V35.5H399V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M418 54.5H399V35.5H418V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M437 54.5H418V35.5H437V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M456 54.5H437V35.5H456V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M475 54.5H456V35.5H475V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M494 54.5H475V35.5H494V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M513 54.5H494V35.5H513V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M532 54.5H513V35.5H532V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M551 54.5H532V35.5H551V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M570 54.5H551V35.5H570V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M589 54.5H570V35.5H589V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M608 54.5H589V35.5H608V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M627 54.5H608V35.5H627V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M646 54.5H627V35.5H646V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M665 54.5H646V35.5H665V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M684 54.5H665V35.5H684V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M703 54.5H684V35.5H703V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M722 54.5H703V35.5H722V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M741 54.5H722V35.5H741V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M760 54.5H741V35.5H760V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M779 54.5H760V35.5H779V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M798 54.5H779V35.5H798V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M817 54.5H798V35.5H817V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M836 54.5H817V35.5H836V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M855 54.5H836V35.5H855V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M874 54.5H855V35.5H874V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M893 54.5H874V35.5H893V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M912 54.5H893V35.5H912V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M931 54.5H912V35.5H931V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M950 54.5H931V35.5H950V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M969 54.5H950V35.5H969V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M988 54.5H969V35.5H988V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M1007 54.5H988V35.5H1007V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M1026 54.5H1007V35.5H1026V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M1045 54.5H1026V35.5H1045V54.5Z" stroke="currentColor">
+            </path>
+            <path d="M114 73.5H95V54.5H114V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M133 73.5H114V54.5H133V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M152 73.5H133V54.5H152V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M171 73.5H152V54.5H171V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M190 73.5H171V54.5H190V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M209 73.5H190V54.5H209V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M228 73.5H209V54.5H228V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M247 73.5H228V54.5H247V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M266 73.5H247V54.5H266V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M285 73.5H266V54.5H285V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M304 73.5H285V54.5H304V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M323 73.5H304V54.5H323V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M342 73.5H323V54.5H342V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M361 73.5H342V54.5H361V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M380 73.5H361V54.5H380V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M399 73.5H380V54.5H399V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M418 73.5H399V54.5H418V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M437 73.5H418V54.5H437V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M456 73.5H437V54.5H456V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M475 73.5H456V54.5H475V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M494 73.5H475V54.5H494V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M513 73.5H494V54.5H513V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M532 73.5H513V54.5H532V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M551 73.5H532V54.5H551V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M570 73.5H551V54.5H570V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M589 73.5H570V54.5H589V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M608 73.5H589V54.5H608V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M627 73.5H608V54.5H627V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M646 73.5H627V54.5H646V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M665 73.5H646V54.5H665V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M684 73.5H665V54.5H684V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M703 73.5H684V54.5H703V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M722 73.5H703V54.5H722V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M741 73.5H722V54.5H741V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M760 73.5H741V54.5H760V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M779 73.5H760V54.5H779V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M798 73.5H779V54.5H798V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M817 73.5H798V54.5H817V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M836 73.5H817V54.5H836V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M855 73.5H836V54.5H855V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M874 73.5H855V54.5H874V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M893 73.5H874V54.5H893V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M912 73.5H893V54.5H912V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M931 73.5H912V54.5H931V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M950 73.5H931V54.5H950V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M969 73.5H950V54.5H969V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M988 73.5H969V54.5H988V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M1007 73.5H988V54.5H1007V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M1026 73.5H1007V54.5H1026V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M1045 73.5H1026V54.5H1045V73.5Z" stroke="currentColor">
+            </path>
+            <path d="M114 92.5H95V73.5H114V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M133 92.5H114V73.5H133V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M152 92.5H133V73.5H152V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M171 92.5H152V73.5H171V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M190 92.5H171V73.5H190V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M209 92.5H190V73.5H209V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M228 92.5H209V73.5H228V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M247 92.5H228V73.5H247V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M266 92.5H247V73.5H266V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M285 92.5H266V73.5H285V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M304 92.5H285V73.5H304V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M323 92.5H304V73.5H323V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M342 92.5H323V73.5H342V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M361 92.5H342V73.5H361V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M380 92.5H361V73.5H380V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M399 92.5H380V73.5H399V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M418 92.5H399V73.5H418V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M437 92.5H418V73.5H437V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M456 92.5H437V73.5H456V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M475 92.5H456V73.5H475V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M494 92.5H475V73.5H494V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M513 92.5H494V73.5H513V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M532 92.5H513V73.5H532V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M551 92.5H532V73.5H551V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M570 92.5H551V73.5H570V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M589 92.5H570V73.5H589V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M608 92.5H589V73.5H608V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M627 92.5H608V73.5H627V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M646 92.5H627V73.5H646V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M665 92.5H646V73.5H665V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M684 92.5H665V73.5H684V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M703 92.5H684V73.5H703V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M722 92.5H703V73.5H722V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M741 92.5H722V73.5H741V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M760 92.5H741V73.5H760V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M779 92.5H760V73.5H779V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M798 92.5H779V73.5H798V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M817 92.5H798V73.5H817V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M836 92.5H817V73.5H836V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M855 92.5H836V73.5H855V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M874 92.5H855V73.5H874V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M893 92.5H874V73.5H893V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M912 92.5H893V73.5H912V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M931 92.5H912V73.5H931V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M950 92.5H931V73.5H950V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M969 92.5H950V73.5H969V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M988 92.5H969V73.5H988V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M1007 92.5H988V73.5H1007V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M1026 92.5H1007V73.5H1026V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M1045 92.5H1026V73.5H1045V92.5Z" stroke="currentColor">
+            </path>
+            <path d="M114 111.5H95V92.5H114V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M133 111.5H114V92.5H133V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M152 111.5H133V92.5H152V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M171 111.5H152V92.5H171V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M190 111.5H171V92.5H190V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M209 111.5H190V92.5H209V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M228 111.5H209V92.5H228V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M247 111.5H228V92.5H247V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M266 111.5H247V92.5H266V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M285 111.5H266V92.5H285V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M304 111.5H285V92.5H304V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M323 111.5H304V92.5H323V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M342 111.5H323V92.5H342V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M361 111.5H342V92.5H361V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M380 111.5H361V92.5H380V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M399 111.5H380V92.5H399V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M418 111.5H399V92.5H418V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M437 111.5H418V92.5H437V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M456 111.5H437V92.5H456V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M475 111.5H456V92.5H475V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M494 111.5H475V92.5H494V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M513 111.5H494V92.5H513V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M532 111.5H513V92.5H532V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M551 111.5H532V92.5H551V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M570 111.5H551V92.5H570V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M589 111.5H570V92.5H589V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M608 111.5H589V92.5H608V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M627 111.5H608V92.5H627V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M646 111.5H627V92.5H646V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M665 111.5H646V92.5H665V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M684 111.5H665V92.5H684V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M703 111.5H684V92.5H703V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M722 111.5H703V92.5H722V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M741 111.5H722V92.5H741V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M760 111.5H741V92.5H760V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M779 111.5H760V92.5H779V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M798 111.5H779V92.5H798V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M817 111.5H798V92.5H817V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M836 111.5H817V92.5H836V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M855 111.5H836V92.5H855V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M874 111.5H855V92.5H874V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M893 111.5H874V92.5H893V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M912 111.5H893V92.5H912V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M931 111.5H912V92.5H931V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M950 111.5H931V92.5H950V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M969 111.5H950V92.5H969V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M988 111.5H969V92.5H988V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M1007 111.5H988V92.5H1007V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M1026 111.5H1007V92.5H1026V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M1045 111.5H1026V92.5H1045V111.5Z" stroke="currentColor">
+            </path>
+            <path d="M114 130.5H95V111.5H114V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M133 130.5H114V111.5H133V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M152 130.5H133V111.5H152V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M171 130.5H152V111.5H171V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M190 130.5H171V111.5H190V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M209 130.5H190V111.5H209V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M228 130.5H209V111.5H228V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M247 130.5H228V111.5H247V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M266 130.5H247V111.5H266V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M285 130.5H266V111.5H285V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M304 130.5H285V111.5H304V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M323 130.5H304V111.5H323V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M342 130.5H323V111.5H342V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M361 130.5H342V111.5H361V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M380 130.5H361V111.5H380V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M399 130.5H380V111.5H399V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M418 130.5H399V111.5H418V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M437 130.5H418V111.5H437V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M456 130.5H437V111.5H456V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M475 130.5H456V111.5H475V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M494 130.5H475V111.5H494V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M513 130.5H494V111.5H513V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M532 130.5H513V111.5H532V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M551 130.5H532V111.5H551V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M570 130.5H551V111.5H570V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M589 130.5H570V111.5H589V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M608 130.5H589V111.5H608V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M627 130.5H608V111.5H627V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M646 130.5H627V111.5H646V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M665 130.5H646V111.5H665V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M684 130.5H665V111.5H684V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M703 130.5H684V111.5H703V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M722 130.5H703V111.5H722V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M741 130.5H722V111.5H741V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M760 130.5H741V111.5H760V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M779 130.5H760V111.5H779V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M798 130.5H779V111.5H798V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M817 130.5H798V111.5H817V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M836 130.5H817V111.5H836V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M855 130.5H836V111.5H855V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M874 130.5H855V111.5H874V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M893 130.5H874V111.5H893V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M912 130.5H893V111.5H912V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M931 130.5H912V111.5H931V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M950 130.5H931V111.5H950V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M969 130.5H950V111.5H969V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M988 130.5H969V111.5H988V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M1007 130.5H988V111.5H1007V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M1026 130.5H1007V111.5H1026V130.5Z" stroke="currentColor">
+            </path>
+            <path d="M1045 130.5H1026V111.5H1045V130.5Z" stroke="currentColor">
+            </path>
+           </g>
+          </g>
+          <defs>
+           <clippath id="clip0_34073_49244">
+            <rect fill="currentColor" height="140" width="1140">
+            </rect>
+           </clippath>
+          </defs>
+         </svg>
+        </div>
+       </div>
+       <!--End of Store Search -->
+       <!-- begin: Featured products -->
+       <div class="grid sm:grid-cols-4 xl:grid-cols-7 gap-5 mb-2">
+        <div class="kt-card">
+         <div class="kt-card-content flex flex-col items-center justify-center pb-0">
+          <a class="hover:text-primary text-sm font-medium text-mono" data-kt-drawer-toggle="#drawers_shop_product_details" href="#">
+           Nike
+          </a>
+          <img alt="" class="cursor-pointer h-[100px] shrink-0" data-kt-drawer-toggle="#drawers_shop_product_details" src="assets/media/store/client/600x600/1.png"/>
+         </div>
+        </div>
+        <div class="kt-card">
+         <div class="kt-card-content flex flex-col items-center justify-center pb-0">
+          <a class="hover:text-primary text-sm font-medium text-mono" data-kt-drawer-toggle="#drawers_shop_product_details" href="#">
+           Adidas
+          </a>
+          <img alt="" class="cursor-pointer h-[100px] shrink-0" data-kt-drawer-toggle="#drawers_shop_product_details" src="assets/media/store/client/600x600/2.png"/>
+         </div>
+        </div>
+        <div class="kt-card">
+         <div class="kt-card-content flex flex-col items-center justify-center pb-0">
+          <a class="hover:text-primary text-sm font-medium text-mono" data-kt-drawer-toggle="#drawers_shop_product_details" href="#">
+           Puma
+          </a>
+          <img alt="" class="cursor-pointer h-[100px] shrink-0" data-kt-drawer-toggle="#drawers_shop_product_details" src="assets/media/store/client/600x600/3.png"/>
+         </div>
+        </div>
+        <div class="kt-card">
+         <div class="kt-card-content flex flex-col items-center justify-center pb-0">
+          <a class="hover:text-primary text-sm font-medium text-mono" data-kt-drawer-toggle="#drawers_shop_product_details" href="#">
+           New Balance
+          </a>
+          <img alt="" class="cursor-pointer h-[100px] shrink-0" data-kt-drawer-toggle="#drawers_shop_product_details" src="assets/media/store/client/600x600/4.png"/>
+         </div>
+        </div>
+        <div class="kt-card">
+         <div class="kt-card-content flex flex-col items-center justify-center pb-0">
+          <a class="hover:text-primary text-sm font-medium text-mono" data-kt-drawer-toggle="#drawers_shop_product_details" href="#">
+           Converse
+          </a>
+          <img alt="" class="cursor-pointer h-[100px] shrink-0" data-kt-drawer-toggle="#drawers_shop_product_details" src="assets/media/store/client/600x600/5.png"/>
+         </div>
+        </div>
+        <div class="kt-card">
+         <div class="kt-card-content flex flex-col items-center justify-center pb-0">
+          <a class="hover:text-primary text-sm font-medium text-mono" data-kt-drawer-toggle="#drawers_shop_product_details" href="#">
+           Reebok
+          </a>
+          <img alt="" class="cursor-pointer h-[100px] shrink-0" data-kt-drawer-toggle="#drawers_shop_product_details" src="assets/media/store/client/600x600/6.png"/>
+         </div>
+        </div>
+        <div class="kt-card">
+         <div class="kt-card-content flex flex-col items-center justify-center pb-0">
+          <a class="hover:text-primary text-sm font-medium text-mono" data-kt-drawer-toggle="#drawers_shop_product_details" href="#">
+           Sketchers
+          </a>
+          <img alt="" class="cursor-pointer h-[100px] shrink-0" data-kt-drawer-toggle="#drawers_shop_product_details" src="assets/media/store/client/600x600/7.png"/>
+         </div>
+        </div>
+       </div>
+       <!-- end: Featured products -->
+       <!-- begin: Special offers -->
+       <div class="space-y-5">
+        <div class="flex items-center justify-between gap-4">
+         <span class="text-lg font-medium text-mono">
+          Special Offers
+         </span>
+         <a class="kt-link" href="html/demo5/account/home/get-started.html">
+          See All
+          <i class="ki-filled ki-right text-xs">
+          </i>
+         </a>
+        </div>
+        <div class="grid xl:grid-cols-2 gap-5 mb-2">
+         <div class="lg:col-span-1">
+          <div class="kt-card h-full bg-violet-50 border-violet-200 dark:border-violet-950 dark:bg-violet-950/30">
+           <div class="kt-card-content flex items-center flex-wrap sm:flex-nowrap justify-between gap-5 lg:gap-9 lg:px-7.5 p-5">
+            <div class="flex flex-col">
+             <div class="mb-3">
+              <span class="kt-badge kt-badge-destructive kt-badge-sm uppercase">
+               save 25%
+              </span>
+             </div>
+             <h3 class="text-[26px] font-semibold text-mono mb-1">
+              Nike Air Max 270
+             </h3>
+             <span class="text-sm font-normal text-foreground mb-5 leading-5.5">
+              The Melodic Monster of Sonic Delights
+        and Harmonious Rhythms
+             </span>
+             <div class="flex items-center gap-4">
+              <button class="kt-btn kt-btn-mono kt-btn-sm" data-kt-drawer-toggle="#drawers_shop_product_details">
+               <i class="ki-filled ki-handcart">
+               </i>
+               Add to Card
+              </button>
+              <span class="text-base font-semibold text-mono">
+               $140.00
+              </span>
+             </div>
+            </div>
+            <img alt="" class="h-[250px]" src="assets/media/store/client/600x600/16.png"/>
+           </div>
+          </div>
+         </div>
+         <div class="lg:col-span-1">
+          <div class="grid sm:grid-cols-2 gap-5 items-stretch">
+           <div class="kt-card h-full bg-green-50 dark:bg-green-950/30 border-green-200 dark:border-green-950">
+            <div class="kt-card-content flex flex-col items-center justify-center px-5 pb-0">
+             <div class="mb-3.5">
+              <span class="kt-badge kt-badge-destructive kt-badge-sm uppercase">
+               save 25%
+              </span>
+             </div>
+             <span class="text-base font-medium text-mono mb-3">
+              Nike Dunk Low
+             </span>
+             <button class="kt-btn kt-btn-outline kt-btn-sm mb-2.5" data-kt-drawer-toggle="#drawers_shop_product_details">
+              <i class="ki-filled ki-handcart">
+              </i>
+              Add to Card
+             </button>
+             <span class="text-sm font-medium text-mono">
+              $110.00
+             </span>
+             <img alt="" class="size-48" src="assets/media/store/client/600x600/4.png"/>
+            </div>
+           </div>
+           <div class="kt-card h-full bg-primary/10 border-primary/10">
+            <div class="kt-card-content flex flex-col items-center justify-center px-5 pb-0">
+             <div class="mb-3.5">
+              <span class="kt-badge kt-badge-destructive kt-badge-sm uppercase">
+               save 25%
+              </span>
+             </div>
+             <span class="text-base font-medium text-mono mb-3">
+              Nike Air Force 1
+             </span>
+             <button class="kt-btn kt-btn-outline kt-btn-sm mb-2.5" data-kt-drawer-toggle="#drawers_shop_product_details">
+              <i class="ki-filled ki-handcart">
+              </i>
+              Add to Card
+             </button>
+             <span class="text-sm font-medium text-mono">
+              $96.99
+             </span>
+             <img alt="" class="size-48" src="assets/media/store/client/600x600/1.png"/>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <!-- end: Special offers -->
+       <!-- begin: New Arrivals -->
+       <div class="space-y-4">
+        <div class="flex items-center justify-between gap-4">
+         <span class="text-lg font-medium text-mono">
+          New Arrivals
+         </span>
+         <a class="kt-link" href="html/demo5/account/home/get-started.html">
+          See All
+          <i class="ki-filled ki-right text-xs">
+          </i>
+         </a>
+        </div>
+        <!-- begin: grid -->
+        <div class="grid sm:grid-cols-2 xl:grid-cols-4 gap-5 mb-2">
+         <div class="kt-card">
+          <div class="kt-card-content flex flex-col justify-between p-2.5 gap-4">
+           <div class="mb-2.5">
+            <div class="kt-card flex items-center justify-center relative bg-accent/50 w-full h-[180px] mb-4 shadow-none">
+             <img alt="" class="h-[180px] shrink-0 cursor-pointer" data-kt-drawer-toggle="#drawers_shop_product_details" src="assets/media/store/client/600x600/8.png"/>
+            </div>
+            <a class="hover:text-primary text-sm font-medium text-mono px-2.5 leading-5.5 block" data-kt-drawer-toggle="#drawers_shop_product_details" href="#">
+             Cloud Shift Lightweight Runner Pro Edition
+            </a>
+           </div>
+           <div class="flex items-center flex-wrap justify-between gap-5 px-2.5 pb-1">
+            <span class="kt-badge kt-badge-warning kt-badge-sm rounded-full gap-1">
+             <i class="ki-solid ki-star text-white -mt-0.5">
+             </i>
+             5.0
+            </span>
+            <div class="flex items-center flex-wrap gap-1.5">
+             <span class="text-xs font-normal text-secondary-foreground line-through pt-[1px]">
+             </span>
+             <span class="text-sm font-medium text-mono">
+              $99.00
+             </span>
+             <button class="kt-btn kt-btn-outline kt-btn-sm ms-1" data-kt-drawer-toggle="#drawers_shop_cart">
+              <i class="ki-filled ki-handcart">
+              </i>
+              Add
+             </button>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="kt-card">
+          <div class="kt-card-content flex flex-col justify-between p-2.5 gap-4">
+           <div class="mb-2.5">
+            <div class="kt-card flex items-center justify-center relative bg-accent/50 w-full h-[180px] mb-4 shadow-none">
+             <img alt="" class="h-[180px] shrink-0 cursor-pointer" data-kt-drawer-toggle="#drawers_shop_product_details" src="assets/media/store/client/600x600/9.png"/>
+            </div>
+            <a class="hover:text-primary text-sm font-medium text-mono px-2.5 leading-5.5 block" data-kt-drawer-toggle="#drawers_shop_product_details" href="#">
+             Wave Strike Dynamic Boost Sneaker
+            </a>
+           </div>
+           <div class="flex items-center flex-wrap justify-between gap-5 px-2.5 pb-1">
+            <span class="kt-badge kt-badge-warning kt-badge-sm rounded-full gap-1">
+             <i class="ki-solid ki-star text-white -mt-0.5">
+             </i>
+             4.7
+            </span>
+            <div class="flex items-center flex-wrap gap-1.5">
+             <span class="text-xs font-normal text-secondary-foreground line-through pt-[1px]">
+             </span>
+             <span class="text-sm font-medium text-mono">
+              $120.00
+             </span>
+             <button class="kt-btn kt-btn-outline kt-btn-sm ms-1" data-kt-drawer-toggle="#drawers_shop_cart">
+              <i class="ki-filled ki-handcart">
+              </i>
+              Add
+             </button>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="kt-card">
+          <div class="kt-card-content flex flex-col justify-between p-2.5 gap-4">
+           <div class="mb-2.5">
+            <div class="kt-card flex items-center justify-center relative bg-accent/50 w-full h-[180px] mb-4 shadow-none">
+             <img alt="" class="h-[180px] shrink-0 cursor-pointer" data-kt-drawer-toggle="#drawers_shop_product_details" src="assets/media/store/client/600x600/5.png"/>
+            </div>
+            <a class="hover:text-primary text-sm font-medium text-mono px-2.5 leading-5.5 block" data-kt-drawer-toggle="#drawers_shop_product_details" href="#">
+             Titan Edge High Impact Stability Lightweight Trainers
+            </a>
+           </div>
+           <div class="flex items-center flex-wrap justify-between gap-5 px-2.5 pb-1">
+            <span class="kt-badge kt-badge-warning kt-badge-sm rounded-full gap-1">
+             <i class="ki-solid ki-star text-white -mt-0.5">
+             </i>
+             3.5
+            </span>
+            <div class="flex items-center flex-wrap gap-1.5">
+             <span class="text-xs font-normal text-secondary-foreground line-through pt-[1px]">
+             </span>
+             <span class="text-sm font-medium text-mono">
+              $65.99
+             </span>
+             <button class="kt-btn kt-btn-outline kt-btn-sm ms-1" data-kt-drawer-toggle="#drawers_shop_cart">
+              <i class="ki-filled ki-handcart">
+              </i>
+              Add
+             </button>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="kt-card">
+          <div class="kt-card-content flex flex-col justify-between p-2.5 gap-4">
+           <div class="mb-2.5">
+            <div class="kt-card flex items-center justify-center relative bg-accent/50 w-full h-[180px] mb-4 shadow-none">
+             <img alt="" class="h-[180px] shrink-0 cursor-pointer" data-kt-drawer-toggle="#drawers_shop_product_details" src="assets/media/store/client/600x600/10.png"/>
+            </div>
+            <a class="hover:text-primary text-sm font-medium text-mono px-2.5 leading-5.5 block" data-kt-drawer-toggle="#drawers_shop_product_details" href="#">
+             Velocity Boost Xtreme High  Shock Absorbers
+            </a>
+           </div>
+           <div class="flex items-center flex-wrap justify-between gap-5 px-2.5 pb-1">
+            <span class="kt-badge kt-badge-warning kt-badge-sm rounded-full gap-1">
+             <i class="ki-solid ki-star text-white -mt-0.5">
+             </i>
+             4.9
+            </span>
+            <div class="flex items-center flex-wrap gap-1.5">
+             <span class="text-xs font-normal text-secondary-foreground line-through pt-[1px]">
+             </span>
+             <span class="text-sm font-medium text-mono">
+              $110.00
+             </span>
+             <button class="kt-btn kt-btn-outline kt-btn-sm ms-1" data-kt-drawer-toggle="#drawers_shop_cart">
+              <i class="ki-filled ki-handcart">
+              </i>
+              Add
+             </button>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <!-- end: grid -->
+       </div>
+       <!-- end: New Arrivals -->
+       <!-- begin: Popular Sneakers -->
+       <div class="space-y-4">
+        <div class="flex items-center justify-between gap-4">
+         <span class="text-lg font-medium text-mono">
+          Popular Sneakers
+         </span>
+         <a class="kt-link" href="html/demo5/account/home/get-started.html">
+          See All
+          <i class="ki-filled ki-right text-xs">
+          </i>
+         </a>
+        </div>
+        <!-- begin: grid -->
+        <div class="grid sm:grid-cols-2 xl:grid-cols-4 gap-5 mb-2">
+         <div class="kt-card">
+          <div class="kt-card-content flex flex-col justify-between p-2.5 gap-4">
+           <div class="mb-2.5">
+            <div class="kt-card flex items-center justify-center relative bg-accent/50 w-full h-[180px] mb-4 shadow-none">
+             <img alt="" class="h-[180px] shrink-0 cursor-pointer" data-kt-drawer-toggle="#drawers_shop_product_details" src="assets/media/store/client/600x600/11.png"/>
+            </div>
+            <a class="hover:text-primary text-sm font-medium text-mono px-2.5 leading-5.5 block" data-kt-drawer-toggle="#drawers_shop_product_details" href="#">
+             Cloud Shift Lightweight Runner Pro Edition
+            </a>
+           </div>
+           <div class="flex items-center flex-wrap justify-between gap-5 px-2.5 pb-1">
+            <span class="kt-badge kt-badge-warning kt-badge-sm rounded-full gap-1">
+             <i class="ki-solid ki-star text-white -mt-0.5">
+             </i>
+             5.0
+            </span>
+            <div class="flex items-center flex-wrap gap-1.5">
+             <span class="text-xs font-normal text-secondary-foreground line-through pt-[1px]">
+             </span>
+             <span class="text-sm font-medium text-mono">
+              $99.00
+             </span>
+             <button class="kt-btn kt-btn-outline kt-btn-sm ms-1" data-kt-drawer-toggle="#drawers_shop_cart">
+              <i class="ki-filled ki-handcart">
+              </i>
+              Add
+             </button>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="kt-card">
+          <div class="kt-card-content flex flex-col justify-between p-2.5 gap-4">
+           <div class="mb-2.5">
+            <div class="kt-card flex items-center justify-center relative bg-accent/50 w-full h-[180px] mb-4 shadow-none">
+             <img alt="" class="h-[180px] shrink-0 cursor-pointer" data-kt-drawer-toggle="#drawers_shop_product_details" src="assets/media/store/client/600x600/12.png"/>
+            </div>
+            <a class="hover:text-primary text-sm font-medium text-mono px-2.5 leading-5.5 block" data-kt-drawer-toggle="#drawers_shop_product_details" href="#">
+             Titan Edge High Impact Stability Lightweight Trainers
+            </a>
+           </div>
+           <div class="flex items-center flex-wrap justify-between gap-5 px-2.5 pb-1">
+            <span class="kt-badge kt-badge-warning kt-badge-sm rounded-full gap-1">
+             <i class="ki-solid ki-star text-white -mt-0.5">
+             </i>
+             3.5
+            </span>
+            <div class="flex items-center flex-wrap gap-1.5">
+             <span class="text-xs font-normal text-secondary-foreground line-through pt-[1px]">
+             </span>
+             <span class="text-sm font-medium text-mono">
+              $65.99
+             </span>
+             <button class="kt-btn kt-btn-outline kt-btn-sm ms-1" data-kt-drawer-toggle="#drawers_shop_cart">
+              <i class="ki-filled ki-handcart">
+              </i>
+              Add
+             </button>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="kt-card">
+          <div class="kt-card-content flex flex-col justify-between p-2.5 gap-4">
+           <div class="mb-2.5">
+            <div class="kt-card flex items-center justify-center relative bg-accent/50 w-full h-[180px] mb-4 shadow-none">
+             <img alt="" class="h-[180px] shrink-0 cursor-pointer" data-kt-drawer-toggle="#drawers_shop_product_details" src="assets/media/store/client/600x600/13.png"/>
+            </div>
+            <a class="hover:text-primary text-sm font-medium text-mono px-2.5 leading-5.5 block" data-kt-drawer-toggle="#drawers_shop_product_details" href="#">
+             Wave Strike Dynamic Boost Sneaker
+            </a>
+           </div>
+           <div class="flex items-center flex-wrap justify-between gap-5 px-2.5 pb-1">
+            <span class="kt-badge kt-badge-warning kt-badge-sm rounded-full gap-1">
+             <i class="ki-solid ki-star text-white -mt-0.5">
+             </i>
+             4.7
+            </span>
+            <div class="flex items-center flex-wrap gap-1.5">
+             <span class="text-xs font-normal text-secondary-foreground line-through pt-[1px]">
+             </span>
+             <span class="text-sm font-medium text-mono">
+              $120.00
+             </span>
+             <button class="kt-btn kt-btn-outline kt-btn-sm ms-1" data-kt-drawer-toggle="#drawers_shop_cart">
+              <i class="ki-filled ki-handcart">
+              </i>
+              Add
+             </button>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="kt-card">
+          <div class="kt-card-content flex flex-col justify-between p-2.5 gap-4">
+           <div class="mb-2.5">
+            <div class="kt-card flex items-center justify-center relative bg-accent/50 w-full h-[180px] mb-4 shadow-none">
+             <img alt="" class="h-[180px] shrink-0 cursor-pointer" data-kt-drawer-toggle="#drawers_shop_product_details" src="assets/media/store/client/600x600/14.png"/>
+            </div>
+            <a class="hover:text-primary text-sm font-medium text-mono px-2.5 leading-5.5 block" data-kt-drawer-toggle="#drawers_shop_product_details" href="#">
+             Velocity Boost Xtreme High  Shock Absorbers
+            </a>
+           </div>
+           <div class="flex items-center flex-wrap justify-between gap-5 px-2.5 pb-1">
+            <span class="kt-badge kt-badge-warning kt-badge-sm rounded-full gap-1">
+             <i class="ki-solid ki-star text-white -mt-0.5">
+             </i>
+             4.9
+            </span>
+            <div class="flex items-center flex-wrap gap-1.5">
+             <span class="text-xs font-normal text-secondary-foreground line-through pt-[1px]">
+             </span>
+             <span class="text-sm font-medium text-mono">
+              $110.00
+             </span>
+             <button class="kt-btn kt-btn-outline kt-btn-sm ms-1" data-kt-drawer-toggle="#drawers_shop_cart">
+              <i class="ki-filled ki-handcart">
+              </i>
+              Add
+             </button>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <!-- end: grid -->
+       </div>
+       <!-- end: Popular Sneakers -->
+       <!-- begin: Deals -->
+       <div class="space-y-4">
+        <div class="flex items-center justify-between gap-4">
+         <span class="text-lg font-medium text-mono">
+          Limited-Time Deals
+         </span>
+         <a class="kt-btn kt-btn-sm kt-btn-ghost kt-btn-primary" href="html/demo5/account/home/get-started.html">
+          See All
+          <i class="ki-filled ki-right">
+          </i>
+         </a>
+        </div>
+        <!-- begin: grid -->
+        <div class="grid sm:grid-cols-2 xl:grid-cols-4 gap-5 mb-2">
+         <div class="kt-card">
+          <div class="kt-card-content flex flex-col justify-between p-2.5 gap-4">
+           <div class="mb-2.5">
+            <div class="kt-card flex items-center justify-center relative bg-accent/50 w-full h-[180px] mb-4 shadow-none">
+             <span class="kt-badge kt-badge-destructive kt-badge-sm absolute top-2 end-2 uppercase">
+              save 40%
+             </span>
+             <img alt="" class="h-[180px] shrink-0 cursor-pointer" data-kt-drawer-toggle="#drawers_shop_product_details" src="assets/media/store/client/600x600/3.png"/>
+            </div>
+            <a class="hover:text-primary text-sm font-medium text-mono px-2.5 leading-5.5 block" data-kt-drawer-toggle="#drawers_shop_product_details" href="#">
+             Cloud Shift Lightweight Runner Pro Edition
+            </a>
+           </div>
+           <div class="flex items-center flex-wrap justify-between gap-5 px-2.5 pb-1">
+            <span class="kt-badge kt-badge-warning kt-badge-sm rounded-full gap-1">
+             <i class="ki-solid ki-star text-white -mt-0.5">
+             </i>
+             5.0
+            </span>
+            <div class="flex items-center flex-wrap gap-1.5">
+             <span class="text-xs font-normal text-secondary-foreground line-through pt-[1px]">
+              $140.00
+             </span>
+             <span class="text-sm font-medium text-mono">
+              $99.00
+             </span>
+             <button class="kt-btn kt-btn-outline kt-btn-sm ms-1" data-kt-drawer-toggle="#drawers_shop_cart">
+              <i class="ki-filled ki-handcart">
+              </i>
+              Add
+             </button>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="kt-card">
+          <div class="kt-card-content flex flex-col justify-between p-2.5 gap-4">
+           <div class="mb-2.5">
+            <div class="kt-card flex items-center justify-center relative bg-accent/50 w-full h-[180px] mb-4 shadow-none">
+             <span class="kt-badge kt-badge-destructive kt-badge-sm absolute top-2 end-2 uppercase">
+              save 40%
+             </span>
+             <img alt="" class="h-[180px] shrink-0 cursor-pointer" data-kt-drawer-toggle="#drawers_shop_product_details" src="assets/media/store/client/600x600/4.png"/>
+            </div>
+            <a class="hover:text-primary text-sm font-medium text-mono px-2.5 leading-5.5 block" data-kt-drawer-toggle="#drawers_shop_product_details" href="#">
+             Titan Edge High Impact Stability Lightweight Trainers
+            </a>
+           </div>
+           <div class="flex items-center flex-wrap justify-between gap-5 px-2.5 pb-1">
+            <span class="kt-badge kt-badge-warning kt-badge-sm rounded-full gap-1">
+             <i class="ki-solid ki-star text-white -mt-0.5">
+             </i>
+             3.5
+            </span>
+            <div class="flex items-center flex-wrap gap-1.5">
+             <span class="text-xs font-normal text-secondary-foreground line-through pt-[1px]">
+              $110.00
+             </span>
+             <span class="text-sm font-medium text-mono">
+              $46.00
+             </span>
+             <button class="kt-btn kt-btn-outline kt-btn-sm ms-1" data-kt-drawer-toggle="#drawers_shop_cart">
+              <i class="ki-filled ki-handcart">
+              </i>
+              Add
+             </button>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="kt-card">
+          <div class="kt-card-content flex flex-col justify-between p-2.5 gap-4">
+           <div class="mb-2.5">
+            <div class="kt-card flex items-center justify-center relative bg-accent/50 w-full h-[180px] mb-4 shadow-none">
+             <span class="kt-badge kt-badge-destructive kt-badge-sm absolute top-2 end-2 uppercase">
+              save 40%
+             </span>
+             <img alt="" class="h-[180px] shrink-0 cursor-pointer" data-kt-drawer-toggle="#drawers_shop_product_details" src="assets/media/store/client/600x600/15.png"/>
+            </div>
+            <a class="hover:text-primary text-sm font-medium text-mono px-2.5 leading-5.5 block" data-kt-drawer-toggle="#drawers_shop_product_details" href="#">
+             Wave Strike Dynamic Boost Sneaker
+            </a>
+           </div>
+           <div class="flex items-center flex-wrap justify-between gap-5 px-2.5 pb-1">
+            <span class="kt-badge kt-badge-warning kt-badge-sm rounded-full gap-1">
+             <i class="ki-solid ki-star text-white -mt-0.5">
+             </i>
+             4.7
+            </span>
+            <div class="flex items-center flex-wrap gap-1.5">
+             <span class="text-xs font-normal text-secondary-foreground line-through pt-[1px]">
+              $179.00
+             </span>
+             <span class="text-sm font-medium text-mono">
+              $140.00
+             </span>
+             <button class="kt-btn kt-btn-outline kt-btn-sm ms-1" data-kt-drawer-toggle="#drawers_shop_cart">
+              <i class="ki-filled ki-handcart">
+              </i>
+              Add
+             </button>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="kt-card">
+          <div class="kt-card-content flex flex-col justify-between p-2.5 gap-4">
+           <div class="mb-2.5">
+            <div class="kt-card flex items-center justify-center relative bg-accent/50 w-full h-[180px] mb-4 shadow-none">
+             <span class="kt-badge kt-badge-destructive kt-badge-sm absolute top-2 end-2 uppercase">
+              save 40%
+             </span>
+             <img alt="" class="h-[180px] shrink-0 cursor-pointer" data-kt-drawer-toggle="#drawers_shop_product_details" src="assets/media/store/client/600x600/2.png"/>
+            </div>
+            <a class="hover:text-primary text-sm font-medium text-mono px-2.5 leading-5.5 block" data-kt-drawer-toggle="#drawers_shop_product_details" href="#">
+             Velocity Boost Xtreme High  Shock Absorbers
+            </a>
+           </div>
+           <div class="flex items-center flex-wrap justify-between gap-5 px-2.5 pb-1">
+            <span class="kt-badge kt-badge-warning kt-badge-sm rounded-full gap-1">
+             <i class="ki-solid ki-star text-white -mt-0.5">
+             </i>
+             4.9
+            </span>
+            <div class="flex items-center flex-wrap gap-1.5">
+             <span class="text-xs font-normal text-secondary-foreground line-through pt-[1px]">
+              $280.00
+             </span>
+             <span class="text-sm font-medium text-mono">
+              $315.00
+             </span>
+             <button class="kt-btn kt-btn-outline kt-btn-sm ms-1" data-kt-drawer-toggle="#drawers_shop_cart">
+              <i class="ki-filled ki-handcart">
+              </i>
+              Add
+             </button>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <!-- end: grid -->
+       </div>
+       <!-- end: Deals -->
+       <div class="grid sm:grid-cols-2 xl:grid-cols-4 gap-5 mb-2">
+        <div class="kt-card">
+         <div class="kt-card-content flex items-center gap-3.5 px-5">
+          <div class="relative size-[50px] shrink-0">
+           <svg class="w-full h-full stroke-primary/10 fill-primary-soft" fill="none" height="48" viewbox="0 0 44 48" width="44" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 2.4641C19.7128 0.320509 24.2872 0.320508 28 2.4641L37.6506 8.0359C41.3634 10.1795 43.6506 14.141 43.6506 
+			18.4282V29.5718C43.6506 33.859 41.3634 37.8205 37.6506 39.9641L28 45.5359C24.2872 47.6795 19.7128 47.6795 16 45.5359L6.34937 
+			39.9641C2.63655 37.8205 0.349365 33.859 0.349365 29.5718V18.4282C0.349365 14.141 2.63655 10.1795 6.34937 8.0359L16 2.4641Z" fill="">
+            </path>
+            <path d="M16.25 2.89711C19.8081 0.842838 24.1919 0.842837 27.75 2.89711L37.4006 8.46891C40.9587 10.5232 43.1506 14.3196 43.1506 
+			18.4282V29.5718C43.1506 33.6804 40.9587 37.4768 37.4006 39.5311L27.75 45.1029C24.1919 47.1572 19.8081 47.1572 16.25 45.1029L6.59937 
+			39.5311C3.04125 37.4768 0.849365 33.6803 0.849365 29.5718V18.4282C0.849365 14.3196 3.04125 10.5232 6.59937 8.46891L16.25 2.89711Z" stroke="">
+            </path>
+           </svg>
+           <div class="absolute leading-none start-2/4 top-2/4 -translate-y-2/4 -translate-x-2/4 rtl:translate-x-2/4">
+            <i class="ki-filled ki-delivery-time text-xl ps-px text-primary">
+            </i>
+           </div>
+          </div>
+          <div class="flex flex-col">
+           <a class="hover:text-primary text-md font-medium text-mono" href="#">
+            Free Delivery
+           </a>
+           <span class="text-xs font-normal text-secondary-foreground">
+            No extra shipping costs
+           </span>
+          </div>
+         </div>
+        </div>
+        <div class="kt-card">
+         <div class="kt-card-content flex items-center gap-3.5 px-5">
+          <div class="relative size-[50px] shrink-0">
+           <svg class="w-full h-full stroke-success-transparent fill-success-soft" fill="none" height="48" viewbox="0 0 44 48" width="44" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 2.4641C19.7128 0.320509 24.2872 0.320508 28 2.4641L37.6506 8.0359C41.3634 10.1795 43.6506 14.141 43.6506 
+			18.4282V29.5718C43.6506 33.859 41.3634 37.8205 37.6506 39.9641L28 45.5359C24.2872 47.6795 19.7128 47.6795 16 45.5359L6.34937 
+			39.9641C2.63655 37.8205 0.349365 33.859 0.349365 29.5718V18.4282C0.349365 14.141 2.63655 10.1795 6.34937 8.0359L16 2.4641Z" fill="">
+            </path>
+            <path d="M16.25 2.89711C19.8081 0.842838 24.1919 0.842837 27.75 2.89711L37.4006 8.46891C40.9587 10.5232 43.1506 14.3196 43.1506 
+			18.4282V29.5718C43.1506 33.6804 40.9587 37.4768 37.4006 39.5311L27.75 45.1029C24.1919 47.1572 19.8081 47.1572 16.25 45.1029L6.59937 
+			39.5311C3.04125 37.4768 0.849365 33.6803 0.849365 29.5718V18.4282C0.849365 14.3196 3.04125 10.5232 6.59937 8.46891L16.25 2.89711Z" stroke="">
+            </path>
+           </svg>
+           <div class="absolute leading-none start-2/4 top-2/4 -translate-y-2/4 -translate-x-2/4 rtl:translate-x-2/4">
+            <i class="ki-filled ki-messages text-xl ps-px text-green-500">
+            </i>
+           </div>
+          </div>
+          <div class="flex flex-col">
+           <a class="hover:text-primary text-md font-medium text-mono" href="#">
+            24/7 Support
+           </a>
+           <span class="text-xs font-normal text-secondary-foreground">
+            Help anytime, anywhere
+           </span>
+          </div>
+         </div>
+        </div>
+        <div class="kt-card">
+         <div class="kt-card-content flex items-center gap-3.5 px-5">
+          <div class="relative size-[50px] shrink-0">
+           <svg class="w-full h-full stroke-info-transparent fill-info-soft" fill="none" height="48" viewbox="0 0 44 48" width="44" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 2.4641C19.7128 0.320509 24.2872 0.320508 28 2.4641L37.6506 8.0359C41.3634 10.1795 43.6506 14.141 43.6506 
+			18.4282V29.5718C43.6506 33.859 41.3634 37.8205 37.6506 39.9641L28 45.5359C24.2872 47.6795 19.7128 47.6795 16 45.5359L6.34937 
+			39.9641C2.63655 37.8205 0.349365 33.859 0.349365 29.5718V18.4282C0.349365 14.141 2.63655 10.1795 6.34937 8.0359L16 2.4641Z" fill="">
+            </path>
+            <path d="M16.25 2.89711C19.8081 0.842838 24.1919 0.842837 27.75 2.89711L37.4006 8.46891C40.9587 10.5232 43.1506 14.3196 43.1506 
+			18.4282V29.5718C43.1506 33.6804 40.9587 37.4768 37.4006 39.5311L27.75 45.1029C24.1919 47.1572 19.8081 47.1572 16.25 45.1029L6.59937 
+			39.5311C3.04125 37.4768 0.849365 33.6803 0.849365 29.5718V18.4282C0.849365 14.3196 3.04125 10.5232 6.59937 8.46891L16.25 2.89711Z" stroke="">
+            </path>
+           </svg>
+           <div class="absolute leading-none start-2/4 top-2/4 -translate-y-2/4 -translate-x-2/4 rtl:translate-x-2/4">
+            <i class="ki-filled ki-discount text-xl ps-px text-violet-500">
+            </i>
+           </div>
+          </div>
+          <div class="flex flex-col">
+           <a class="hover:text-primary text-md font-medium text-mono" href="#">
+            Discounts
+           </a>
+           <span class="text-xs font-normal text-secondary-foreground">
+            Save big on top deals
+           </span>
+          </div>
+         </div>
+        </div>
+        <div class="kt-card">
+         <div class="kt-card-content flex items-center gap-3.5 px-5">
+          <div class="relative size-[50px] shrink-0">
+           <svg class="w-full h-full stroke-yellow-100 fill-warning-soft" fill="none" height="48" viewbox="0 0 44 48" width="44" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 2.4641C19.7128 0.320509 24.2872 0.320508 28 2.4641L37.6506 8.0359C41.3634 10.1795 43.6506 14.141 43.6506 
+			18.4282V29.5718C43.6506 33.859 41.3634 37.8205 37.6506 39.9641L28 45.5359C24.2872 47.6795 19.7128 47.6795 16 45.5359L6.34937 
+			39.9641C2.63655 37.8205 0.349365 33.859 0.349365 29.5718V18.4282C0.349365 14.141 2.63655 10.1795 6.34937 8.0359L16 2.4641Z" fill="">
+            </path>
+            <path d="M16.25 2.89711C19.8081 0.842838 24.1919 0.842837 27.75 2.89711L37.4006 8.46891C40.9587 10.5232 43.1506 14.3196 43.1506 
+			18.4282V29.5718C43.1506 33.6804 40.9587 37.4768 37.4006 39.5311L27.75 45.1029C24.1919 47.1572 19.8081 47.1572 16.25 45.1029L6.59937 
+			39.5311C3.04125 37.4768 0.849365 33.6803 0.849365 29.5718V18.4282C0.849365 14.3196 3.04125 10.5232 6.59937 8.46891L16.25 2.89711Z" stroke="">
+            </path>
+           </svg>
+           <div class="absolute leading-none start-2/4 top-2/4 -translate-y-2/4 -translate-x-2/4 rtl:translate-x-2/4">
+            <i class="ki-filled ki-credit-cart text-xl ps-px text-yellow-500">
+            </i>
+           </div>
+          </div>
+          <div class="flex flex-col">
+           <a class="hover:text-primary text-md font-medium text-mono" href="#">
+            Money-Back
+           </a>
+           <span class="text-xs font-normal text-secondary-foreground">
+            Full refund, no risk
+           </span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <!-- end: Content -->
+     </div>
+     <!-- End of Container -->
+     <!-- Footer -->
+     <footer class="footer">
+      <!-- Container -->
+      <div class="kt-container-fluid">
+       <div class="flex flex-col md:flex-row justify-center md:justify-between items-center gap-3 py-5">
+        <div class="flex order-2 md:order-1 gap-2 font-normal text-sm">
+         <span class="text-muted-foreground">
+          2025©
+         </span>
+         <a class="text-secondary-foreground hover:text-primary" href="https://keenthemes.com">
+          Keenthemes Inc.
+         </a>
+        </div>
+        <nav class="flex order-1 md:order-2 gap-4 font-normal text-sm text-secondary-foreground">
+         <a class="hover:text-primary" href="https://keenthemes.com/metronic/tailwind/docs">
+          Docs
+         </a>
+         <a class="hover:text-primary" href="https://1.envato.market/Vm7VRE">
+          Purchase
+         </a>
+         <a class="hover:text-primary" href="https://keenthemes.com/metronic/tailwind/docs/getting-started/license">
+          FAQ
+         </a>
+         <a class="hover:text-primary" href="https://devs.keenthemes.com">
+          Support
+         </a>
+         <a class="hover:text-primary" href="https://keenthemes.com/metronic/tailwind/docs/getting-started/license">
+          License
+         </a>
+        </nav>
+       </div>
+      </div>
+      <!-- End of Container -->
+     </footer>
+     <!-- End of Footer -->
+    </main>
+    <!-- End of Content -->
+   </div>
+   <!-- End of Wrapper Container -->
+  </div>
+  <!-- End of Main -->
+  <div class="kt-modal" data-kt-modal="true" id="search_modal">
+   <div class="kt-modal-content max-w-[600px] top-[15%]">
+    <div class="kt-modal-header py-4 px-5">
+     <i class="ki-filled ki-magnifier text-muted-foreground text-xl">
+     </i>
+     <input class="kt-input kt-input-ghost" name="query" placeholder="Tap to start search" type="text" value=""/>
+     <button class="kt-btn kt-btn-sm kt-btn-icon kt-btn-dim shrink-0" data-kt-modal-dismiss="true">
+      <i class="ki-filled ki-cross">
+      </i>
+     </button>
+    </div>
+    <div class="kt-modal-body p-0 pb-5">
+     <div class="kt-tabs kt-tabs-line justify-between px-5 mb-2.5" data-kt-tabs="true">
+      <div class="flex items-center gap-5">
+       <button class="kt-tab-toggle py-5 active" data-kt-tab-toggle="#search_modal_mixed">
+        Mixed
+       </button>
+       <button class="kt-tab-toggle py-5" data-kt-tab-toggle="#search_modal_settings">
+        Settings
+       </button>
+       <button class="kt-tab-toggle py-5" data-kt-tab-toggle="#search_modal_integrations">
+        Integrations
+       </button>
+       <button class="kt-tab-toggle py-5" data-kt-tab-toggle="#search_modal_users">
+        Users
+       </button>
+       <button class="kt-tab-toggle py-5" data-kt-tab-toggle="#search_modal_docs">
+        Docs
+       </button>
+       <button class="kt-tab-toggle py-5" data-kt-tab-toggle="#search_modal_empty">
+        Empty
+       </button>
+       <button class="kt-tab-toggle py-5" data-kt-tab-toggle="#search_modal_no-results">
+        No Results
+       </button>
+      </div>
+      <div class="kt-menu -mt-px" data-kt-menu="true">
+       <div class="kt-menu-item" data-kt-menu-item-offset="0, 10px" data-kt-menu-item-placement="bottom-end" data-kt-menu-item-placement-rtl="bottom-start" data-kt-menu-item-toggle="dropdown" data-kt-menu-item-trigger="click">
+        <button class="kt-menu-toggle kt-btn kt-btn-icon kt-btn-ghost">
+         <i class="ki-filled ki-setting-2">
+         </i>
+        </button>
+        <div class="kt-menu-dropdown kt-menu-default w-full max-w-[175px]" data-kt-menu-dismiss="true">
+         <div class="kt-menu-item">
+          <a class="kt-menu-link" href="#">
+           <span class="kt-menu-icon">
+            <i class="ki-filled ki-document">
+            </i>
+           </span>
+           <span class="kt-menu-title">
+            View
+           </span>
+          </a>
+         </div>
+         <div class="kt-menu-item" data-kt-menu-item-offset="-15px, 0" data-kt-menu-item-placement="right-start" data-kt-menu-item-toggle="dropdown" data-kt-menu-item-trigger="click|lg:hover">
+          <div class="kt-menu-link">
+           <span class="kt-menu-icon">
+            <i class="ki-filled ki-notification-status">
+            </i>
+           </span>
+           <span class="kt-menu-title">
+            Export
+           </span>
+           <span class="kt-menu-arrow">
+            <i class="ki-filled ki-right text-xs rtl:transform rtl:rotate-180">
+            </i>
+           </span>
+          </div>
+          <div class="kt-menu-dropdown kt-menu-default w-full max-w-[175px]">
+           <div class="kt-menu-item">
+            <a class="kt-menu-link" href="html/demo5/account/home/settings-sidebar.html">
+             <span class="kt-menu-icon">
+              <i class="ki-filled ki-sms">
+              </i>
+             </span>
+             <span class="kt-menu-title">
+              Email
+             </span>
+            </a>
+           </div>
+           <div class="kt-menu-item">
+            <a class="kt-menu-link" href="html/demo5/account/home/settings-sidebar.html">
+             <span class="kt-menu-icon">
+              <i class="ki-filled ki-message-notify">
+              </i>
+             </span>
+             <span class="kt-menu-title">
+              SMS
+             </span>
+            </a>
+           </div>
+           <div class="kt-menu-item">
+            <a class="kt-menu-link" href="html/demo5/account/home/settings-sidebar.html">
+             <span class="kt-menu-icon">
+              <i class="ki-filled ki-notification-status">
+              </i>
+             </span>
+             <span class="kt-menu-title">
+              Push
+             </span>
+            </a>
+           </div>
+          </div>
+         </div>
+         <div class="kt-menu-item">
+          <a class="kt-menu-link" href="#">
+           <span class="kt-menu-icon">
+            <i class="ki-filled ki-pencil">
+            </i>
+           </span>
+           <span class="kt-menu-title">
+            Edit
+           </span>
+          </a>
+         </div>
+         <div class="kt-menu-item">
+          <a class="kt-menu-link" href="#">
+           <span class="kt-menu-icon">
+            <i class="ki-filled ki-trash">
+            </i>
+           </span>
+           <span class="kt-menu-title">
+            Delete
+           </span>
+          </a>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="kt-scrollable-y-auto" data-kt-scrollable="true" data-kt-scrollable-max-height="auto" data-kt-scrollable-offset="300px">
+      <div class="" id="search_modal_mixed">
+       <div class="flex flex-col gap-2.5">
+        <div>
+         <div class="text-xs text-secondary-foreground font-medium pt-2.5 pb-1.5 ps-5">
+          Settings
+         </div>
+         <div class="kt-menu kt-menu-default px-0.5 flex-col">
+          <div class="kt-menu-item">
+           <a class="kt-menu-link" href="#">
+            <span class="kt-menu-icon">
+             <i class="ki-filled ki-badge">
+             </i>
+            </span>
+            <span class="kt-menu-title">
+             Public Profile
+            </span>
+           </a>
+          </div>
+          <div class="kt-menu-item">
+           <a class="kt-menu-link" href="#">
+            <span class="kt-menu-icon">
+             <i class="ki-filled ki-setting-2">
+             </i>
+            </span>
+            <span class="kt-menu-title">
+             My Account
+            </span>
+           </a>
+          </div>
+          <div class="kt-menu-item">
+           <a class="kt-menu-link" href="#">
+            <span class="kt-menu-icon">
+             <i class="ki-filled ki-message-programming">
+             </i>
+            </span>
+            <span class="kt-menu-title">
+             Devs Forum
+            </span>
+           </a>
+          </div>
+         </div>
+        </div>
+        <div class="border-b border-b-border">
+        </div>
+        <div>
+         <div class="text-xs text-secondary-foreground font-medium pt-2.5 pb-1.5 ps-5">
+          Integrations
+         </div>
+         <div class="kt-menu kt-menu-default px-0.5 flex-col">
+          <div class="kt-menu-item">
+           <div class="kt-menu-link flex items-center jistify-between gap-2">
+            <div class="flex items-center grow gap-2">
+             <div class="flex items-center justify-center size-10 shrink-0 rounded-full border border-border bg-accent/60">
+              <img alt="" class="size-6 shrink-0" src="assets/media/brand-logos/jira.svg"/>
+             </div>
+             <div class="flex flex-col gap-0.5">
+              <a class="text-sm font-semibold text-mono hover:text-primary" href="#">
+               Jira
+              </a>
+              <span class="text-xs font-medium text-secondary-foreground">
+               Project management
+              </span>
+             </div>
+            </div>
+            <div class="flex justify-end shrink-0">
+             <div class="flex -space-x-2">
+              <div class="flex">
+               <img class="hover:z-5 relative shrink-0 rounded-full ring-1 ring-background size-6" src="assets/media/avatars/300-4.png"/>
+              </div>
+              <div class="flex">
+               <img class="hover:z-5 relative shrink-0 rounded-full ring-1 ring-background size-6" src="assets/media/avatars/300-1.png"/>
+              </div>
+              <div class="flex">
+               <img class="hover:z-5 relative shrink-0 rounded-full ring-1 ring-background size-6" src="assets/media/avatars/300-2.png"/>
+              </div>
+              <div class="flex">
+               <span class="hover:z-5 relative inline-flex items-center justify-center shrink-0 rounded-full ring-1 font-semibold leading-none text-2xs size-6 text-white size-6 ring-background bg-green-500">
+                +3
+               </span>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="kt-menu-item">
+           <div class="kt-menu-link flex items-center jistify-between gap-2">
+            <div class="flex items-center grow gap-2">
+             <div class="flex items-center justify-center size-10 shrink-0 rounded-full border border-border bg-accent/60">
+              <img alt="" class="size-6 shrink-0" src="assets/media/brand-logos/inferno.svg"/>
+             </div>
+             <div class="flex flex-col gap-0.5">
+              <a class="text-sm font-semibold text-mono hover:text-primary" href="#">
+               Inferno
+              </a>
+              <span class="text-xs font-medium text-secondary-foreground">
+               Real-time photo sharing app
+              </span>
+             </div>
+            </div>
+            <div class="flex justify-end shrink-0">
+             <div class="flex -space-x-2">
+              <div class="flex">
+               <img class="hover:z-5 relative shrink-0 rounded-full ring-1 ring-background size-6" src="assets/media/avatars/300-14.png"/>
+              </div>
+              <div class="flex">
+               <img class="hover:z-5 relative shrink-0 rounded-full ring-1 ring-background size-6" src="assets/media/avatars/300-12.png"/>
+              </div>
+              <div class="flex">
+               <img class="hover:z-5 relative shrink-0 rounded-full ring-1 ring-background size-6" src="assets/media/avatars/300-9.png"/>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="border-b border-b-border">
+        </div>
+        <div>
+         <div class="text-xs text-secondary-foreground font-medium pt-2.5 pb-1.5 ps-5">
+          Users
+         </div>
+         <div class="kt-menu kt-menu-default px-0.5 flex-col">
+          <div class="grid gap-1">
+           <div class="kt-menu-item">
+            <div class="kt-menu-link flex justify-between gap-2">
+             <div class="flex items-center gap-2.5">
+              <img alt="" class="rounded-full size-9 shrink-0" src="assets/media/avatars/300-3.png"/>
+              <div class="flex flex-col">
+               <a class="text-sm font-semibold text-mono hover:text-primary mb-px" href="#">
+                Tyler Hero
+               </a>
+               <span class="text-2sm font-normal text-muted-foreground">
+                tyler.hero@gmail.com connections
+               </span>
+              </div>
+             </div>
+             <div class="flex items-center gap-2.5">
+              <div class="kt-badge rounded-full kt-badge-outline kt-badge-success gap-1.5">
+               <span class="kt-badge-dot">
+               </span>
+               In Office
+              </div>
+              <button class="kt-btn kt-btn-icon kt-btn-ghost kt-btn-sm">
+               <i class="ki-filled ki-dots-vertical text-lg">
+               </i>
+              </button>
+             </div>
+            </div>
+           </div>
+           <div class="kt-menu-item">
+            <div class="kt-menu-link flex justify-between gap-2">
+             <div class="flex items-center gap-2.5">
+              <img alt="" class="rounded-full size-9 shrink-0" src="assets/media/avatars/300-1.png"/>
+              <div class="flex flex-col">
+               <a class="text-sm font-semibold text-mono hover:text-primary mb-px" href="#">
+                Esther Howard
+               </a>
+               <span class="text-2sm font-normal text-muted-foreground">
+                esther.howard@gmail.com connections
+               </span>
+              </div>
+             </div>
+             <div class="flex items-center gap-2.5">
+              <div class="kt-badge rounded-full kt-badge-outline kt-badge-destructive gap-1.5">
+               <span class="kt-badge-dot">
+               </span>
+               On Leave
+              </div>
+              <button class="kt-btn kt-btn-icon kt-btn-ghost kt-btn-sm">
+               <i class="ki-filled ki-dots-vertical text-lg">
+               </i>
+              </button>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="hidden" id="search_modal_settings">
+       <div class="kt-menu kt-menu-default px-0.5 flex-col">
+        <div class="text-xs text-secondary-foreground font-medium pt-2.5 ps-5 pb-1.5">
+         Shortcuts
+        </div>
+        <div class="kt-menu-item">
+         <a class="kt-menu-link" href="#">
+          <span class="kt-menu-icon">
+           <i class="ki-filled ki-home-2">
+           </i>
+          </span>
+          <span class="kt-menu-title">
+           Go to Dashboard
+          </span>
+         </a>
+        </div>
+        <div class="kt-menu-item">
+         <a class="kt-menu-link" href="#">
+          <span class="kt-menu-icon">
+           <i class="ki-filled ki-badge">
+           </i>
+          </span>
+          <span class="kt-menu-title">
+           Public Profile
+          </span>
+         </a>
+        </div>
+        <div class="kt-menu-item">
+         <a class="kt-menu-link" href="#">
+          <span class="kt-menu-icon">
+           <i class="ki-filled ki-profile-circle">
+           </i>
+          </span>
+          <span class="kt-menu-title">
+           My Profile
+          </span>
+         </a>
+        </div>
+        <div class="kt-menu-item">
+         <a class="kt-menu-link" href="#">
+          <span class="kt-menu-icon">
+           <i class="ki-filled ki-setting-2">
+           </i>
+          </span>
+          <span class="kt-menu-title">
+           My Account
+          </span>
+         </a>
+        </div>
+        <div class="kt-menu-item">
+         <a class="kt-menu-link" href="#">
+          <span class="kt-menu-icon">
+           <i class="ki-filled ki-message-programming">
+           </i>
+          </span>
+          <span class="kt-menu-title">
+           Devs Forum
+          </span>
+         </a>
+        </div>
+        <div class="text-xs text-secondary-foreground font-medium pt-2.5 ps-5 pt-2.5 pb-1.5">
+         Actions
+        </div>
+        <div class="kt-menu-item">
+         <a class="kt-menu-link" href="#">
+          <span class="kt-menu-icon">
+           <i class="ki-filled ki-user">
+           </i>
+          </span>
+          <span class="kt-menu-title">
+           Create User
+          </span>
+         </a>
+        </div>
+        <div class="kt-menu-item">
+         <a class="kt-menu-link" href="#">
+          <span class="kt-menu-icon">
+           <i class="ki-filled ki-user-edit">
+           </i>
+          </span>
+          <span class="kt-menu-title">
+           Create Team
+          </span>
+         </a>
+        </div>
+        <div class="kt-menu-item">
+         <a class="kt-menu-link" href="#">
+          <span class="kt-menu-icon">
+           <i class="ki-filled ki-subtitle">
+           </i>
+          </span>
+          <span class="kt-menu-title">
+           Change Plan
+          </span>
+         </a>
+        </div>
+        <div class="kt-menu-item">
+         <a class="kt-menu-link" href="#">
+          <span class="kt-menu-icon">
+           <i class="ki-filled ki-setting">
+           </i>
+          </span>
+          <span class="kt-menu-title">
+           Setup Branding
+          </span>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="hidden" id="search_modal_integrations">
+       <div class="kt-menu kt-menu-default px-0.5 flex-col">
+        <div class="kt-menu-item">
+         <div class="kt-menu-link flex items-center jistify-between gap-2">
+          <div class="flex items-center grow gap-2">
+           <div class="flex items-center justify-center size-10 shrink-0 rounded-full border border-border bg-accent/60">
+            <img alt="" class="size-6 shrink-0" src="assets/media/brand-logos/jira.svg"/>
+           </div>
+           <div class="flex flex-col gap-0.5">
+            <a class="text-sm font-semibold text-mono hover:text-primary" href="#">
+             Jira
+            </a>
+            <span class="text-xs font-medium text-secondary-foreground">
+             Project management
+            </span>
+           </div>
+          </div>
+          <div class="flex justify-end shrink-0">
+           <div class="flex -space-x-2">
+            <div class="flex">
+             <img class="hover:z-5 relative shrink-0 rounded-full ring-1 ring-background size-6" src="assets/media/avatars/300-4.png"/>
+            </div>
+            <div class="flex">
+             <img class="hover:z-5 relative shrink-0 rounded-full ring-1 ring-background size-6" src="assets/media/avatars/300-1.png"/>
+            </div>
+            <div class="flex">
+             <img class="hover:z-5 relative shrink-0 rounded-full ring-1 ring-background size-6" src="assets/media/avatars/300-2.png"/>
+            </div>
+            <div class="flex">
+             <span class="hover:z-5 relative inline-flex items-center justify-center shrink-0 rounded-full ring-1 font-semibold leading-none text-2xs size-6 text-white size-6 ring-background bg-green-500">
+              +3
+             </span>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="kt-menu-item">
+         <div class="kt-menu-link flex items-center jistify-between gap-2">
+          <div class="flex items-center grow gap-2">
+           <div class="flex items-center justify-center size-10 shrink-0 rounded-full border border-border bg-accent/60">
+            <img alt="" class="size-6 shrink-0" src="assets/media/brand-logos/inferno.svg"/>
+           </div>
+           <div class="flex flex-col gap-0.5">
+            <a class="text-sm font-semibold text-mono hover:text-primary" href="#">
+             Inferno
+            </a>
+            <span class="text-xs font-medium text-secondary-foreground">
+             Real-time photo sharing app
+            </span>
+           </div>
+          </div>
+          <div class="flex justify-end shrink-0">
+           <div class="flex -space-x-2">
+            <div class="flex">
+             <img class="hover:z-5 relative shrink-0 rounded-full ring-1 ring-background size-6" src="assets/media/avatars/300-14.png"/>
+            </div>
+            <div class="flex">
+             <img class="hover:z-5 relative shrink-0 rounded-full ring-1 ring-background size-6" src="assets/media/avatars/300-12.png"/>
+            </div>
+            <div class="flex">
+             <img class="hover:z-5 relative shrink-0 rounded-full ring-1 ring-background size-6" src="assets/media/avatars/300-9.png"/>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="kt-menu-item">
+         <div class="kt-menu-link flex items-center jistify-between gap-2">
+          <div class="flex items-center grow gap-2">
+           <div class="flex items-center justify-center size-10 shrink-0 rounded-full border border-border bg-accent/60">
+            <img alt="" class="size-6 shrink-0" src="assets/media/brand-logos/evernote.svg"/>
+           </div>
+           <div class="flex flex-col gap-0.5">
+            <a class="text-sm font-semibold text-mono hover:text-primary" href="#">
+             Evernote
+            </a>
+            <span class="text-xs font-medium text-secondary-foreground">
+             Notes management app
+            </span>
+           </div>
+          </div>
+          <div class="flex justify-end shrink-0">
+           <div class="flex -space-x-2">
+            <div class="flex">
+             <img class="hover:z-5 relative shrink-0 rounded-full ring-1 ring-background size-6" src="assets/media/avatars/300-6.png"/>
+            </div>
+            <div class="flex">
+             <img class="hover:z-5 relative shrink-0 rounded-full ring-1 ring-background size-6" src="assets/media/avatars/300-3.png"/>
+            </div>
+            <div class="flex">
+             <img class="hover:z-5 relative shrink-0 rounded-full ring-1 ring-background size-6" src="assets/media/avatars/300-1.png"/>
+            </div>
+            <div class="flex">
+             <img class="hover:z-5 relative shrink-0 rounded-full ring-1 ring-background size-6" src="assets/media/avatars/300-8.png"/>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="kt-menu-item">
+         <div class="kt-menu-link flex items-center jistify-between gap-2">
+          <div class="flex items-center grow gap-2">
+           <div class="flex items-center justify-center size-10 shrink-0 rounded-full border border-border bg-accent/60">
+            <img alt="" class="size-6 shrink-0" src="assets/media/brand-logos/gitlab.svg"/>
+           </div>
+           <div class="flex flex-col gap-0.5">
+            <a class="text-sm font-semibold text-mono hover:text-primary" href="#">
+             Gitlab
+            </a>
+            <span class="text-xs font-medium text-secondary-foreground">
+             Notes management app
+            </span>
+           </div>
+          </div>
+          <div class="flex justify-end shrink-0">
+           <div class="flex -space-x-2">
+            <div class="flex">
+             <img class="hover:z-5 relative shrink-0 rounded-full ring-1 ring-background size-6" src="assets/media/avatars/300-18.png"/>
+            </div>
+            <div class="flex">
+             <img class="hover:z-5 relative shrink-0 rounded-full ring-1 ring-background size-6" src="assets/media/avatars/300-17.png"/>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="kt-menu-item">
+         <div class="kt-menu-link flex items-center jistify-between gap-2">
+          <div class="flex items-center grow gap-2">
+           <div class="flex items-center justify-center size-10 shrink-0 rounded-full border border-border bg-accent/60">
+            <img alt="" class="size-6 shrink-0" src="assets/media/brand-logos/google-webdev.svg"/>
+           </div>
+           <div class="flex flex-col gap-0.5">
+            <a class="text-sm font-semibold text-mono hover:text-primary" href="#">
+             Google webdev
+            </a>
+            <span class="text-xs font-medium text-secondary-foreground">
+             Building web expierences
+            </span>
+           </div>
+          </div>
+          <div class="flex justify-end shrink-0">
+           <div class="flex -space-x-2">
+            <div class="flex">
+             <img class="hover:z-5 relative shrink-0 rounded-full ring-1 ring-background size-6" src="assets/media/avatars/300-14.png"/>
+            </div>
+            <div class="flex">
+             <img class="hover:z-5 relative shrink-0 rounded-full ring-1 ring-background size-6" src="assets/media/avatars/300-20.png"/>
+            </div>
+            <div class="flex">
+             <img class="hover:z-5 relative shrink-0 rounded-full ring-1 ring-background size-6" src="assets/media/avatars/300-21.png"/>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="kt-menu-item px-4 pt-2">
+         <a class="kt-btn kt-btn-outline justify-center" href="#">
+          Go to Apps
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="hidden" id="search_modal_users">
+       <div class="kt-menu kt-menu-default px-0.5 flex-col">
+        <div class="grid gap-1">
+         <div class="kt-menu-item">
+          <div class="kt-menu-link flex justify-between gap-2">
+           <div class="flex items-center gap-2.5">
+            <img alt="" class="rounded-full size-9 shrink-0" src="assets/media/avatars/300-3.png"/>
+            <div class="flex flex-col">
+             <a class="text-sm font-semibold text-mono hover:text-primary mb-px" href="#">
+              Tyler Hero
+             </a>
+             <span class="text-2sm font-normal text-muted-foreground">
+              tyler.hero@gmail.com connections
+             </span>
+            </div>
+           </div>
+           <div class="flex items-center gap-2.5">
+            <div class="kt-badge rounded-full kt-badge-outline kt-badge-success gap-1.5">
+             <span class="kt-badge-dot">
+             </span>
+             In Office
+            </div>
+            <button class="kt-btn kt-btn-icon kt-btn-ghost kt-btn-sm">
+             <i class="ki-filled ki-dots-vertical text-lg">
+             </i>
+            </button>
+           </div>
+          </div>
+         </div>
+         <div class="kt-menu-item">
+          <div class="kt-menu-link flex justify-between gap-2">
+           <div class="flex items-center gap-2.5">
+            <img alt="" class="rounded-full size-9 shrink-0" src="assets/media/avatars/300-1.png"/>
+            <div class="flex flex-col">
+             <a class="text-sm font-semibold text-mono hover:text-primary mb-px" href="#">
+              Esther Howard
+             </a>
+             <span class="text-2sm font-normal text-muted-foreground">
+              esther.howard@gmail.com connections
+             </span>
+            </div>
+           </div>
+           <div class="flex items-center gap-2.5">
+            <div class="kt-badge rounded-full kt-badge-outline kt-badge-destructive gap-1.5">
+             <span class="kt-badge-dot">
+             </span>
+             On Leave
+            </div>
+            <button class="kt-btn kt-btn-icon kt-btn-ghost kt-btn-sm">
+             <i class="ki-filled ki-dots-vertical text-lg">
+             </i>
+            </button>
+           </div>
+          </div>
+         </div>
+         <div class="kt-menu-item">
+          <div class="kt-menu-link flex justify-between gap-2">
+           <div class="flex items-center gap-2.5">
+            <img alt="" class="rounded-full size-9 shrink-0" src="assets/media/avatars/300-11.png"/>
+            <div class="flex flex-col">
+             <a class="text-sm font-semibold text-mono hover:text-primary mb-px" href="#">
+              Jacob Jones
+             </a>
+             <span class="text-2sm font-normal text-muted-foreground">
+              jacob.jones@gmail.com connections
+             </span>
+            </div>
+           </div>
+           <div class="flex items-center gap-2.5">
+            <div class="kt-badge rounded-full kt-badge-outline kt-badge-primary gap-1.5">
+             <span class="kt-badge-dot">
+             </span>
+             Remote
+            </div>
+            <button class="kt-btn kt-btn-icon kt-btn-ghost kt-btn-sm">
+             <i class="ki-filled ki-dots-vertical text-lg">
+             </i>
+            </button>
+           </div>
+          </div>
+         </div>
+         <div class="kt-menu-item">
+          <div class="kt-menu-link flex justify-between gap-2">
+           <div class="flex items-center gap-2.5">
+            <img alt="" class="rounded-full size-9 shrink-0" src="assets/media/avatars/300-5.png"/>
+            <div class="flex flex-col">
+             <a class="text-sm font-semibold text-mono hover:text-primary mb-px" href="#">
+              TLeslie Alexander
+             </a>
+             <span class="text-2sm font-normal text-muted-foreground">
+              leslie.alexander@gmail.com connections
+             </span>
+            </div>
+           </div>
+           <div class="flex items-center gap-2.5">
+            <div class="kt-badge rounded-full kt-badge-outline kt-badge-success gap-1.5">
+             <span class="kt-badge-dot">
+             </span>
+             In Office
+            </div>
+            <button class="kt-btn kt-btn-icon kt-btn-ghost kt-btn-sm">
+             <i class="ki-filled ki-dots-vertical text-lg">
+             </i>
+            </button>
+           </div>
+          </div>
+         </div>
+         <div class="kt-menu-item">
+          <div class="kt-menu-link flex justify-between gap-2">
+           <div class="flex items-center gap-2.5">
+            <img alt="" class="rounded-full size-9 shrink-0" src="assets/media/avatars/300-2.png"/>
+            <div class="flex flex-col">
+             <a class="text-sm font-semibold text-mono hover:text-primary mb-px" href="#">
+              Cody Fisher
+             </a>
+             <span class="text-2sm font-normal text-muted-foreground">
+              cody.fisher@gmail.com connections
+             </span>
+            </div>
+           </div>
+           <div class="flex items-center gap-2.5">
+            <div class="kt-badge rounded-full kt-badge-outline kt-badge-primary gap-1.5">
+             <span class="kt-badge-dot">
+             </span>
+             Remote
+            </div>
+            <button class="kt-btn kt-btn-icon kt-btn-ghost kt-btn-sm">
+             <i class="ki-filled ki-dots-vertical text-lg">
+             </i>
+            </button>
+           </div>
+          </div>
+         </div>
+         <div class="kt-menu-item px-4 pt-2">
+          <a class="kt-btn kt-btn-outline justify-center" href="#">
+           Go to Users
+          </a>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="hidden" id="search_modal_docs">
+       <div class="kt-menu kt-menu-default px-0.5 flex-col">
+        <div class="grid">
+         <div class="kt-menu-item">
+          <div class="kt-menu-link flex items-center">
+           <div class="flex items-center grow gap-2.5">
+            <img src="assets/media/file-types/pdf.svg"/>
+            <div class="flex flex-col">
+             <span class="text-sm font-semibold text-mono cursor-pointer hover:text-primary mb-px">
+              Project-pitch.pdf
+             </span>
+             <span class="text-xs font-medium text-muted-foreground">
+              4.7 MB 26 Sep 2024 3:20 PM
+             </span>
+            </div>
+           </div>
+           <button class="kt-btn kt-btn-icon kt-btn-ghost kt-btn-sm">
+            <i class="ki-filled ki-dots-vertical text-lg">
+            </i>
+           </button>
+          </div>
+         </div>
+         <div class="kt-menu-item">
+          <div class="kt-menu-link flex items-center">
+           <div class="flex items-center grow gap-2.5">
+            <img src="assets/media/file-types/doc.svg"/>
+            <div class="flex flex-col">
+             <span class="text-sm font-semibold text-mono cursor-pointer hover:text-primary mb-px">
+              Report-v1.docx
+             </span>
+             <span class="text-xs font-medium text-muted-foreground">
+              2.3 MB 1 Oct 2024 12:00 PM
+             </span>
+            </div>
+           </div>
+           <button class="kt-btn kt-btn-icon kt-btn-ghost kt-btn-sm">
+            <i class="ki-filled ki-dots-vertical text-lg">
+            </i>
+           </button>
+          </div>
+         </div>
+         <div class="kt-menu-item">
+          <div class="kt-menu-link flex items-center">
+           <div class="flex items-center grow gap-2.5">
+            <img src="assets/media/file-types/javascript.svg"/>
+            <div class="flex flex-col">
+             <span class="text-sm font-semibold text-mono cursor-pointer hover:text-primary mb-px">
+              Framework-App.js
+             </span>
+             <span class="text-xs font-medium text-muted-foreground">
+              0.8 MB 17 Oct 2024 6:46 PM
+             </span>
+            </div>
+           </div>
+           <button class="kt-btn kt-btn-icon kt-btn-ghost kt-btn-sm">
+            <i class="ki-filled ki-dots-vertical text-lg">
+            </i>
+           </button>
+          </div>
+         </div>
+         <div class="kt-menu-item">
+          <div class="kt-menu-link flex items-center">
+           <div class="flex items-center grow gap-2.5">
+            <img src="assets/media/file-types/ai.svg"/>
+            <div class="flex flex-col">
+             <span class="text-sm font-semibold text-mono cursor-pointer hover:text-primary mb-px">
+              Framework-App.js
+             </span>
+             <span class="text-xs font-medium text-muted-foreground">
+              0.8 MB 17 Oct 2024 6:46 PM
+             </span>
+            </div>
+           </div>
+           <button class="kt-btn kt-btn-icon kt-btn-ghost kt-btn-sm">
+            <i class="ki-filled ki-dots-vertical text-lg">
+            </i>
+           </button>
+          </div>
+         </div>
+         <div class="kt-menu-item">
+          <div class="kt-menu-link flex items-center">
+           <div class="flex items-center grow gap-2.5">
+            <img src="assets/media/file-types/php.svg"/>
+            <div class="flex flex-col">
+             <span class="text-sm font-semibold text-mono cursor-pointer hover:text-primary mb-px">
+              appController.js
+             </span>
+             <span class="text-xs font-medium text-muted-foreground">
+              0.1 MB 21 Nov 2024 3:20 PM
+             </span>
+            </div>
+           </div>
+           <button class="kt-btn kt-btn-icon kt-btn-ghost kt-btn-sm">
+            <i class="ki-filled ki-dots-vertical text-lg">
+            </i>
+           </button>
+          </div>
+         </div>
+         <div class="kt-menu-item px-4 pt-2.5">
+          <a class="kt-btn kt-btn-outline justify-center" href="#">
+           Go to Users
+          </a>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="hidden" id="search_modal_empty">
+       <div class="flex flex-col text-center py-9 gap-5">
+        <div class="flex justify-center">
+         <img alt="image" class="dark:hidden max-h-[113px]" src="assets/media/illustrations/33.svg"/>
+         <img alt="image" class="light:hidden max-h-[113px]" src="assets/media/illustrations/33-dark.svg"/>
+        </div>
+        <div class="flex flex-col gap-1.5">
+         <h3 class="text-base font-semibold text-mono text-center">
+          Looking for something..
+         </h3>
+         <span class="text-sm font-medium text-center text-secondary-foreground">
+          Initiate your digital experience with
+          <br/>
+          our intuitive dashboard
+         </span>
+        </div>
+        <div class="flex justify-center">
+         <a class="kt-btn kt-btn-outline flex justify-center" href="#">
+          View Projects
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="hidden" id="search_modal_no-results">
+       <div class="flex flex-col text-center py-9 gap-5">
+        <div class="flex justify-center">
+         <img alt="image" class="dark:hidden max-h-[113px]" src="assets/media/illustrations/33.svg"/>
+         <img alt="image" class="light:hidden max-h-[113px]" src="assets/media/illustrations/33-dark.svg"/>
+        </div>
+        <div class="flex flex-col gap-1.5">
+         <h3 class="text-base font-semibold text-mono text-center">
+          No Results Found
+         </h3>
+         <span class="text-sm font-medium text-center text-secondary-foreground">
+          Refine your query to discover relevant items
+         </span>
+        </div>
+        <div class="flex justify-center">
+         <a class="kt-btn kt-btn-outline flex justify-center" href="#">
+          View Projects
+         </a>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!-- Share Profile Modal -->
+  <div class="kt-modal" data-kt-modal="true" id="share_profile_modal">
+   <div class="kt-modal-content max-w-[500px] top-5 lg:top-[15%]">
+    <div class="kt-modal-header">
+     <h3 class="kt-modal-title">
+      Share Profile
+     </h3>
+     <button class="kt-btn kt-btn-sm kt-btn-icon kt-btn-ghost shrink-0" data-kt-modal-dismiss="true">
+      <i class="ki-filled ki-cross">
+      </i>
+     </button>
+    </div>
+    <div class="kt-modal-body grid gap-5 px-0 py-5">
+     <div class="flex flex-col px-5 gap-2.5">
+      <div class="flex flex-center gap-1">
+       <label class="text-mono font-semibold text-sm">
+        Share read-only link
+       </label>
+       <i class="ki-filled ki-information-2 text-muted-foreground text-sm">
+       </i>
+      </div>
+      <label class="kt-input">
+       <input type="text" value="https://metronic.com/profiles/x7g2vA3kZ5"/>
+       <button class="kt-btn kt-btn-icon kt-btn-sm kt-btn-ghost -me-2">
+        <i class="ki-filled ki-copy">
+        </i>
+       </button>
+      </label>
+     </div>
+     <div class="border-b border-b-border">
+     </div>
+     <div class="flex flex-col px-5 gap-2.5">
+      <div class="flex flex-center gap-1">
+       <label class="text-mono font-semibold text-sm">
+        Share via email
+       </label>
+       <i class="ki-filled ki-information-2 text-muted-foreground text-sm">
+       </i>
+      </div>
+      <div class="flex flex-center gap-2.5">
+       <label class="kt-input">
+        <input type="text" value="miles.turner@gmail.com"/>
+       </label>
+       <button class="kt-btn kt-btn-primary">
+        Share
+       </button>
+      </div>
+     </div>
+     <div class="kt-scrollable-y-auto max-h-[300px]">
+      <div class="flex flex-col px-5 gap-3">
+       <div class="flex items-center flex-wrap gap-2">
+        <div class="flex items-center grow gap-2.5">
+         <img alt="" class="rounded-full size-9 shrink-0" src="assets/media/avatars/300-3.png"/>
+         <div class="flex flex-col">
+          <a class="text-sm font-semibold text-mono hover:text-primary mb-px" href="#">
+           Tyler Hero
+          </a>
+          <a class="hover:text-primary text-2sm text-secondary-foreground" href="#">
+           tyler.hero@gmail.com
+          </a>
+         </div>
+        </div>
+        <select class="kt-select max-w-24" data-kt-select="true">
+         <option selected="">
+          Owner
+         </option>
+         <option>
+          Editor
+         </option>
+         <option>
+          Viewer
+         </option>
+        </select>
+       </div>
+       <div class="flex items-center flex-wrap gap-2">
+        <div class="flex items-center grow gap-2.5">
+         <img alt="" class="rounded-full size-9 shrink-0" src="assets/media/avatars/300-1.png"/>
+         <div class="flex flex-col">
+          <a class="text-sm font-semibold text-mono hover:text-primary mb-px" href="#">
+           Esther Howard
+          </a>
+          <a class="hover:text-primary text-2sm text-secondary-foreground" href="#">
+           esther.howard@gmail.com
+          </a>
+         </div>
+        </div>
+        <select class="kt-select max-w-24" data-kt-select="true">
+         <option>
+          Owner
+         </option>
+         <option selected="">
+          Editor
+         </option>
+         <option>
+          Viewer
+         </option>
+        </select>
+       </div>
+       <div class="flex items-center flex-wrap gap-2">
+        <div class="flex items-center grow gap-2.5">
+         <img alt="" class="rounded-full size-9 shrink-0" src="assets/media/avatars/300-11.png"/>
+         <div class="flex flex-col">
+          <a class="text-sm font-semibold text-mono hover:text-primary mb-px" href="#">
+           Jacob Jones
+          </a>
+          <a class="hover:text-primary text-2sm text-secondary-foreground" href="#">
+           jacob.jones@gmail.com
+          </a>
+         </div>
+        </div>
+        <select class="kt-select max-w-24" data-kt-select="true">
+         <option>
+          Owner
+         </option>
+         <option>
+          Editor
+         </option>
+         <option selected="">
+          Viewer
+         </option>
+        </select>
+       </div>
+      </div>
+     </div>
+     <div class="border-b border-b-border">
+     </div>
+     <div class="flex flex-col px-5 gap-4">
+      <label class="text-mono font-semibold text-sm">
+       Settings
+      </label>
+      <div class="flex flex-center justify-between flex-wrap gap-2">
+       <div class="flex flex-center gap-1.5">
+        <i class="ki-filled ki-user text-muted-foreground">
+        </i>
+        <div class="flex flex-center text-secondary-foreground font-medium text-xs">
+         Anyone at
+         <a class="text-xs font-medium link mx-1" href="#">
+          KeenThemes
+         </a>
+         can view
+        </div>
+       </div>
+       <button class="kt-link kt-link-sm kt-link-underlined kt-link-dashed">
+        Change Access
+       </button>
+      </div>
+      <div class="flex flex-center justify-between flex-wrap gap-2 mb-2.5">
+       <div class="flex flex-center gap-1.5">
+        <i class="ki-filled ki-icon text-muted-foreground">
+        </i>
+        <div class="flex flex-center text-secondary-foreground font-medium text-xs">
+         Anyone with link can edit
+        </div>
+       </div>
+       <button class="kt-link kt-link-sm kt-link-underlined kt-link-dashed">
+        Set Password
+       </button>
+      </div>
+      <button class="kt-btn kt-btn-primary justify-center">
+       Done
+      </button>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!-- End of Share Profile Modal -->
+  <div class="kt-modal" data-kt-modal="true" id="give_award_modal">
+   <div class="kt-modal-content max-w-[500px] top-[15%]">
+    <div class="kt-modal-header pr-2.5">
+     <h3 class="kt-modal-title">
+      Give Award
+     </h3>
+     <button class="kt-btn kt-btn-icon kt-btn-ghost shrink-0" data-kt-modal-dismiss="true">
+      <i class="ki-filled ki-black-left">
+      </i>
+     </button>
+    </div>
+    <div class="kt-modal-body grid gap-5 px-0 py-5">
+     <div class="flex flex-col px-5 gap-2.5">
+      <div class="flex flex-center gap-1">
+       <label class="text-mono font-semibold text-sm">
+        Share read-only link
+       </label>
+       <i class="ki-filled ki-information-2 text-muted-foreground text-sm">
+       </i>
+      </div>
+      <label class="kt-input">
+       <input type="text" value="https://metronic.com/profiles/x7g2vA3kZ5"/>
+       <button class="kt-btn kt-btn-icon kt-btn-sm kt-btn-ghost -me-2">
+        <i class="ki-filled ki-copy">
+        </i>
+       </button>
+      </label>
+     </div>
+     <div class="border-b border-b-border">
+     </div>
+     <div class="flex flex-col px-5 gap-2.5">
+      <div class="flex flex-center gap-1">
+       <label class="text-mono font-semibold text-sm">
+        Share via email
+       </label>
+       <i class="ki-filled ki-information-2 text-muted-foreground text-sm">
+       </i>
+      </div>
+      <div class="flex flex-center gap-2.5">
+       <label class="kt-input">
+        <input type="text" value="miles.turner@gmail.com"/>
+       </label>
+       <button class="kt-btn kt-btn-primary">
+        Share
+       </button>
+      </div>
+     </div>
+     <div class="kt-scrollable-y-auto max-h-[300px]">
+      <div class="flex flex-col px-5 gap-3">
+       <div class="flex items-center flex-wrap gap-2">
+        <div class="flex items-center grow gap-2.5">
+         <img alt="" class="rounded-full size-9 shrink-0" src="assets/media/avatars/300-3.png"/>
+         <div class="flex flex-col">
+          <a class="text-sm font-semibold text-mono hover:text-primary mb-px" href="#">
+           Tyler Hero
+          </a>
+          <a class="hover:text-primary text-2sm text-secondary-foreground" href="#">
+           tyler.hero@gmail.com
+          </a>
+         </div>
+        </div>
+        <select class="kt-select max-w-24" data-kt-select="true">
+         <option selected="">
+          Owner
+         </option>
+         <option>
+          Editor
+         </option>
+         <option>
+          Viewer
+         </option>
+        </select>
+       </div>
+       <div class="flex items-center flex-wrap gap-2">
+        <div class="flex items-center grow gap-2.5">
+         <img alt="" class="rounded-full size-9 shrink-0" src="assets/media/avatars/300-1.png"/>
+         <div class="flex flex-col">
+          <a class="text-sm font-semibold text-mono hover:text-primary mb-px" href="#">
+           Esther Howard
+          </a>
+          <a class="hover:text-primary text-2sm text-secondary-foreground" href="#">
+           esther.howard@gmail.com
+          </a>
+         </div>
+        </div>
+        <select class="kt-select max-w-24" data-kt-select="true">
+         <option>
+          Owner
+         </option>
+         <option selected="">
+          Editor
+         </option>
+         <option>
+          Viewer
+         </option>
+        </select>
+       </div>
+       <div class="flex items-center flex-wrap gap-2">
+        <div class="flex items-center grow gap-2.5">
+         <img alt="" class="rounded-full size-9 shrink-0" src="assets/media/avatars/300-11.png"/>
+         <div class="flex flex-col">
+          <a class="text-sm font-semibold text-mono hover:text-primary mb-px" href="#">
+           Jacob Jones
+          </a>
+          <a class="hover:text-primary text-2sm text-secondary-foreground" href="#">
+           jacob.jones@gmail.com
+          </a>
+         </div>
+        </div>
+        <select class="kt-select max-w-24" data-kt-select="true">
+         <option>
+          Owner
+         </option>
+         <option>
+          Editor
+         </option>
+         <option selected="">
+          Viewer
+         </option>
+        </select>
+       </div>
+      </div>
+     </div>
+     <div class="border-b border-b-border">
+     </div>
+     <div class="flex flex-col px-5 gap-4">
+      <label class="text-mono font-semibold text-sm">
+       Settings
+      </label>
+      <div class="flex flex-center justify-between flex-wrap gap-2">
+       <div class="flex flex-center gap-1.5">
+        <i class="ki-filled ki-user text-muted-foreground">
+        </i>
+        <div class="flex flex-center text-secondary-foreground font-medium text-xs">
+         Anyone at
+         <a class="text-xs font-medium link mx-1" href="#">
+          KeenThemes
+         </a>
+         can view
+        </div>
+       </div>
+       <button class="kt-link kt-link-sm kt-link-underlined kt-link-dashed">
+        Change Access
+       </button>
+      </div>
+      <div class="flex flex-center justify-between flex-wrap gap-2 mb-2.5">
+       <div class="flex flex-center gap-1.5">
+        <i class="ki-filled ki-icon text-muted-foreground">
+        </i>
+        <div class="flex flex-center text-secondary-foreground font-medium text-xs">
+         Anyone with link can edit
+        </div>
+       </div>
+       <button class="kt-link kt-link-sm kt-link-underlined kt-link-dashed">
+        Set Password
+       </button>
+      </div>
+      <button class="kt-btn kt-btn-primary justify-center">
+       Done
+      </button>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="kt-modal" data-kt-modal="true" id="report_user_modal">
+   <div class="kt-modal-content max-w-[500px] top-[15%]">
+    <div class="kt-modal-header">
+     <h3 class="kt-modal-title">
+      Report User
+     </h3>
+     <button class="kt-btn kt-btn-sm kt-btn-icon kt-btn-ghost shrink-0" data-kt-modal-dismiss="true">
+      <i class="ki-filled ki-cross">
+      </i>
+     </button>
+    </div>
+    <div class="kt-modal-body p-0">
+     <div class="p-5">
+      <div class="grid place-items-center gap-1">
+       <div class="flex justify-center items-center rounded-full">
+        <img class="rounded-full max-h-[55px] max-w-full" src="assets/media/avatars/300-1.png"/>
+       </div>
+       <div class="flex items-center justify-center gap-1">
+        <a class="hover:text-primary text-sm leading-5 font-semibold text-mono" href="#">
+         Jenny Klabber
+        </a>
+        <svg class="text-primary" fill="none" height="13" viewbox="0 0 15 16" width="13" xmlns="http://www.w3.org/2000/svg">
+         <path d="M14.5425 6.89749L13.5 5.83999C13.4273 5.76877 13.3699 5.6835 13.3312 5.58937C13.2925 5.49525 13.2734 5.39424 13.275 5.29249V3.79249C13.274 3.58699 13.2324 3.38371 13.1527 3.19432C13.0729 3.00494 12.9565 2.83318 12.8101 2.68892C12.6638 2.54466 12.4904 2.43073 12.2998 2.35369C12.1093 2.27665 11.9055 2.23801 11.7 2.23999H10.2C10.0982 2.24159 9.99722 2.22247 9.9031 2.18378C9.80898 2.1451 9.72371 2.08767 9.65249 2.01499L8.60249 0.957487C8.30998 0.665289 7.91344 0.50116 7.49999 0.50116C7.08654 0.50116 6.68999 0.665289 6.39749 0.957487L5.33999 1.99999C5.26876 2.07267 5.1835 2.1301 5.08937 2.16879C4.99525 2.20747 4.89424 2.22659 4.79249 2.22499H3.29249C3.08699 2.22597 2.88371 2.26754 2.69432 2.34731C2.50494 2.42709 2.33318 2.54349 2.18892 2.68985C2.04466 2.8362 1.93073 3.00961 1.85369 3.20013C1.77665 3.39064 1.73801 3.5945 1.73999 3.79999V5.29999C1.74159 5.40174 1.72247 5.50275 1.68378 5.59687C1.6451 5.691 1.58767 5.77627 1.51499 5.84749L0.457487 6.89749C0.165289 7.19 0.00115967 7.58654 0.00115967 7.99999C0.00115967 8.41344 0.165289 8.80998 0.457487 9.10249L1.49999 10.16C1.57267 10.2312 1.6301 10.3165 1.66878 10.4106C1.70747 10.5047 1.72659 10.6057 1.72499 10.7075V12.2075C1.72597 12.413 1.76754 12.6163 1.84731 12.8056C1.92709 12.995 2.04349 13.1668 2.18985 13.3111C2.3362 13.4553 2.50961 13.5692 2.70013 13.6463C2.89064 13.7233 3.0945 13.762 3.29999 13.76H4.79999C4.90174 13.7584 5.00275 13.7775 5.09687 13.8162C5.191 13.8549 5.27627 13.9123 5.34749 13.985L6.40499 15.0425C6.69749 15.3347 7.09404 15.4988 7.50749 15.4988C7.92094 15.4988 8.31748 15.3347 8.60999 15.0425L9.65999 14C9.73121 13.9273 9.81647 13.8699 9.9106 13.8312C10.0047 13.7925 10.1057 13.7734 10.2075 13.775H11.7075C12.1212 13.775 12.518 13.6106 12.8106 13.3181C13.1031 13.0255 13.2675 12.6287 13.2675 12.215V10.715C13.2659 10.6132 13.285 10.5122 13.3237 10.4181C13.3624 10.324 13.4198 10.2387 13.4925 10.1675L14.55 9.10999C14.6953 8.96452 14.8104 8.79176 14.8887 8.60164C14.9671 8.41152 15.007 8.20779 15.0063 8.00218C15.0056 7.79656 14.9643 7.59311 14.8847 7.40353C14.8051 7.21394 14.6888 7.04197 14.5425 6.89749ZM10.635 6.64999L6.95249 10.25C6.90055 10.3026 6.83864 10.3443 6.77038 10.3726C6.70212 10.4009 6.62889 10.4153 6.55499 10.415C6.48062 10.4139 6.40719 10.3982 6.33896 10.3685C6.27073 10.3389 6.20905 10.2961 6.15749 10.2425L4.37999 8.44249C4.32532 8.39044 4.28169 8.32793 4.25169 8.25867C4.22169 8.18941 4.20593 8.11482 4.20536 8.03934C4.20479 7.96387 4.21941 7.88905 4.24836 7.81934C4.27731 7.74964 4.31999 7.68647 4.37387 7.63361C4.42774 7.58074 4.4917 7.53926 4.56194 7.51163C4.63218 7.484 4.70726 7.47079 4.78271 7.47278C4.85816 7.47478 4.93244 7.49194 5.00112 7.52324C5.0698 7.55454 5.13148 7.59935 5.18249 7.65499L6.56249 9.05749L9.84749 5.84749C9.95296 5.74215 10.0959 5.68298 10.245 5.68298C10.394 5.68298 10.537 5.74215 10.6425 5.84749C10.6953 5.90034 10.737 5.96318 10.7653 6.03234C10.7935 6.1015 10.8077 6.1756 10.807 6.25031C10.8063 6.32502 10.7908 6.39884 10.7612 6.46746C10.7317 6.53608 10.6888 6.59813 10.635 6.64999Z" fill="currentColor">
+         </path>
+        </svg>
+       </div>
+      </div>
+     </div>
+     <div class="border-b border-b-border">
+     </div>
+     <div class="flex flex-col gap-5 p-5">
+      <div class="text-sm text-mono font-semibold">
+       Let us know why you’re reporing this person
+      </div>
+      <div class="flex flex-col gap-3.5">
+       <label class="kt-form-label flex items-center gap-2.5">
+        <input checked="" class="kt-radio radio-sm" name="report-option" type="radio" value="1"/>
+        <div class="flex flex-col gap-0.5">
+         <div class="text-sm font-semibold text-mono">
+          Impersonation
+         </div>
+         <div class="text-sm font-medium text-secondary-foreground">
+          It looks like this profile might be impersonating someone else
+         </div>
+        </div>
+       </label>
+       <label class="kt-form-label flex items-center gap-2.5">
+        <input checked="" class="kt-radio radio-sm" name="report-option" type="radio" value="2"/>
+        <div class="flex flex-col gap-0.5">
+         <div class="text-sm font-semibold text-mono">
+          Spammy
+         </div>
+         <div class="text-sm font-medium text-secondary-foreground">
+          This person profile, comments or posts contain misleading text
+         </div>
+        </div>
+       </label>
+       <label class="kt-form-label flex items-center gap-2.5">
+        <input checked="" class="kt-radio radio-sm" name="report-option" type="radio" value="3"/>
+        <div class="flex flex-col gap-0.5">
+         <div class="text-sm font-semibold text-mono">
+          Off bumble behavior
+         </div>
+         <div class="text-sm font-medium text-secondary-foreground">
+          This person has engaged in behavior that is abusive, bullying
+         </div>
+        </div>
+       </label>
+       <label class="kt-form-label flex items-center gap-2.5">
+        <input checked="" class="kt-radio radio-sm" name="report-option" type="radio" value="4"/>
+        <div class="flex flex-col gap-0.5">
+         <div class="text-sm font-semibold text-mono">
+          Something else
+         </div>
+         <div class="text-sm font-medium text-secondary-foreground">
+          None of the reasons listed above are suitable
+         </div>
+        </div>
+       </label>
+      </div>
+     </div>
+     <div class="border-b border-b-border">
+     </div>
+     <div class="text-2sm font-medium text-center text-foreground p-5">
+      Don't worry, your report is completely anonymous; the person you're
+      <br/>
+      reporting will not be informed that you've submitted it
+     </div>
+     <div class="border-b border-b-border">
+     </div>
+     <div class="flex items-center gap-2.5 justify-end p-5" id="report_user_modal">
+      <button class="kt-btn kt-btn-primary">
+       Report this person
+      </button>
+      <button class="kt-btn kt-btn-outline" data-kt-modal-dismiss="true">
+       Cancel
+      </button>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!-- End of Page -->
+  <!-- Scripts -->
+  <script src="assets/js/core.bundle.js">
+  </script>
+  <script src="assets/vendors/ktui/ktui.min.js">
+  </script>
+  <script src="assets/vendors/apexcharts/apexcharts.min.js">
+  </script>
+  <!-- End of Scripts -->
+ </body>
+</html>
